@@ -2,25 +2,82 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #09141f;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-aptos: "Aptos", system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-aptos);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-aptos);
+}
+
+/* Custom utilities for Figma exact matching */
+.content-stretch {
+  align-content: stretch;
+}
+
+.size-full {
+  width: 100%;
+  height: 100%;
+}
+
+/* Exact spacing utilities */
+.gap-\[140px\] {
+  gap: 140px;
+}
+
+.gap-\[100px\] {
+  gap: 100px;
+}
+
+.gap-\[52px\] {
+  gap: 52px;
+}
+
+/* Exact font utilities */
+.text-\[96px\] {
+  font-size: 96px;
+}
+
+.text-\[24px\] {
+  font-size: 24px;
+}
+
+.text-\[16px\] {
+  font-size: 16px;
+}
+
+.leading-\[96px\] {
+  line-height: 96px;
+}
+
+.leading-\[20px\] {
+  line-height: 20px;
+}
+
+.tracking-\[-5\.76px\] {
+  letter-spacing: -5.76px;
+}
+
+/* Font family utilities */
+.font-aptos {
+  font-family: "Aptos", system-ui, -apple-system, sans-serif;
+}
+
+/* Aptos font weight variants */
+.font-aptos-regular {
+  font-family: "Aptos", system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+}
+
+.font-aptos-semibold {
+  font-family: "Aptos", system-ui, -apple-system, sans-serif;
+  font-weight: 600;
 }
