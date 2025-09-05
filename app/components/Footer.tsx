@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const imgEliosLogo = "/elios-logo-footer.svg";
 const imgFacebook = "/footer-facebook.svg";
@@ -44,7 +45,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="basis-0 box-border content-stretch flex grow items-start justify-between min-h-px min-w-px pb-0 pt-7 px-0 relative shrink-0" data-node-id="65:1762">
+          <div className="basis-0 content-stretch flex grow items-start justify-between min-h-px min-w-px relative shrink-0" data-node-id="65:1762">
             <div className="content-stretch flex flex-col gap-8 items-start justify-start relative shrink-0" data-name="Footer Column" data-node-id="65:1763">
               <div className="content-stretch flex flex-col gap-6 items-start justify-start relative shrink-0" data-name="Grid Column" data-node-id="65:1764">
                 <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1765">
@@ -109,11 +110,11 @@ export default function Footer() {
                   <p className="leading-[14px] whitespace-pre">Resources</p>
                 </div>
               </div>
-              <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1790">
-                <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap" data-node-id="102:1587">
+              <Link href="/blog" className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0 cursor-pointer hover:text-[#fa6a20] transition-colors" data-name="Link" data-node-id="65:1790">
+                <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap hover:text-[#fa6a20]" data-node-id="102:1587">
                   <p className="leading-[14px] whitespace-pre">Blog</p>
                 </div>
-              </div>
+              </Link>
               <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1792">
                 <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap" data-node-id="102:1589">
                   <p className="leading-[14px] whitespace-pre">Case Studies</p>

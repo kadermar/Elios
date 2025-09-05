@@ -28,6 +28,39 @@ export default function Navigation() {
     setShowDropdown(!showDropdown);
   };
 
+  const handleMouseEnter = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+    hoverTimeoutRef.current = setTimeout(() => {
+      setShowDropdown(true);
+    }, 200); // 200ms delay
+  };
+
+  const handleMouseLeave = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+    hoverTimeoutRef.current = setTimeout(() => {
+      setShowDropdown(false);
+    }, 150); // Slightly shorter delay for closing
+  };
+
+  const handleDropdownMouseEnter = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+  };
+
+  const handleDropdownMouseLeave = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+    hoverTimeoutRef.current = setTimeout(() => {
+      setShowDropdown(false);
+    }, 150);
+  };
+
   const handleClickOutside = (event: MouseEvent) => {
     const target = event.target as Element;
     if (!target.closest('[data-dropdown-container]')) {
@@ -80,6 +113,8 @@ export default function Navigation() {
             data-name="Link"
             data-dropdown-container
             onClick={handleClick}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <div className="font-semibold leading-[0] not-italic relative text-[#09141f] text-[16px] text-center text-nowrap">
               <p className="leading-[22px] whitespace-pre">Elios Talent</p>
@@ -162,6 +197,8 @@ export default function Navigation() {
           willChange: 'transform'
         }}
         data-dropdown-container
+        onMouseEnter={handleDropdownMouseEnter}
+        onMouseLeave={handleDropdownMouseLeave}
       >
         <EliosTalentDropdown />
       </div>
