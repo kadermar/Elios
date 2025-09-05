@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const imgImage56 = "/services-image-56.png";
 const imgImage58 = "/services-image-58.png";
@@ -94,7 +95,7 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-              <div className="content-stretch flex gap-2.5 items-center justify-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity" data-node-id="65:1273">
+              <Link href="/request-talent" className="content-stretch flex gap-2.5 items-center justify-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity" data-node-id="65:1273">
                 <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[#fa6a20] text-[24px] text-nowrap tracking-[-0.48px]" data-node-id="65:1274">
                   <p className="leading-[24px] whitespace-pre">Request Talent</p>
                 </div>
@@ -105,7 +106,7 @@ export default function Services() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
           <div className="basis-0 bg-white box-border content-stretch flex flex-col gap-[46px] grow items-center justify-center min-h-px min-w-px overflow-clip pb-12 pt-6 px-6 relative rounded-[15px] self-stretch shrink-0" data-node-id="65:1276">
@@ -173,7 +174,7 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-              <div className="content-stretch flex gap-2.5 items-center justify-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity" data-node-id="65:1351">
+              <Link href="/book-demo" className="content-stretch flex gap-2.5 items-center justify-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity" data-node-id="65:1351">
                 <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[#fa6a20] text-[24px] text-nowrap tracking-[-0.48px]" data-node-id="65:1352">
                   <p className="leading-[24px] whitespace-pre">Book a Demo</p>
                 </div>
@@ -184,7 +185,7 @@ export default function Services() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

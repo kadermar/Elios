@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const imgImage56 = "/cta-background-image.png";
 const img = "/cta-arrow.svg";
@@ -13,7 +14,7 @@ export default function Cta() {
           <p className="leading-none">Let&apos;s Build Your Dream Team of Tomorrow</p>
         </div>
         <div className="content-stretch flex gap-3 items-start justify-start relative shrink-0" data-name="Button Row" data-node-id="65:1823">
-          <div className="bg-[#fa6a20] box-border content-stretch flex gap-4 h-[60px] items-center justify-center pl-[22px] pr-2 py-3.5 relative rounded-[12px] shrink-0" data-name="Primary Button" data-node-id="65:1824">
+          <Link href="/book-demo" className="bg-[#fa6a20] box-border content-stretch flex gap-4 h-[60px] items-center justify-center pl-[22px] pr-2 py-3.5 relative rounded-[12px] shrink-0" data-name="Primary Button" data-node-id="65:1824">
             <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[16px] text-center text-nowrap text-white" data-node-id="65:1826">
               <p className="leading-[20px] whitespace-pre">Book a Demo</p>
             </div>
@@ -26,7 +27,7 @@ export default function Cta() {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
           <div className="box-border content-stretch flex gap-[3px] h-[60px] items-center justify-center px-[22px] py-[18px] relative rounded-[12px] shrink-0" data-name="Secondary Button" data-node-id="65:1829">
             <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[16px] text-black text-center text-nowrap" data-node-id="65:1831">
               <p className="leading-[20px] whitespace-pre">Get Talent</p>

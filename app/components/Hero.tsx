@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const imgProfileDropdownMenu1 = "/hero-dashboard.png";
 const img = "/hero-arrow.svg";
@@ -20,7 +21,7 @@ export default function Hero() {
               <p className="leading-[1.35]">Elios combines elite recruiters with an intelligence layer that cuts the noise and moves the right people forward—fast.</p>
             </div>
             <div className="content-stretch flex gap-3 items-start justify-start relative shrink-0" data-name="Button Row" data-node-id="65:833">
-              <div className="bg-[#fa6a20] box-border content-stretch flex gap-4 h-[60px] items-center justify-center pl-[22px] pr-2 py-3.5 relative rounded-[12px] shrink-0 cursor-pointer hover:bg-[#e85a10] transition-colors" data-name="Primary Button" data-node-id="65:834">
+              <Link href="/book-demo" className="bg-[#fa6a20] box-border content-stretch flex gap-4 h-[60px] items-center justify-center pl-[22px] pr-2 py-3.5 relative rounded-[12px] shrink-0 cursor-pointer hover:bg-[#e85a10] transition-colors" data-name="Primary Button" data-node-id="65:834">
                 <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[16px] text-center text-nowrap text-white" data-node-id="65:836">
                   <p className="leading-[20px] whitespace-pre">Book a Demo</p>
                 </div>
@@ -33,12 +34,12 @@ export default function Hero() {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="box-border content-stretch flex gap-[3px] items-center justify-center px-[22px] py-[18px] relative rounded-[12px] self-stretch shrink-0 cursor-pointer hover:bg-gray-50 transition-colors" data-name="Secondary Button" data-node-id="65:839">
+              </Link>
+              <Link href="/request-talent" className="box-border content-stretch flex gap-[3px] items-center justify-center px-[22px] py-[18px] relative rounded-[12px] self-stretch shrink-0 cursor-pointer hover:bg-gray-50 transition-colors" data-name="Secondary Button" data-node-id="65:839">
                 <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[16px] text-black text-center text-nowrap" data-node-id="65:841">
                   <p className="leading-[20px] whitespace-pre">Request Talent</p>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
           <div className="content-stretch flex gap-[52px] items-center justify-center opacity-50 relative shrink-0" data-name="Logo Reel" data-node-id="65:843">

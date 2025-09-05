@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useEffect, useState, useRef } from "react";
+import EliosTalentDropdown from "./EliosTalentDropdown";
 
 const imgEliosLogo = "/elios-logo-alt.svg";
 const imgCarat = "/caret.svg";
@@ -10,6 +12,8 @@ const imgArrow = "/nav-arrow-alt.svg";
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,12 +24,36 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleClick = () => {
+    setShowDropdown(!showDropdown);
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    const target = event.target as Element;
+    if (!target.closest('[data-dropdown-container]')) {
+      setShowDropdown(false);
+    }
+  };
+
+  useEffect(() => {
+    if (showDropdown) {
+      document.addEventListener('click', handleClickOutside);
+    } else {
+      document.removeEventListener('click', handleClickOutside);
+    }
+    
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [showDropdown]);
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 flex flex-col gap-2.5 items-center justify-center w-full transition-all duration-300 ${
+    <>
+    <nav className={`fixed top-0 left-0 right-0 z-40 flex flex-col gap-[10px] items-center justify-center self-stretch w-full transition-all duration-300 ${
       isScrolled ? 'bg-white/25 backdrop-blur-sm' : 'bg-transparent'
     }`} data-name="Nav">
       <div className="flex items-center justify-between max-w-[1638px] px-4 md:px-0 py-[30px] md:py-[60px] relative rounded-[8px] w-full" data-name="Wrapper">
-        <div className="h-[49.999px] relative w-[126.2px]" data-name="Elios Logo">
+        <Link href="/" className="h-[49.999px] relative w-[126.2px]" data-name="Elios Logo">
           <Image
             alt="Elios"
             src={imgEliosLogo}
@@ -33,7 +61,7 @@ export default function Navigation() {
             height={50}
             className="block max-w-none w-full h-full"
           />
-        </div>
+        </Link>
         
         {/* Mobile menu button */}
         <button 
@@ -47,7 +75,12 @@ export default function Navigation() {
 
         {/* Desktop navigation */}
         <div className="hidden md:flex gap-9 items-center justify-start p-[20px] relative rounded-[18px]" data-name="Nav List">
-          <div className="flex gap-1.5 items-center justify-start relative cursor-pointer hover:opacity-70 transition-opacity" data-name="Link">
+          <div 
+            className="flex gap-1.5 items-center justify-start relative cursor-pointer hover:opacity-70 transition-opacity" 
+            data-name="Link"
+            data-dropdown-container
+            onClick={handleClick}
+          >
             <div className="font-semibold leading-[0] not-italic relative text-[#09141f] text-[16px] text-center text-nowrap">
               <p className="leading-[22px] whitespace-pre">Elios Talent</p>
             </div>
@@ -91,13 +124,13 @@ export default function Navigation() {
         </div>
         
         <div className="flex gap-3 items-center justify-start relative" data-name="Button Row">
-          <button className="flex gap-[3px] items-center justify-center px-[22px] py-[18px] relative rounded-[12px] hover:bg-gray-50 transition-colors" data-name="Min Secondary Button">
+          <Link href="/request-talent" className="flex gap-[3px] items-center justify-center px-[22px] py-[18px] relative rounded-[12px] hover:bg-gray-50 transition-colors" data-name="Min Secondary Button">
             <div className="font-semibold leading-[0] not-italic relative text-[14px] text-black text-center text-nowrap">
               <p className="leading-[20px] whitespace-pre">Request Talent</p>
             </div>
-          </button>
+          </Link>
           
-          <button className="bg-[#fa6a20] flex gap-2 items-center justify-center px-5 py-4 relative rounded-[8px] hover:bg-[#e85a10] transition-colors" data-name="Min Primary Button">
+          <Link href="/book-demo" className="bg-[#fa6a20] flex gap-2 items-center justify-center px-5 py-4 relative rounded-[8px] hover:bg-[#e85a10] transition-colors" data-name="Min Primary Button">
             <div className="font-semibold leading-[0] not-italic relative text-[14px] text-center text-nowrap text-white">
               <p className="leading-[20px] whitespace-pre">Book a Demo</p>
             </div>
@@ -114,9 +147,25 @@ export default function Navigation() {
                 </div>
               </div>
             </div>
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
+    
+    {/* Dropdown positioned outside nav to avoid backdrop-blur inheritance */}
+    {showDropdown && (
+      <div 
+        className="fixed left-1/2 transform -translate-x-1/2 z-[9999] pointer-events-auto"
+        style={{ 
+          top: isScrolled ? '150px' : '174px', 
+          isolation: 'isolate',
+          willChange: 'transform'
+        }}
+        data-dropdown-container
+      >
+        <EliosTalentDropdown />
+      </div>
+    )}
+    </>
   );
 }

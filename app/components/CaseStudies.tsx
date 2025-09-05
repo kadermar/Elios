@@ -47,7 +47,7 @@ const testimonials = [
   {
     company: "Samsung",
     logo: imgGroup,
-    quote: "Wow. There&apos;s so many words.",
+    quote: "Wow. There's so many words.",
     author: "* Darren Styles, CEO of Amplify Change",
     bgImage: imgImage58,
     bgColor: "bg-white",
