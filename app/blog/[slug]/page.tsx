@@ -75,7 +75,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       </div>
       
       {/* Hero Section */}
-      <div className="flex flex-col items-center justify-center w-[1920px] h-[508px] relative">
+      <div className="flex flex-col items-center justify-center w-[1920px] h-[508px] relative mt-32">
         <div className="content-stretch flex gap-[140px] items-center justify-start max-w-[1638px] relative w-full">
           <div className="basis-0 content-stretch flex flex-col gap-[100px] grow items-start justify-start min-h-px min-w-px relative">
             <div className="content-stretch flex flex-col gap-10 items-start justify-start relative w-full">

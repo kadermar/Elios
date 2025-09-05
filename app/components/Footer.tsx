@@ -11,14 +11,14 @@ const imgLinkedIn = "/footer-linkedin.svg";
 
 export default function Footer() {
   return (
-    <div className="bg-white box-border content-stretch flex flex-col gap-[72px] items-center justify-end pb-[140px] pt-[440px] px-[167px] relative size-full" data-name="Footer V1" data-node-id="65:1719">
-      <div className="content-stretch flex flex-col gap-[72px] items-start justify-start relative shrink-0 w-[1638px]" data-node-id="65:1720">
-        <div className="content-stretch flex gap-60 items-start justify-start relative shrink-0 w-full" data-name="Footer Top" data-node-id="65:1721">
-          <div className="content-stretch flex flex-col gap-[30px] items-start justify-start relative shrink-0 w-[516px]" data-node-id="65:1722">
-            <div className="h-[60px] relative shrink-0 w-[151.443px]" data-name="Elios Logo" data-node-id="65:1723">
+    <div className="bg-white box-border content-stretch flex flex-col gap-[72px] md:gap-[72px] items-center justify-end pb-[60px] md:pb-[140px] pt-[200px] md:pt-[440px] px-4 md:px-[167px] relative size-full" data-name="Footer V1" data-node-id="65:1719">
+      <div className="content-stretch flex flex-col gap-[48px] md:gap-[72px] items-start justify-start relative shrink-0 w-full max-w-[1638px]" data-node-id="65:1720">
+        <div className="content-stretch flex flex-col md:flex-row gap-8 md:gap-60 items-start justify-start relative shrink-0 w-full" data-name="Footer Top" data-node-id="65:1721">
+          <div className="content-stretch flex flex-col gap-[30px] items-start justify-start relative shrink-0 w-full md:w-[516px]" data-node-id="65:1722">
+            <div className="h-[50px] md:h-[60px] relative shrink-0 w-[126px] md:w-[151.443px]" data-name="Elios Logo" data-node-id="65:1723">
               <Image alt="Elios" src={imgEliosLogo} width={151} height={60} className="block max-w-none size-full" />
             </div>
-            <div className="font-aptos leading-[0] min-w-full not-italic relative shrink-0 text-[#535960] text-[16px]" data-node-id="65:1756" style={{ width: "min-content" }}>
+            <div className="font-aptos leading-[0] min-w-full not-italic relative shrink-0 text-[#535960] text-[14px] md:text-[16px]" data-node-id="65:1756" style={{ width: "min-content" }}>
               <p className="leading-[1.4]">Elios is a technology-driven, human-centered recruiting firm committed to helping businesses scale with top talent. We connect leading companies with highly qualified professionals across key industries.</p>
             </div>
             <div className="content-stretch flex gap-4 items-start justify-start relative shrink-0" data-name="Social Media Wrapper" data-node-id="65:1757">
@@ -45,93 +45,93 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="basis-0 content-stretch flex grow items-start justify-between min-h-px min-w-px relative shrink-0" data-node-id="65:1762">
-            <div className="content-stretch flex flex-col gap-8 items-start justify-start relative shrink-0" data-name="Footer Column" data-node-id="65:1763">
-              <div className="content-stretch flex flex-col gap-6 items-start justify-start relative shrink-0" data-name="Grid Column" data-node-id="65:1764">
+          <div className="basis-0 content-stretch flex flex-col md:flex-row grow items-start justify-between min-h-px min-w-px relative shrink-0 gap-8 md:gap-0" data-node-id="65:1762">
+            <div className="w-full grid grid-cols-2 md:flex md:justify-between gap-6 md:gap-8">
+              <div className="content-stretch flex flex-col gap-4 md:gap-6 items-start justify-start relative shrink-0" data-name="Grid Column" data-node-id="65:1764">
                 <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1765">
-                  <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[16px] text-black text-center text-nowrap" data-node-id="102:1562">
+                  <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[14px] md:text-[16px] text-black text-center text-nowrap" data-node-id="102:1562">
                     <p className="leading-[14px] whitespace-pre">For Hiring Managers</p>
                   </div>
                 </div>
                 <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1767">
-                  <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap" data-node-id="102:1564">
+                  <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[14px] md:text-[16px] text-center text-nowrap" data-node-id="102:1564">
                     <p className="leading-[14px] whitespace-pre">Elios Talent</p>
                   </div>
                 </div>
                 <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1769">
-                  <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap" data-node-id="102:1566">
+                  <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[14px] md:text-[16px] text-center text-nowrap" data-node-id="102:1566">
                     <p className="leading-[14px] whitespace-pre">Elios Insights</p>
                   </div>
                 </div>
                 <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1771">
-                  <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap" data-node-id="102:1568">
+                  <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[14px] md:text-[16px] text-center text-nowrap" data-node-id="102:1568">
                     <p className="leading-[14px] whitespace-pre">Industries Served</p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="content-stretch flex flex-col gap-6 items-start justify-start relative shrink-0" data-name="Grid Column" data-node-id="65:1773">
-              <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0 w-full" data-name="Link" data-node-id="65:1774">
-                <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[16px] text-black text-center text-nowrap" data-node-id="102:1571">
-                  <p className="leading-[14px] whitespace-pre">For Candidates</p>
+              <div className="content-stretch flex flex-col gap-4 md:gap-6 items-start justify-start relative shrink-0" data-name="Grid Column" data-node-id="65:1773">
+                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0 w-full" data-name="Link" data-node-id="65:1774">
+                  <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[14px] md:text-[16px] text-black text-center text-nowrap" data-node-id="102:1571">
+                    <p className="leading-[14px] whitespace-pre">For Candidates</p>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0 w-full" data-name="Link" data-node-id="65:1776">
+                  <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[14px] md:text-[16px] text-center text-nowrap" data-node-id="102:1573">
+                    <p className="leading-[14px] whitespace-pre">Explore Jobs</p>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1778">
+                  <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[14px] md:text-[16px] text-center text-nowrap" data-node-id="102:1575">
+                    <p className="leading-[14px] whitespace-pre">Upload Resume</p>
+                  </div>
                 </div>
               </div>
-              <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0 w-full" data-name="Link" data-node-id="65:1776">
-                <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap" data-node-id="102:1573">
-                  <p className="leading-[14px] whitespace-pre">Explore Jobs</p>
+              <div className="content-stretch flex flex-col gap-4 md:gap-6 items-start justify-start relative shrink-0" data-name="Grid Column" data-node-id="65:1780">
+                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1781">
+                  <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[14px] md:text-[16px] text-black text-center text-nowrap" data-node-id="102:1578">
+                    <p className="leading-[14px] whitespace-pre">Company</p>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1783">
+                  <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[14px] md:text-[16px] text-center text-nowrap" data-node-id="102:1580">
+                    <p className="leading-[14px] whitespace-pre">About Us</p>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1785">
+                  <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[14px] md:text-[16px] text-center text-nowrap" data-node-id="102:1582">
+                    <p className="leading-[14px] whitespace-pre">Connect</p>
+                  </div>
                 </div>
               </div>
-              <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1778">
-                <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap" data-node-id="102:1575">
-                  <p className="leading-[14px] whitespace-pre">Upload Resume</p>
+              <div className="content-stretch flex flex-col gap-4 md:gap-6 items-start justify-start relative shrink-0" data-name="Grid Column" data-node-id="65:1787">
+                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1788">
+                  <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[14px] md:text-[16px] text-black text-center text-nowrap" data-node-id="102:1585">
+                    <p className="leading-[14px] whitespace-pre">Resources</p>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="content-stretch flex flex-col gap-6 items-start justify-start relative shrink-0" data-name="Grid Column" data-node-id="65:1780">
-              <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1781">
-                <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[16px] text-black text-center text-nowrap" data-node-id="102:1578">
-                  <p className="leading-[14px] whitespace-pre">Company</p>
+                <Link href="/blog" className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0 cursor-pointer hover:text-[#fa6a20] transition-colors" data-name="Link" data-node-id="65:1790">
+                  <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[14px] md:text-[16px] text-center text-nowrap hover:text-[#fa6a20]" data-node-id="102:1587">
+                    <p className="leading-[14px] whitespace-pre">Blog</p>
+                  </div>
+                </Link>
+                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1792">
+                  <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[14px] md:text-[16px] text-center text-nowrap" data-node-id="102:1589">
+                    <p className="leading-[14px] whitespace-pre">Case Studies</p>
+                  </div>
                 </div>
-              </div>
-              <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1783">
-                <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap" data-node-id="102:1580">
-                  <p className="leading-[14px] whitespace-pre">About Us</p>
-                </div>
-              </div>
-              <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1785">
-                <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap" data-node-id="102:1582">
-                  <p className="leading-[14px] whitespace-pre">Connect</p>
-                </div>
-              </div>
-            </div>
-            <div className="content-stretch flex flex-col gap-6 items-start justify-start relative shrink-0" data-name="Grid Column" data-node-id="65:1787">
-              <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1788">
-                <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[16px] text-black text-center text-nowrap" data-node-id="102:1585">
-                  <p className="leading-[14px] whitespace-pre">Resources</p>
-                </div>
-              </div>
-              <Link href="/blog" className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0 cursor-pointer hover:text-[#fa6a20] transition-colors" data-name="Link" data-node-id="65:1790">
-                <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap hover:text-[#fa6a20]" data-node-id="102:1587">
-                  <p className="leading-[14px] whitespace-pre">Blog</p>
-                </div>
-              </Link>
-              <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1792">
-                <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap" data-node-id="102:1589">
-                  <p className="leading-[14px] whitespace-pre">Case Studies</p>
-                </div>
-              </div>
-              <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1794">
-                <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap" data-node-id="102:1591">
-                  <p className="leading-[14px] whitespace-pre">FAQ</p>
+                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0" data-name="Link" data-node-id="65:1794">
+                  <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[14px] md:text-[16px] text-center text-nowrap" data-node-id="102:1591">
+                    <p className="leading-[14px] whitespace-pre">FAQ</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="65:1796">
+        <div className="content-stretch flex items-center justify-center md:justify-between relative shrink-0 w-full" data-node-id="65:1796">
           <div className="flex flex-row items-center self-stretch">
             <div className="content-stretch flex gap-6 h-full items-center justify-start relative shrink-0" data-node-id="65:1797">
-              <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-nowrap" data-node-id="102:1594">
+              <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[#535960] text-[14px] md:text-[16px] text-center md:text-nowrap" data-node-id="102:1594">
                 <p className="leading-[22px] whitespace-pre">© 2025 Elios, Inc. All Rights Reserved.</p>
               </div>
             </div>
