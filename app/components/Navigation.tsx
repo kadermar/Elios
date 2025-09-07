@@ -65,7 +65,8 @@ export default function Navigation() {
   };
 
   const handleConnectClick = () => {
-    setShowConnectDropdown(!showConnectDropdown);
+    // Redirect to connect page when clicked
+    window.location.href = '/connect';
   };
 
   const handleConnectMouseEnter = () => {
@@ -100,6 +101,7 @@ export default function Navigation() {
       setShowConnectDropdown(false);
     }, 150);
   };
+
 
   const handleClickOutside = (event: MouseEvent) => {
     const target = event.target as Element;
@@ -180,17 +182,17 @@ export default function Navigation() {
             </div>
           </div>
           
-          <div className="flex gap-1.5 items-center justify-start relative cursor-pointer hover:opacity-70 transition-opacity" data-name="Link">
+          <Link href="/insights" className="flex gap-1.5 items-center justify-start relative cursor-pointer hover:opacity-70 transition-opacity" data-name="Link">
             <div className="font-semibold leading-[0] not-italic relative text-[#09141f] text-[16px] text-center text-nowrap">
               <p className="leading-[22px] whitespace-pre">Elios Insights</p>
             </div>
-          </div>
+          </Link>
           
-          <div className="flex gap-1.5 items-center justify-start relative cursor-pointer hover:opacity-70 transition-opacity" data-name="Link">
+          <Link href="/about" className="flex gap-1.5 items-center justify-start relative cursor-pointer hover:opacity-70 transition-opacity" data-name="Link">
             <div className="font-semibold leading-[0] not-italic relative text-[#09141f] text-[16px] text-center text-nowrap">
               <p className="leading-[22px] whitespace-pre">About</p>
             </div>
-          </div>
+          </Link>
           
           <div 
             className="flex gap-1.5 items-center justify-start relative cursor-pointer hover:opacity-70 transition-opacity" 
@@ -253,12 +255,12 @@ export default function Navigation() {
               </div>
               <div className="flex flex-col gap-4 pl-4 text-[#666] text-[16px]">
                 <Link href="/request-talent" className="hover:text-[#fa6a20] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Request Talent</Link>
-                <Link href="/talent-solutions" className="hover:text-[#fa6a20] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Talent Solutions</Link>
+                <Link href="/staffing-services" className="hover:text-[#fa6a20] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Talent Solutions</Link>
                 <Link href="/industries" className="hover:text-[#fa6a20] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Industries</Link>
               </div>
             </div>
             
-            <Link href="/elios-insights" className="font-semibold text-[#09141f] text-[20px] hover:text-[#fa6a20] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link href="/blog" className="font-semibold text-[#09141f] text-[20px] hover:text-[#fa6a20] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Elios Insights
             </Link>
             
@@ -271,9 +273,9 @@ export default function Navigation() {
                 Connect
               </div>
               <div className="flex flex-col gap-4 pl-4 text-[#666] text-[16px]">
-                <Link href="/contact" className="hover:text-[#fa6a20] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
+                <Link href="/connect" className="hover:text-[#fa6a20] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
                 <Link href="/blog" className="hover:text-[#fa6a20] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Blog</Link>
-                <Link href="/careers" className="hover:text-[#fa6a20] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Careers</Link>
+                <Link href="/connect" className="hover:text-[#fa6a20] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Careers</Link>
               </div>
             </div>
             

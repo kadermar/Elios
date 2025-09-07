@@ -147,7 +147,7 @@ export default function EliosTalentDropdown() {
             </div>
           </Link>
           <div className="content-stretch flex flex-col items-start justify-start relative shrink-0" data-node-id="98:742">
-            <div className="box-border content-stretch flex flex-col gap-2.5 items-start justify-start p-[10px] relative shrink-0 w-full" data-node-id="98:743">
+            <Link href="/technology" className="box-border content-stretch flex flex-col gap-2.5 items-start justify-start p-[10px] relative shrink-0 w-full cursor-pointer hover:shadow-[0_0_20px_rgba(250,106,32,0.5)] hover:bg-orange-50 transition-all duration-200 rounded-lg" data-node-id="98:743">
               <div className="content-stretch flex gap-[15px] items-center justify-start relative shrink-0" data-node-id="98:744">
                 <div className="bg-[#f4f4f4] box-border content-stretch flex gap-2.5 items-center justify-start overflow-clip p-[14px] relative rounded-[6px] shrink-0" data-name="Frame" data-node-id="98:745">
                   <div className="relative shrink-0 size-5" data-name="Frame" data-node-id="98:746">
@@ -160,8 +160,8 @@ export default function EliosTalentDropdown() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="box-border content-stretch flex flex-col gap-2.5 items-start justify-start p-[10px] relative rounded-[5px] shrink-0 w-full" data-node-id="98:750">
+            </Link>
+            <Link href="/healthcare" className="box-border content-stretch flex flex-col gap-2.5 items-start justify-start p-[10px] relative rounded-[5px] shrink-0 w-full cursor-pointer hover:shadow-[0_0_20px_rgba(250,106,32,0.5)] hover:bg-orange-50 transition-all duration-200" data-node-id="98:750">
               <div className="content-stretch flex gap-[15px] items-center justify-start relative shrink-0" data-node-id="98:751">
                 <div className="bg-[#f4f4f4] box-border content-stretch flex gap-2.5 items-center justify-start overflow-clip p-[14px] relative rounded-[6px] shrink-0" data-name="Frame" data-node-id="98:752">
                   <div className="relative shrink-0 size-5" data-name="Frame" data-node-id="98:753">
@@ -174,8 +174,8 @@ export default function EliosTalentDropdown() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="box-border content-stretch flex flex-col gap-2.5 items-start justify-start p-[10px] relative shrink-0 w-full" data-node-id="98:757">
+            </Link>
+            <Link href="/engineering" className="box-border content-stretch flex flex-col gap-2.5 items-start justify-start p-[10px] relative shrink-0 w-full cursor-pointer hover:shadow-[0_0_20px_rgba(250,106,32,0.5)] hover:bg-orange-50 transition-all duration-200 rounded-lg" data-node-id="98:757">
               <div className="content-stretch flex gap-[15px] items-center justify-start relative shrink-0" data-node-id="98:758">
                 <div className="bg-[#f4f4f4] box-border content-stretch flex gap-2.5 items-center justify-start overflow-clip p-[14px] relative rounded-[6px] shrink-0" data-name="Frame" data-node-id="98:759">
                   <div className="relative shrink-0 size-5" data-name="Frame" data-node-id="98:760">
@@ -184,12 +184,12 @@ export default function EliosTalentDropdown() {
                 </div>
                 <div className="content-stretch flex flex-col gap-3.5 items-start justify-start relative shrink-0" data-name="Footer Column" data-node-id="98:762">
                   <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[#09141f] text-[16px] text-nowrap" data-node-id="98:763">
-                    <p className="leading-[22px] whitespace-pre">{`Financial Services & Fintech`}</p>
+                    <p className="leading-[22px] whitespace-pre">{`Engineering`}</p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="box-border content-stretch flex flex-col gap-2.5 items-start justify-start p-[10px] relative shrink-0 w-full" data-node-id="98:764">
+            </Link>
+            <Link href="/energy" className="box-border content-stretch flex flex-col gap-2.5 items-start justify-start p-[10px] relative shrink-0 w-full cursor-pointer hover:shadow-[0_0_20px_rgba(250,106,32,0.5)] hover:bg-orange-50 transition-all duration-200 rounded-lg" data-node-id="98:764">
               <div className="content-stretch flex gap-[15px] items-center justify-start relative shrink-0" data-node-id="98:765">
                 <div className="bg-[#f4f4f4] box-border content-stretch flex gap-2.5 items-center justify-start overflow-clip p-[14px] relative rounded-[6px] shrink-0" data-name="Frame" data-node-id="98:766">
                   <div className="relative shrink-0 size-5" data-name="Frame" data-node-id="98:767">
@@ -198,12 +198,12 @@ export default function EliosTalentDropdown() {
                 </div>
                 <div className="content-stretch flex flex-col gap-3.5 items-start justify-start relative shrink-0" data-name="Footer Column" data-node-id="98:769">
                   <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[#09141f] text-[16px] text-nowrap" data-node-id="98:770">
-                    <p className="leading-[22px] whitespace-pre">{`Engineering & Energy`}</p>
+                    <p className="leading-[22px] whitespace-pre">{`Energy`}</p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="box-border content-stretch flex flex-col gap-2.5 items-start justify-start p-[10px] relative shrink-0 w-full" data-node-id="98:771">
+            </Link>
+            <Link href="/private-equity" className="box-border content-stretch flex flex-col gap-2.5 items-start justify-start p-[10px] relative shrink-0 w-full cursor-pointer hover:shadow-[0_0_20px_rgba(250,106,32,0.5)] hover:bg-orange-50 transition-all duration-200 rounded-lg" data-node-id="98:771">
               <div className="content-stretch flex gap-[15px] items-center justify-start relative shrink-0" data-node-id="98:772">
                 <div className="bg-[#f4f4f4] box-border content-stretch flex gap-2.5 items-center justify-start overflow-clip p-[14px] relative rounded-[6px] shrink-0" data-name="Frame" data-node-id="98:773">
                   <div className="relative shrink-0 size-5" data-name="Frame" data-node-id="98:774">
@@ -212,24 +212,24 @@ export default function EliosTalentDropdown() {
                 </div>
                 <div className="content-stretch flex flex-col gap-3.5 items-start justify-start relative shrink-0" data-name="Footer Column" data-node-id="98:776">
                   <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[#09141f] text-[16px] text-nowrap" data-node-id="98:777">
-                    <p className="leading-[22px] whitespace-pre">{`Legal & Professional`}</p>
+                    <p className="leading-[22px] whitespace-pre">{`Private Equity`}</p>
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="content-stretch flex flex-col gap-5 items-start justify-start relative shrink-0" data-node-id="98:778">
-          <Link href="/candidates" className="content-stretch flex gap-1 items-center justify-start relative shrink-0 w-full cursor-pointer hover:shadow-[0_0_20px_rgba(250,106,32,0.5)] hover:bg-orange-50 transition-all duration-200 rounded-lg p-2 -m-2" data-node-id="98:779">
+          <Link href="/explore-jobs" className="content-stretch flex gap-1 items-center justify-start relative shrink-0 w-full cursor-pointer hover:shadow-[0_0_20px_rgba(250,106,32,0.5)] hover:bg-orange-50 transition-all duration-200 rounded-lg p-2 -m-2" data-node-id="98:779">
             <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[#09141f] text-[15px] text-nowrap" data-node-id="98:780">
-              <p className="leading-[22px] whitespace-pre">Candidates</p>
+              <p className="leading-[22px] whitespace-pre">Explore Jobs</p>
             </div>
             <div className="relative shrink-0 size-3.5" data-name="Carat" data-node-id="98:781">
               <Image alt="" src={imgCarat} width={14} height={14} className="block max-w-none size-full" />
             </div>
           </Link>
           <div className="content-stretch flex flex-col items-start justify-start relative shrink-0" data-node-id="98:783">
-            <div className="box-border content-stretch flex flex-col gap-2.5 items-start justify-start p-[10px] relative shrink-0 w-full" data-node-id="98:784">
+            <Link href="/explore-jobs" className="box-border content-stretch flex flex-col gap-2.5 items-start justify-start p-[10px] relative shrink-0 w-full cursor-pointer hover:shadow-[0_0_20px_rgba(250,106,32,0.5)] hover:bg-orange-50 transition-all duration-200 rounded-lg" data-node-id="98:784">
               <div className="content-stretch flex gap-[15px] items-center justify-start relative shrink-0" data-node-id="98:785">
                 <div className="bg-[#f4f4f4] box-border content-stretch flex gap-2.5 items-center justify-start overflow-clip p-[14px] relative rounded-[6px] shrink-0" data-name="Frame" data-node-id="98:786">
                   <div className="relative shrink-0 size-5" data-name="Frame" data-node-id="98:787">
@@ -245,7 +245,7 @@ export default function EliosTalentDropdown() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
             <div className="box-border content-stretch flex flex-col gap-2.5 items-start justify-start p-[10px] relative shrink-0" data-node-id="98:792">
               <div className="content-stretch flex gap-[15px] items-center justify-start relative shrink-0" data-node-id="98:793">
                 <div className="bg-[#f4f4f4] box-border content-stretch flex gap-2.5 items-center justify-start overflow-clip p-[14px] relative rounded-[6px] shrink-0" data-name="Frame" data-node-id="98:794">

@@ -22,14 +22,14 @@ export default function Hero() {
             </div>
             <div className="content-stretch flex flex-col sm:flex-row gap-3 items-start justify-start relative shrink-0 w-full sm:w-auto" data-name="Button Row" data-node-id="65:833">
               <Link href="/book-demo" className="bg-[#fa6a20] box-border content-stretch flex gap-3 md:gap-4 h-[50px] md:h-[60px] items-center justify-center px-4 md:pl-[22px] md:pr-2 py-3 md:py-3.5 relative rounded-[12px] shrink-0 cursor-pointer hover:bg-[#e85a10] transition-colors w-full sm:w-auto" data-name="Primary Button" data-node-id="65:834">
-                <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[14px] md:text-[16px] text-center text-nowrap text-white" data-node-id="65:836">
+                <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[14px] md:text-[16px] text-center text-nowrap text-white" data-node-id="65:836">
                   <p className="leading-[20px] whitespace-pre">Book a Demo</p>
                 </div>
                 <div className="bg-white box-border content-stretch flex gap-2.5 items-center justify-center p-[8px] md:p-[10px] relative rounded-[7px] shrink-0 size-[36px] md:size-[46px]" data-node-id="65:837">
                   <div className="relative shrink-0 size-3 md:size-4" data-name="Line Rounded/Arrow rigth" data-node-id="65:838">
                     <div className="absolute inset-[15.67%_15%]" data-name="Arrow rigth" id="node-I65_838-4940_34491">
                       <div className="absolute inset-[-7.8%_-7.66%_-7.8%_-7.65%]">
-                        <Image alt="Arrow" src={img} width={16} height={16} className="block max-w-none size-full" />
+                        <Image alt="Arrow" src="/connect-cta-arrow.svg" width={16} height={16} className="block max-w-none size-full" />
                       </div>
                     </div>
                   </div>

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import BookDemoNavigation from "../components/BookDemoNavigation";
+import Navigation from "../components/Navigation";
 
 const imgFrame = "/request-talent-frame-icon.svg";
 const imgNavArrow = "/book-demo-nav-arrow.svg";
@@ -34,8 +34,8 @@ export default function BookDemo() {
 
   return (
     <div className="bg-[#f4f4f4] content-stretch flex flex-col items-center justify-start relative size-full" data-name="Elios - Book Demo" data-node-id="102:1595">
-      <BookDemoNavigation />
-      <div className="content-stretch flex flex-col h-[1002px] items-center justify-center relative shrink-0 w-full" data-name="Hero" data-node-id="102:1651">
+      <Navigation />
+      <div className="content-stretch flex flex-col h-[1002px] items-center justify-center mt-[174px] relative shrink-0 w-full" data-name="Hero" data-node-id="102:1651">
         <div className="content-stretch flex gap-[140px] items-center justify-start max-w-[1638px] relative shrink-0 w-full" data-name="Wrapper" data-node-id="102:1652">
           <div className="content-stretch flex flex-col gap-[70px] items-start justify-start relative shrink-0 w-[694px]" data-name="Hero Text" data-node-id="102:1674">
             <div className="content-stretch flex flex-col gap-10 items-start justify-start leading-[0] not-italic relative shrink-0 text-[#09141f] w-full" data-name="Top" data-node-id="102:1675">

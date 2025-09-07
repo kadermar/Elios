@@ -11,6 +11,9 @@ const imgImage44 = "/blog-article-bg.png";
 const imgImage48 = "/blog-article-image.png";
 const img = "/cta-arrow.svg";
 const img1 = "/hero-arrow.svg";
+const imgProfileDropdownMenu1 = "http://localhost:3845/assets/a5646353145800288e648f5fe27f13f824531797.png";
+const imgHeroArrow = "http://localhost:3845/assets/dbfc7fa3b59b3bc1d708ecb442d7b149635903f4.svg";
+const imgProfileDropdownMenu2 = "http://localhost:3845/assets/1026c93c2f0cc786fb8f3edf6ebc6bf177a470e8.svg";
 
 const categories = [
   "All Categories",

@@ -11,7 +11,7 @@ const imgLinkedIn = "/footer-linkedin.svg";
 
 export default function Footer() {
   return (
-    <div className="bg-white box-border content-stretch flex flex-col gap-[72px] md:gap-[72px] items-center justify-end pb-[60px] md:pb-[140px] pt-[200px] md:pt-[440px] px-4 md:px-[167px] relative size-full" data-name="Footer V1" data-node-id="65:1719">
+    <div className="bg-white box-border content-stretch flex flex-col gap-[72px] md:gap-[72px] items-center justify-end pb-[60px] md:pb-[140px] pt-[100px] md:pt-[220px] px-4 md:px-[167px] relative size-full" data-name="Footer V1" data-node-id="65:1719">
       <div className="content-stretch flex flex-col gap-[48px] md:gap-[72px] items-start justify-start relative shrink-0 w-full max-w-[1638px]" data-node-id="65:1720">
         <div className="content-stretch flex flex-col md:flex-row gap-8 md:gap-60 items-start justify-start relative shrink-0 w-full" data-name="Footer Top" data-node-id="65:1721">
           <div className="content-stretch flex flex-col gap-[30px] items-start justify-start relative shrink-0 w-full md:w-[516px]" data-node-id="65:1722">

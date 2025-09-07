@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const imgEliosTalentJasonLeonardRemovebgPreview12 = "/who-we-are-jason-leonard.png";
 const imgEliosTalentDuranWorkmanRemovebgPreview1 = "/who-we-are-duran-workman.png";
@@ -112,18 +113,17 @@ export default function WhoWeAre() {
               </div>
             </div>
           </div>
-          <div className="content-stretch flex gap-2.5 items-center justify-center relative shrink-0" data-node-id="65:1615">
-            <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[24px] text-nowrap text-white tracking-[-0.48px]" data-node-id="65:1616">
+          <Link href="/about" className="group content-stretch flex gap-2.5 items-center justify-center relative shrink-0 cursor-pointer hover:shadow-[0_0_6px_rgba(250,106,32,0.15)] hover:bg-orange-50 transition-all duration-200 rounded-lg p-4 -m-4" data-node-id="65:1615">
+            <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[24px] text-nowrap text-white group-hover:text-[#fa6a20] transition-colors duration-200 tracking-[-0.48px]" data-node-id="65:1616">
               <p className="leading-[24px] whitespace-pre">See More About Us</p>
             </div>
-            <div className="relative shrink-0 size-[22px]" data-name="Line Rounded/Arrow rigth" data-node-id="65:1617">
+            <div className="relative shrink-0 size-[22px] transition-all duration-200" data-name="Line Rounded/Arrow rigth" data-node-id="65:1617">
               <div className="absolute inset-[15.67%_15%]" data-name="Arrow rigth" id="node-I65_1617-4940_34491">
-                <div className="absolute inset-[-5.67%_-5.57%_-5.68%_-5.56%]">
-                  <Image alt="" src={img} width={22} height={22} className="block max-w-none size-full" />
+                <div className="absolute inset-[-5.67%_-5.57%_-5.68%_-5.56%] bg-white group-hover:bg-[#fa6a20] transition-colors duration-200" style={{maskImage: `url(${img})`, maskSize: 'contain', maskRepeat: 'no-repeat', maskPosition: 'center'}}>
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
