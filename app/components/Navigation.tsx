@@ -128,7 +128,7 @@ export default function Navigation() {
     <nav className={`fixed top-0 left-0 right-0 z-40 flex flex-col gap-[10px] items-center justify-center self-stretch w-full transition-all duration-300 ${
       isScrolled ? 'bg-white/25 backdrop-blur-sm' : 'bg-transparent'
     }`} data-name="Nav">
-      <div className="flex items-center justify-between max-w-[1638px] px-4 md:px-0 py-[30px] md:py-[60px] relative rounded-[8px] w-full" data-name="Wrapper">
+      <div className="flex items-center justify-between max-w-full lg:max-w-[1638px] px-4 lg:px-0 py-[30px] md:py-[60px] relative rounded-[8px] w-full" data-name="Wrapper">
         <Link href="/" className="h-[49.999px] relative w-[126.2px]" data-name="Elios Logo">
           <Image
             alt="Elios"

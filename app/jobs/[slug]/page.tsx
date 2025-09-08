@@ -68,8 +68,8 @@ export default function JobDetailPage({ params }: JobPageProps) {
       <Navigation />
       
       {/* Breadcrumb and Job Header */}
-      <div className="box-border content-stretch flex flex-col items-center justify-start px-4 md:px-0 py-[70px] relative shrink-0 w-full">
-        <div className="content-stretch flex flex-col gap-10 items-start justify-start relative shrink-0 w-full max-w-[1638px]">
+      <div className="box-border content-stretch flex flex-col items-center justify-start px-4 lg:px-0 py-[70px] pt-[174px] relative shrink-0 w-full overflow-hidden">
+        <div className="content-stretch flex flex-col gap-6 lg:gap-10 items-start justify-start relative shrink-0 w-full max-w-full lg:max-w-[1638px]">
           <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0">
             <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap">
               <p className="leading-[22px] whitespace-pre">Jobs</p>
@@ -141,9 +141,9 @@ export default function JobDetailPage({ params }: JobPageProps) {
       </div>
 
       {/* Job Description */}
-      <div className="bg-white box-border content-stretch flex flex-col items-center justify-center px-4 md:px-0 py-[70px] relative shrink-0 w-full">
-        <div className="content-stretch flex flex-col gap-[26px] items-start justify-start relative shrink-0 w-full max-w-[1638px]">
-          <div className="font-inter font-normal leading-[0] not-italic relative shrink-0 text-[#404453] text-[16px] w-full max-w-[1074px] whitespace-pre-line">
+      <div className="bg-white box-border content-stretch flex flex-col items-center justify-center px-4 lg:px-0 py-[70px] relative shrink-0 w-full overflow-hidden">
+        <div className="content-stretch flex flex-col gap-4 lg:gap-[26px] items-start justify-start relative shrink-0 w-full max-w-full lg:max-w-[1638px]">
+          <div className="font-inter font-normal leading-[0] not-italic relative shrink-0 text-[#404453] text-[16px] w-full max-w-full lg:max-w-[1074px] whitespace-pre-line">
             <div className="font-aptos leading-[24px] text-[#404453]">
               {job.description.split('\n').map((paragraph, index) => (
                 <p key={index} className="mb-6 last:mb-0">

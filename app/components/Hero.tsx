@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const imgProfileDropdownMenu1 = "/hero-dashboard.png";
-const img = "/hero-arrow.svg";
 const imgGroup = "/samsung-group.svg";
 const imgDrataWordmarkDark01 = "/drata-wordmark.svg";
 const imgGoldmanSachsLogo01 = "/goldman-sachs.svg";
@@ -11,7 +10,7 @@ const imgAmplifyChangeLogo01 = "/amplify-change.svg";
 export default function Hero() {
   return (
     <div className="content-stretch flex flex-col items-center justify-center relative size-full px-4 md:px-0" data-name="Hero" data-node-id="65:806">
-      <div className="content-stretch flex flex-col lg:flex-row gap-8 md:gap-[140px] items-center justify-start max-w-[1638px] relative shrink-0 w-full" data-name="Wrapper" data-node-id="65:807">
+      <div className="content-stretch flex flex-col lg:flex-row gap-8 md:gap-[140px] items-center justify-start max-w-full lg:max-w-[1638px] relative shrink-0 w-full" data-name="Wrapper" data-node-id="65:807">
         <div className="content-stretch flex flex-col gap-8 md:gap-[100px] items-start justify-start relative shrink-0 w-full lg:w-[694px]" data-name="Hero Text" data-node-id="65:829">
           <div className="content-stretch flex flex-col gap-6 md:gap-10 items-start justify-start relative shrink-0 w-full" data-name="Top" data-node-id="65:830">
             <div className="font-semibold leading-[0] min-w-full not-italic relative shrink-0 text-[#09141f] text-[36px] md:text-[64px] lg:text-[96px] tracking-[-2px] md:tracking-[-4px] lg:tracking-[-5.76px]" data-node-id="65:831" style={{ width: "min-content" }}>
@@ -64,9 +63,15 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="hidden lg:block grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-name="Hero Image" data-node-id="65:908">
-          <div className="[grid-area:1_/_1] grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-[15.88px] place-items-start relative" data-name="Software" data-node-id="65:910">
-            <div className="[grid-area:1_/_1] bg-center bg-cover bg-no-repeat h-[600px] xl:h-[1043.12px] ml-[49.645px] mt-0 rounded-[15px] shadow-[0px_138.351px_38.79px_0px_rgba(216,134,19,0),0px_87.924px_34.911px_0px_rgba(216,134,19,0.01),0px_49.134px_29.739px_0px_rgba(216,134,19,0.05),0px_21.981px_21.981px_0px_rgba(216,134,19,0.09),0px_5.172px_11.637px_0px_rgba(216,134,19,0.1)] w-[1000px] xl:w-[1854.44px]" data-name="Profile Dropdown Menu 1" data-node-id="65:913" style={{ backgroundImage: `url(${imgProfileDropdownMenu1})` }} />
+        <div className="relative w-full lg:w-auto lg:flex-1" data-name="Hero Image" data-node-id="65:908">
+          <div className="relative w-full aspect-[16/10] lg:aspect-[1854.44/1043.12] rounded-[15px] overflow-hidden shadow-[0px_138.351px_38.79px_0px_rgba(216,134,19,0),0px_87.924px_34.911px_0px_rgba(216,134,19,0.01),0px_49.134px_29.739px_0px_rgba(216,134,19,0.05),0px_21.981px_21.981px_0px_rgba(216,134,19,0.09),0px_5.172px_11.637px_0px_rgba(216,134,19,0.1)]" data-name="Software" data-node-id="65:910">
+            <Image 
+              src={imgProfileDropdownMenu1}
+              alt="Elios Dashboard"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </div>

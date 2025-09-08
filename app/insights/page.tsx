@@ -31,7 +31,7 @@ export default function InsightsPage() {
         
         {/* Hero Section */}
         <div className="box-border content-stretch flex flex-col items-center justify-start px-4 md:px-0 py-[70px] relative size-full bg-[#F4F4F4]" data-name="Hero">
-          <div className="content-stretch flex flex-col lg:flex-row gap-8 md:gap-[140px] items-center justify-start max-w-[1638px] relative shrink-0 w-full px-4 md:px-[141px]" data-name="Wrapper">
+          <div className="content-stretch flex flex-col lg:flex-row gap-8 md:gap-[140px] items-center justify-start max-w-full lg:max-w-[1638px] relative shrink-0 w-full px-4 md:px-8 lg:px-[141px]" data-name="Wrapper">
             <div className="content-stretch flex flex-col gap-8 md:gap-[100px] items-start justify-start relative shrink-0 w-full lg:w-[694px]" data-name="Hero Text">
               <div className="content-stretch flex flex-col gap-6 md:gap-10 items-start justify-start relative shrink-0 w-full" data-name="Top">
                 <div className="font-aptos font-semibold leading-[0] min-w-full not-italic relative shrink-0 text-[#09141f] text-[36px] md:text-[64px] lg:text-[96px] tracking-[-2px] md:tracking-[-4px] lg:tracking-[-5.76px]" style={{ width: "min-content" }}>
@@ -74,7 +74,7 @@ export default function InsightsPage() {
         
         {/* Platform Overview Section */}
         <div className="bg-white box-border content-stretch flex flex-col gap-[90px] items-center justify-center px-4 md:px-0 py-[120px] md:py-[152px] relative size-full" data-name="Platform Overview">
-          <div className="content-stretch flex flex-col gap-[90px] md:gap-[120px] items-center justify-center max-w-[1638px] relative shrink-0 w-full" data-name="Wrapper">
+          <div className="content-stretch flex flex-col gap-[90px] md:gap-[120px] items-center justify-center max-w-full lg:max-w-[1638px] relative shrink-0 w-full" data-name="Wrapper">
             <div className="content-stretch flex flex-col gap-[40px] md:gap-[50px] items-center justify-center max-w-[830px] relative shrink-0 w-full" data-name="Subhead Section">
               <div className="content-stretch flex flex-col gap-[20px] md:gap-[30px] items-center justify-start relative shrink-0 w-full">
                 <div className="box-border content-stretch flex gap-2.5 items-center justify-center px-0 py-[18px] relative rounded-[9px] shrink-0" data-name="Tagline">
@@ -251,10 +251,10 @@ export default function InsightsPage() {
         
         {/* Features Section */}
         <div className="box-border content-stretch flex flex-col gap-[90px] items-center justify-center px-4 md:px-0 py-[152px] relative size-full">
-          <div className="bg-black box-border content-stretch flex flex-col lg:flex-row gap-8 lg:gap-[100px] h-auto lg:h-[1145px] items-start justify-start overflow-clip px-4 md:px-8 lg:px-[130px] py-[60px] lg:py-[90px] relative rounded-[25px] shrink-0 w-full max-w-[1638px]">
+          <div className="bg-black box-border content-stretch flex flex-col lg:flex-row gap-8 lg:gap-[100px] h-auto lg:min-h-[600px] items-start justify-start overflow-clip px-4 md:px-8 lg:px-[130px] py-[60px] lg:py-[90px] relative rounded-[25px] shrink-0 w-full max-w-full lg:max-w-[1638px]">
             <div className="box-border content-stretch flex flex-col gap-8 lg:gap-[180px] h-full items-start justify-start px-0 py-0 lg:py-[60px] relative shrink-0 w-full lg:w-[522px]">
-              <div className="content-stretch flex flex-col gap-8 lg:gap-[90px] items-start justify-center max-w-[1638px] relative shrink-0 w-full">
-                <div className="content-stretch flex flex-col gap-8 lg:gap-[120px] items-start justify-start max-w-[1638px] relative shrink-0 w-full">
+              <div className="content-stretch flex flex-col gap-8 lg:gap-[90px] items-start justify-center max-w-full relative shrink-0 w-full">
+                <div className="content-stretch flex flex-col gap-8 lg:gap-[120px] items-start justify-start max-w-full relative shrink-0 w-full">
                   <div className="content-stretch flex flex-col gap-8 lg:gap-[90px] items-start justify-center relative shrink-0 w-full">
                     <div className="content-stretch flex flex-col gap-6 lg:gap-10 items-start justify-center relative shrink-0 w-full">
                       <div className="content-stretch flex gap-2.5 items-center justify-center relative shrink-0 w-full">
@@ -309,12 +309,12 @@ export default function InsightsPage() {
                 </div>
               </div>
             </div>
-            <div className="basis-0 box-border content-stretch flex flex-col gap-8 lg:gap-[153px] grow items-start justify-start min-h-px min-w-px px-0 py-0 lg:py-[60px] relative shrink-0">
+            <div className="flex-1 box-border content-stretch flex flex-col gap-8 lg:gap-[153px] items-start justify-start px-0 py-0 lg:py-[60px] relative shrink-0">
               <div className="content-stretch flex flex-col gap-6 lg:gap-[50px] items-start justify-start relative shrink-0 w-full">
-                <div className="font-aptos font-semibold leading-[0] min-w-full not-italic relative shrink-0 text-[32px] md:text-[40px] lg:text-[48px] text-white tracking-[-1.6px] md:tracking-[-2px] lg:tracking-[-2.4px]" style={{ width: "min-content" }}>
+                <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[32px] md:text-[40px] lg:text-[48px] text-white tracking-[-1.6px] md:tracking-[-2px] lg:tracking-[-2.4px]">
                   <p className="leading-none">AI-Powered Matching</p>
                 </div>
-                <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[16px] md:text-[18px] lg:text-[20px] text-white w-full lg:w-[684px]">
+                <div className="font-aptos leading-[0] not-italic relative shrink-0 text-[16px] md:text-[18px] lg:text-[20px] text-white w-full max-w-full lg:max-w-[684px]">
                   <p className="leading-[24px]">Elios Insights enriches your ATS with AI-powered recommendations, workflow automation, and recruiter support – converting static data into real-time actions and dramatically improving speed, quality, and candidate experience.</p>
                 </div>
                 <div className="content-stretch flex gap-3 items-start justify-start relative shrink-0">
@@ -334,7 +334,7 @@ export default function InsightsPage() {
                   </div>
                 </div>
               </div>
-              <div className="bg-center bg-cover bg-no-repeat h-[400px] lg:h-[731px] rounded-[15px] shadow-[-125px_-155px_56px_0px_rgba(247,116,42,0.01),-80px_-99px_51px_0px_rgba(247,116,42,0.06),-45px_-56px_43px_0px_rgba(247,116,42,0.2),-20px_-25px_32px_0px_rgba(247,116,42,0.34),-5px_-6px_18px_0px_rgba(247,116,42,0.39)] shrink-0 w-full lg:w-[1300px]" style={{ backgroundImage: `url('${imgProfileDropdownMenu1}')` }} />
+              <div className="bg-center bg-cover bg-no-repeat h-[400px] lg:h-[731px] rounded-[15px] shadow-[-125px_-155px_56px_0px_rgba(247,116,42,0.01),-80px_-99px_51px_0px_rgba(247,116,42,0.06),-45px_-56px_43px_0px_rgba(247,116,42,0.2),-20px_-25px_32px_0px_rgba(247,116,42,0.34),-5px_-6px_18px_0px_rgba(247,116,42,0.39)] shrink-0 w-full max-w-full lg:max-w-[1300px]" style={{ backgroundImage: `url('${imgProfileDropdownMenu1}')` }} />
             </div>
           </div>
         </div>
