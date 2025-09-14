@@ -34,7 +34,7 @@ export default function EliosDifference() {
           </div>
         </div>
         <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-name="Time Compare Visual" data-node-id="65:1411">
-          <div className="[grid-area:1_/_1] box-border content-stretch flex flex-col gap-2.5 h-[507px] items-end justify-end ml-[1.298px] mt-0 px-12 py-10 relative rounded-bl-[15px] rounded-br-[45px] rounded-tl-[15px] rounded-tr-[45px] w-[1310.7px] bg-[#ABA499] cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-gray-500/20 hover:z-10" data-name="30 Days" data-node-id="65:1412">
+          <div className="[grid-area:1_/_1] box-border content-stretch flex flex-col gap-2.5 h-[507px] items-end justify-end ml-[1.298px] mt-0 px-12 py-10 relative rounded-bl-[15px] rounded-br-[45px] rounded-tl-[15px] rounded-tr-[45px] w-[1310.7px] bg-[#ABA499]" data-name="30 Days" data-node-id="65:1412">
             <div className="absolute contents left-[346.7px] top-[-15.57px]" data-name="Bar" data-node-id="65:1413">
               <div className="absolute h-[508px] left-[382.7px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-36px_-15px] mask-size-[964px_523px] rounded-bl-[15px] rounded-br-[45px] rounded-tl-[15px] rounded-tr-[45px] top-[-0.57px] w-[928px] bg-[#ABA499]" data-node-id="65:1415" style={{ maskImage: `url('${imgFrame1410111204}')` }}>
                 <div aria-hidden="true" className="absolute border-[5px_5px_0px_0px] border-solid border-white inset-0 pointer-events-none rounded-bl-[15px] rounded-br-[45px] rounded-tl-[15px] rounded-tr-[45px]" />
@@ -49,7 +49,7 @@ export default function EliosDifference() {
               </div>
             </div>
           </div>
-          <div className="[grid-area:1_/_1] box-border content-stretch flex flex-col gap-2.5 h-[422px] items-end justify-end ml-px mt-[84.43px] opacity-60 hover:opacity-100 px-12 py-10 relative rounded-bl-[15px] rounded-br-[45px] rounded-tl-[15px] rounded-tr-[45px] w-[885px] bg-[#3C3F44] cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-gray-700/30 z-10 hover:z-20" data-name="14 Days" data-node-id="65:1419">
+          <div className="[grid-area:1_/_1] box-border content-stretch flex flex-col gap-2.5 h-[422px] items-end justify-end ml-px mt-[84.43px] opacity-60 px-12 py-10 relative rounded-bl-[15px] rounded-br-[45px] rounded-tl-[15px] rounded-tr-[45px] w-[885px] bg-[#3C3F44]" data-name="14 Days" data-node-id="65:1419">
             <div className="absolute contents left-[-19.1px] top-[-103.14px]" data-name="Mask group" data-node-id="65:1420" />
             <div className="absolute contents left-[-18.1px] top-[-15.14px]" data-name="Mask group" data-node-id="65:1422">
               <div className="absolute h-[422px] left-[-0.86px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-17.236px_-15px] mask-size-[923.099px_459px] rounded-bl-[15px] rounded-br-[45px] rounded-tl-[15px] rounded-tr-[45px] top-[-0.14px] w-[888.736px] bg-[#3C3F44]" data-node-id="65:1424" style={{ maskImage: `url('${imgFrame1410111205}')` }}>
@@ -65,7 +65,7 @@ export default function EliosDifference() {
               </div>
             </div>
           </div>
-          <div className="[grid-area:1_/_1] box-border content-stretch flex flex-col gap-[47px] h-80 items-start justify-start ml-0 mt-[187px] pb-10 pt-[50px] px-[50px] relative rounded-bl-[15px] rounded-br-[45px] rounded-tr-[45px] w-[458px] bg-gradient-to-br from-orange-500 to-orange-600 cursor-pointer transition-all duration-300 hover:scale-[1.05] hover:shadow-2xl hover:shadow-orange-500/40 z-30 hover:z-50 hover:from-orange-400 hover:to-orange-500" data-name="Elios" data-node-id="65:1428">
+          <div className="[grid-area:1_/_1] box-border content-stretch flex flex-col gap-[47px] h-80 items-start justify-start ml-0 mt-[187px] pb-10 pt-[50px] px-[50px] relative rounded-bl-[15px] rounded-br-[45px] rounded-tr-[45px] w-[458px] bg-gradient-to-br from-orange-500 to-orange-600" data-name="Elios" data-node-id="65:1428">
             <div aria-hidden="true" className="absolute border-[#fff3b1] border-[6px_6px_0px_0px] border-solid inset-0 pointer-events-none rounded-bl-[15px] rounded-br-[45px] rounded-tr-[45px]" />
             <div className="basis-0 content-stretch flex flex-col grow items-start justify-between min-h-px min-w-px relative shrink-0 w-full" data-node-id="65:1429">
               <div className="relative shrink-0 size-[66px]" data-name="Vector" data-node-id="65:1430">

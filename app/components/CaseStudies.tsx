@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Tagline from "./Tagline";
 import React, { useRef, useState } from "react";
 
 const imgImage48 = "/testimonial-bg-amplify.png";
@@ -18,41 +19,45 @@ const testimonials = [
   {
     company: "Amplify Change",
     logo: imgAmplifyChangeLogo01,
-    quote: "We cannot believe how much we needed the Insights platform.",
-    author: "Darren Styles, CEO of Amplify Change",
+    title: "Unblocking stalled engineering pipelines",
+    bullets: [
+      "28 hires in under a week",
+      "10x faster cycle time with 0% schedule slippage"
+    ],
     bgImage: imgImage48,
-    bgColor: "bg-white",
-    textColor: "text-[#09141f]",
     logoType: "image"
   },
   {
     company: "Weatherford",
     logo: "weatherford",
-    quote: "Elios simplified our entire hiring process.",
-    author: "Darren Styles, CEO of Amplify Change",
+    title: "Scaling operations across global markets",
+    bullets: [
+      "45 technical hires in 3 weeks",
+      "Reduced time-to-hire by 60%"
+    ],
     bgImage: imgImage47,
-    bgColor: "bg-[#fae6a4]",
-    textColor: "text-[#09141f]",
     logoType: "text"
   },
   {
     company: "Drata",
     logo: imgDrataWordmarkDark01,
-    quote: "We cannot believe how much we needed the Insights platform.",
-    author: "Darren Styles, CEO of Amplify Change",
+    title: "Building security-first engineering teams",
+    bullets: [
+      "15 senior engineers hired in 2 weeks",
+      "Zero compromise on security clearances"
+    ],
     bgImage: imgImage52,
-    bgColor: "bg-[#e0f1fe]",
-    textColor: "text-[#09141f]",
     logoType: "image"
   },
   {
     company: "Samsung",
     logo: imgGroup,
-    quote: "Wow. There's so many words.",
-    author: "* Darren Styles, CEO of Amplify Change",
+    title: "Accelerating mobile innovation cycles",
+    bullets: [
+      "50+ engineers across 5 specializations",
+      "Fastest product launch in company history"
+    ],
     bgImage: imgImage58,
-    bgColor: "bg-white",
-    textColor: "text-[#404453]",
     logoType: "image"
   }
 ];
@@ -123,36 +128,21 @@ export default function CaseStudies() {
   const handleNext = () => handleScroll('next');
 
   return (
-    <div className="w-full py-[80px] md:py-[152px] relative" data-name="Case Studies">
+    <div className="w-full py-[80px] md:py-[152px] relative overflow-visible" data-name="Case Studies">
       {/* Header Section - Constrained */}
       <div className="flex flex-col gap-6 md:gap-10 items-center justify-center px-4 lg:px-12 relative w-full mb-[60px] md:mb-[90px]" data-name="Subhead Section">
-        <div className="flex gap-2.5 items-center justify-center px-0 py-[18px] relative rounded-[9px]" data-name="Tagline">
-          <div className="h-[13px] relative w-4">
-            <div className="absolute inset-[-3.99%_-8.8%_-11.36%_-1.63%]">
-              <Image
-                alt="Case Studies"
-                src={imgVector622}
-                width={16}
-                height={13}
-                className="block max-w-none w-full h-full"
-              />
-            </div>
-          </div>
-          <div className="font-semibold leading-[0] not-italic relative text-[#fa6a20] text-[16px] md:text-[20px] text-nowrap uppercase">
-            <p className="leading-[24px] whitespace-pre">Case Studies</p>
-          </div>
-        </div>
+        <Tagline text="Case Studies" className="px-0 py-[18px]" />
         <div className="font-semibold leading-[0] not-italic relative text-[#09141f] text-[36px] md:text-[64px] text-center tracking-[-1.8px] md:tracking-[-3.2px] max-w-4xl">
           <p className="leading-[1.1] md:leading-[0.9]">Proven Results, Real Impact</p>
         </div>
       </div>
 
       {/* Carousel Container - Full Width */}
-      <div className="relative w-full">
+      <div className="relative w-full overflow-visible">
         {/* Scroll Container - Full Width with Edge Padding */}
         <div 
           ref={scrollContainerRef}
-          className="flex gap-5 items-stretch overflow-x-auto scrollbar-hide scroll-smooth w-full pl-4 pr-4 lg:pl-12 lg:pr-12"
+          className="flex gap-5 items-stretch overflow-x-auto overflow-y-visible scrollbar-hide scroll-smooth w-full pl-4 pr-4 lg:pl-12 lg:pr-12 py-4"
           style={{ 
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
@@ -165,42 +155,61 @@ export default function CaseStudies() {
           {extendedTestimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="flex flex-col items-start justify-between overflow-clip pb-6 pt-6 md:pt-10 px-4 md:px-6 relative rounded-[15px] w-[320px] md:w-[380px] lg:w-[480px] min-h-[400px] md:h-[500px] lg:h-[564px] flex-shrink-0 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-orange-500/20"
+              className="box-border content-stretch flex items-center justify-between overflow-clip p-[40px] relative rounded-[6px] w-[400px] md:w-[520px] lg:w-[600px] h-[280px] md:h-[320px] lg:h-[367px] flex-shrink-0 transition-all duration-300 hover:scale-[1.02] hover:z-20 group"
               style={{
                 backgroundImage: `url(${testimonial.bgImage})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             >
-              {/* Logo Section */}
-              <div className="flex flex-col gap-3 md:gap-5 items-start justify-start px-2.5 py-0 relative w-full">
-                {testimonial.logoType === "text" ? (
-                  <div className="text-white text-xl md:text-2xl font-medium opacity-90">
-                    Weatherford
-                  </div>
-                ) : (
-                  <div className={index === 0 ? "h-[40px] md:h-[50px] relative w-[130px] md:w-[162px]" : index === 2 ? "h-[22px] md:h-[27px] relative w-[123px] md:w-[154px]" : "h-[23px] md:h-[29px] overflow-clip relative w-[151px] md:w-[189px]"}>
-                    <Image
-                      alt={testimonial.company}
-                      src={testimonial.logo}
-                      width={index === 0 ? 162 : index === 2 ? 154 : 189}
-                      height={index === 0 ? 50 : index === 2 ? 27 : 29}
-                      className="block max-w-none w-full h-full"
-                    />
-                  </div>
-                )}
-              </div>
+              {/* Gradient overlay for better text readability */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent rounded-[6px]" />
+              
+              {/* Content Container */}
+              <div className="basis-0 content-stretch flex flex-col grow h-full items-start justify-between min-h-px min-w-px relative shrink-0 z-10">
+                {/* Logo Section */}
+                <div className="shrink-0">
+                  {testimonial.logoType === "text" ? (
+                    <div className="text-white text-xl md:text-2xl font-medium opacity-90">
+                      Weatherford
+                    </div>
+                  ) : (
+                    <div className="h-[24px] md:h-[30px] relative w-auto max-w-[120px] md:max-w-[150px]">
+                      <Image
+                        alt={testimonial.company}
+                        src={testimonial.logo}
+                        width={150}
+                        height={30}
+                        className="block max-w-none h-full w-auto object-contain object-left"
+                      />
+                    </div>
+                  )}
+                </div>
 
-              {/* Quote Card */}
-              <div className={`${testimonial.bgColor} flex flex-col gap-2.5 items-start justify-start p-4 md:p-[30px] relative rounded-[4px] w-full ${index === 3 ? "md:py-[50px]" : ""}`}>
-                <div className="flex flex-col gap-6 md:gap-[50px] items-start justify-start leading-[0] not-italic relative w-full">
-                  <div className={`font-semibold relative ${testimonial.textColor} text-[20px] md:text-[32px] tracking-[-0.6px] md:tracking-[-0.96px] w-full`}>
-                    <p className="leading-[1.3] md:leading-[32px]">&ldquo;{testimonial.quote}&rdquo;</p>
+                {/* Text Content */}
+                <div className="content-stretch flex flex-col gap-4 md:gap-6 items-start justify-start leading-[0] not-italic relative shrink-0 text-white max-w-[400px] md:max-w-[480px]">
+                  <div className="font-aptos-semibold relative shrink-0 text-[28px] md:text-[36px] tracking-[-1.4px] md:tracking-[-1.8px] w-full">
+                    <p className="leading-[30px] md:leading-[36px]">{testimonial.title}</p>
                   </div>
-                  <div className={`font-normal relative text-[#121212] ${index === 3 ? "text-[14px] md:text-[20px]" : "text-[14px] md:text-[16px]"} w-full`}>
-                    <p className="leading-[1.4] md:leading-[32px]">{testimonial.author}</p>
+                  <div className="font-aptos-regular relative shrink-0 text-[14px] md:text-[16px] w-full">
+                    <p className="leading-[18px] md:leading-[20px]">
+                      {testimonial.bullets.map((bullet, bulletIndex) => (
+                        <span key={bulletIndex}>
+                          • {bullet}
+                          {bulletIndex < testimonial.bullets.length - 1 && <br />}
+                        </span>
+                      ))}
+                    </p>
                   </div>
                 </div>
+              </div>
+              
+              {/* Hover Effects - Orange border and inner shadow */}
+              <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[6px]">
+                {/* Inner shadow */}
+                <div className="absolute inset-0 shadow-[inset_0px_4px_24px_0px_rgba(251,93,11,1)] rounded-[6px]" />
+                {/* Orange border */}
+                <div className="absolute inset-0 border-[3px] border-solid border-[#fb5d0b] rounded-[6px]" />
               </div>
             </div>
           ))}

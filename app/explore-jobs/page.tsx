@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 export default function ExploreJobsPage() {
   return (
-    <div className="min-h-screen bg-[#F4F4F4]">
+    <div className="min-h-screen">
       <div className="pt-[174px]"> {/* Account for fixed navigation height */}
         <Navigation />
         

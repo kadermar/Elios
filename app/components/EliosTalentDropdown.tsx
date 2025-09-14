@@ -222,7 +222,7 @@ export default function EliosTalentDropdown() {
         <div className="content-stretch flex flex-col gap-5 items-start justify-start relative shrink-0" data-node-id="98:778">
           <Link href="/explore-jobs" className="content-stretch flex gap-1 items-center justify-start relative shrink-0 w-full cursor-pointer hover:shadow-[0_0_20px_rgba(250,106,32,0.5)] hover:bg-orange-50 transition-all duration-200 rounded-lg p-2 -m-2" data-node-id="98:779">
             <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[#09141f] text-[15px] text-nowrap" data-node-id="98:780">
-              <p className="leading-[22px] whitespace-pre">Explore Jobs</p>
+              <p className="leading-[22px] whitespace-pre">Candidates</p>
             </div>
             <div className="relative shrink-0 size-3.5" data-name="Carat" data-node-id="98:781">
               <Image alt="" src={imgCarat} width={14} height={14} className="block max-w-none size-full" />

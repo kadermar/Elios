@@ -5,7 +5,7 @@ import Link from "next/link";
 import Navigation from "../components/Navigation";
 import CeoLetter from "../components/CeoLetter";
 import Team from "../components/Team";
-import Cta from "../components/Cta";
+import CTA from "../components/CTA";
 import Footer from "../components/Footer";
 
 export default function About() {
@@ -86,7 +86,7 @@ export default function About() {
         <div className="relative">
           <Footer />
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 px-4 md:px-0">
-            <Cta />
+            <CTA />
           </div>
         </div>
       </main>

@@ -5,13 +5,13 @@ import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
 // Job detail page assets
-const imgEliosLogo = "http://localhost:3845/assets/45fb82d91c1f8d6c272b7a05da7d8728eb3cf5db.svg";
-const imgCarat = "http://localhost:3845/assets/573932348127699381859fe288dac033a32dfbc4.svg";
-const imgNavArrow = "http://localhost:3845/assets/e0fbade973505445677298e8ee81b697bdef37ff.svg";
-const imgCarat1 = "http://localhost:3845/assets/06dc1c9a9ef39425b34ab6d4636bc2f449e15c79.svg";
-const imgUnion = "http://localhost:3845/assets/2ba8325838dddcc74ed6f59400fba2b0b0ae14ba.svg";
-const imgFrame = "http://localhost:3845/assets/98d99b647a22d791128bf6d819358dfaa6c1dadf.svg";
-const imgFrame1 = "http://localhost:3845/assets/ff3f2a2a1a6a4f4e2418232e8f90c465436d19ff.svg";
+const imgEliosLogo = "/assets/45fb82d91c1f8d6c272b7a05da7d8728eb3cf5db.svg";
+const imgCarat = "/assets/573932348127699381859fe288dac033a32dfbc4.svg";
+const imgNavArrow = "/assets/e0fbade973505445677298e8ee81b697bdef37ff.svg";
+const imgCarat1 = "/assets/06dc1c9a9ef39425b34ab6d4636bc2f449e15c79.svg";
+const imgUnion = "/assets/2ba8325838dddcc74ed6f59400fba2b0b0ae14ba.svg";
+const imgFrame = "/assets/98d99b647a22d791128bf6d819358dfaa6c1dadf.svg";
+const imgFrame1 = "/assets/ff3f2a2a1a6a4f4e2418232e8f90c465436d19ff.svg";
 
 // Sample job data - in a real app this would come from an API or database
 const jobData = {

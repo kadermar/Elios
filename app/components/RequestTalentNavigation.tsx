@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
 import EliosTalentDropdown from "./EliosTalentDropdown";
+import Logo from "./Logo";
 
-const imgEliosLogo = "/request-talent-nav-logo.svg";
 const imgCarat = "/request-talent-nav-caret.svg";
 const imgNavArrow = "/request-talent-nav-arrow.svg";
 
@@ -39,9 +39,7 @@ export default function RequestTalentNavigation() {
     <>
     <div className="content-stretch flex flex-col gap-2.5 items-center justify-center relative shrink-0 w-full" data-name="Nav" data-node-id="102:1305">
       <div className="box-border content-stretch flex items-center justify-between max-w-[1638px] px-0 py-[60px] relative rounded-[8px] shrink-0 w-full" data-name="Wrapper" data-node-id="102:1306">
-        <Link href="/" className="h-[49.999px] relative shrink-0 w-[126.2px]" data-name="Elios Logo" data-node-id="102:1307">
-          <Image alt="Elios" src={imgEliosLogo} width={126} height={50} className="block max-w-none size-full" />
-        </Link>
+        <Logo variant="full" size="md" href="/" className="h-[49.999px] w-[126.2px]" />
         <div className="box-border content-stretch flex gap-9 items-center justify-start p-[20px] relative rounded-[18px] shrink-0" data-name="Nav List" data-node-id="102:1340">
           <div 
             className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0 cursor-pointer hover:opacity-70 transition-opacity" 

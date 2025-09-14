@@ -2,30 +2,30 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const imgProfileDropdownMenu1 = "http://localhost:3845/assets/a5646353145800288e648f5fe27f13f824531797.png";
-const imgHeroArrow = "http://localhost:3845/assets/dbfc7fa3b59b3bc1d708ecb442d7b149635903f4.svg";
-const imgProfileDropdownMenu2 = "http://localhost:3845/assets/1026c93c2f0cc786fb8f3edf6ebc6bf177a470e8.svg";
+const imgProfileDropdownMenu1 = "/assets/a5646353145800288e648f5fe27f13f824531797.png";
+const imgHeroArrow = "/assets/dbfc7fa3b59b3bc1d708ecb442d7b149635903f4.svg";
+const imgProfileDropdownMenu2 = "/assets/1026c93c2f0cc786fb8f3edf6ebc6bf177a470e8.svg";
 
 // Platform Overview assets
-const imgVector622 = "http://localhost:3845/assets/18721c6591626d2156d2f18b97a5158dcf117d0c.svg";
-const imgFrame = "http://localhost:3845/assets/1ab3a849e2aa39a5832eb25a7aa617bea81ac253.svg";
-const imgFrame1 = "http://localhost:3845/assets/f1828b99a318c6f590e08437cff82a426dca1193.svg";
-const imgFrame2 = "http://localhost:3845/assets/891014d415199aa869f77ce643178ede2fcb2ee0.svg";
-const imgFrame3 = "http://localhost:3845/assets/ceeebd9969b52363826f874176593d0e5a2148e9.svg";
-const imgGroup4712 = "http://localhost:3845/assets/e34a1f8f9dd6093f5436ed6548b1060d8ca41ba4.svg";
-const imgGroup4713 = "http://localhost:3845/assets/41f0c0e9149f37040f83fc07d0c63d8bbe8a399a.svg";
-const imgGroup4711 = "http://localhost:3845/assets/37e222f4c369192079cdcaf9ac35865f724b9213.svg";
-const imgEliosLogo = "http://localhost:3845/assets/67555c82589c30488d329281d4794a01ae973c57.svg";
-const imgGroup4710 = "http://localhost:3845/assets/268a792539c58bf6d424c008710a3fd321fc6249.svg";
+const imgVector622 = "/assets/18721c6591626d2156d2f18b97a5158dcf117d0c.svg";
+const imgFrame = "/assets/1ab3a849e2aa39a5832eb25a7aa617bea81ac253.svg";
+const imgFrame1 = "/assets/f1828b99a318c6f590e08437cff82a426dca1193.svg";
+const imgFrame2 = "/assets/891014d415199aa869f77ce643178ede2fcb2ee0.svg";
+const imgFrame3 = "/assets/ceeebd9969b52363826f874176593d0e5a2148e9.svg";
+const imgGroup4712 = "/assets/e34a1f8f9dd6093f5436ed6548b1060d8ca41ba4.svg";
+const imgGroup4713 = "/assets/41f0c0e9149f37040f83fc07d0c63d8bbe8a399a.svg";
+const imgGroup4711 = "/assets/37e222f4c369192079cdcaf9ac35865f724b9213.svg";
+const imgEliosLogo = "/assets/67555c82589c30488d329281d4794a01ae973c57.svg";
+const imgGroup4710 = "/assets/268a792539c58bf6d424c008710a3fd321fc6249.svg";
 
 // Features section assets
-const imgFrame1410111306 = "http://localhost:3845/assets/7db1933c5e1c0b76e690521c1faba1d2c14fd77a.svg";
-const imgFrame1410111307 = "http://localhost:3845/assets/6eac8afffb53554be4dff20eb03c3a471230975b.svg";
-const imgArrow = "http://localhost:3845/assets/dbfc7fa3b59b3bc1d708ecb442d7b149635903f4.svg";
+const imgFrame1410111306 = "/assets/7db1933c5e1c0b76e690521c1faba1d2c14fd77a.svg";
+const imgFrame1410111307 = "/assets/6eac8afffb53554be4dff20eb03c3a471230975b.svg";
+const imgArrow = "/assets/dbfc7fa3b59b3bc1d708ecb442d7b149635903f4.svg";
 
 export default function InsightsPage() {
   return (
-    <div className="min-h-screen bg-[#F4F4F4]">
+    <div className="min-h-screen">
       <div className="pt-[174px]">
         <Navigation />
         

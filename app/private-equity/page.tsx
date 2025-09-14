@@ -4,49 +4,49 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Hero assets
-const imgArrow = "http://localhost:3845/assets/af95064ccab6ee359bc75f7a09db40c0162fd9cd.svg";
+const imgArrow = "/assets/af95064ccab6ee359bc75f7a09db40c0162fd9cd.svg";
 
 // Role icons
-const imgRoleIcon1 = "http://localhost:3845/assets/bb483e0a6a74244c11cf95a11df9830226501854.svg";
-const imgRoleIcon2 = "http://localhost:3845/assets/486a1faec1d5eb4500b90e6d036def65f06de1d6.svg";
-const imgRoleIcon3 = "http://localhost:3845/assets/fbd85535a69ed375fb650bf93e830b74b73cc189.svg";
-const imgRoleIcon4 = "http://localhost:3845/assets/8f21ca0a5d411bb19a8124b9481564d3d0d8c35a.svg";
-const imgRoleIcon5 = "http://localhost:3845/assets/c85557a6627529bb7b180758be685ab69a74d8d1.svg";
-const imgRoleIcon6 = "http://localhost:3845/assets/641c7e775c78e673afa22146cefa3142cc84a2ce.svg";
+const imgRoleIcon1 = "/assets/bb483e0a6a74244c11cf95a11df9830226501854.svg";
+const imgRoleIcon2 = "/assets/486a1faec1d5eb4500b90e6d036def65f06de1d6.svg";
+const imgRoleIcon3 = "/assets/fbd85535a69ed375fb650bf93e830b74b73cc189.svg";
+const imgRoleIcon4 = "/assets/8f21ca0a5d411bb19a8124b9481564d3d0d8c35a.svg";
+const imgRoleIcon5 = "/assets/c85557a6627529bb7b180758be685ab69a74d8d1.svg";
+const imgRoleIcon6 = "/assets/641c7e775c78e673afa22146cefa3142cc84a2ce.svg";
 
 // Common assets
-const imgVector622 = "http://localhost:3845/assets/18721c6591626d2156d2f18b97a5158dcf117d0c.svg";
+const imgVector622 = "/assets/18721c6591626d2156d2f18b97a5158dcf117d0c.svg";
 
 // Case study logos
-const imgAmplifyChange = "http://localhost:3845/assets/d6fa8ccf04c6cec63c738de7bd38c50b2074718b.svg";
-const imgWeatherford = "http://localhost:3845/assets/c2d5f71db181ef4e21bcc3648272db190c76715f.svg";
-const imgDrata = "http://localhost:3845/assets/6067f9ed3d170a726d2ea02fd539a0b56c337a04.svg";
-const imgSamsung = "http://localhost:3845/assets/d676c6942966e9ae4c171de327666f398754e82e.svg";
-const imgGoldmanSachs = "http://localhost:3845/assets/4dcd68412e554c3ce6741fe77bd1164877d15ef2.svg";
+const imgAmplifyChange = "/assets/d6fa8ccf04c6cec63c738de7bd38c50b2074718b.svg";
+const imgWeatherford = "/assets/c2d5f71db181ef4e21bcc3648272db190c76715f.svg";
+const imgDrata = "/assets/6067f9ed3d170a726d2ea02fd539a0b56c337a04.svg";
+const imgSamsung = "/assets/d676c6942966e9ae4c171de327666f398754e82e.svg";
+const imgGoldmanSachs = "/assets/4dcd68412e554c3ce6741fe77bd1164877d15ef2.svg";
 
 // Case study images
-const imgImage44 = "http://localhost:3845/assets/626fed97cfe088a057d058501a853d0a1698ff9f.png";
-const imgImage47 = "http://localhost:3845/assets/b6522ee211cf1501a81e304b7952987cf2bed325.png";
-const imgImage49 = "http://localhost:3845/assets/ee1c469fa54bff47a3eb0c9ff464470c74a61adb.png";
-const imgImage52 = "http://localhost:3845/assets/b6a64c7fd1d247f3b175650a28512167d79ae589.png";
-const imgImage58 = "http://localhost:3845/assets/8e0cc7fd7d7762e4c06e65ba838d06253b2cdbbd.png";
-const imgImage59 = "http://localhost:3845/assets/133586ff46005cc64512fe39ac769d5579f709a1.png";
+const imgImage44 = "/assets/626fed97cfe088a057d058501a853d0a1698ff9f.png";
+const imgImage47 = "/assets/b6522ee211cf1501a81e304b7952987cf2bed325.png";
+const imgImage49 = "/assets/ee1c469fa54bff47a3eb0c9ff464470c74a61adb.png";
+const imgImage52 = "/assets/b6a64c7fd1d247f3b175650a28512167d79ae589.png";
+const imgImage58 = "/assets/8e0cc7fd7d7762e4c06e65ba838d06253b2cdbbd.png";
+const imgImage59 = "/assets/133586ff46005cc64512fe39ac769d5579f709a1.png";
 
 // Mask images
-const imgImage45 = "http://localhost:3845/assets/71b862066df77941d15b89c106c291ddcd888a00.svg";
-const imgImage46 = "http://localhost:3845/assets/0a0207dcb81ea8967c2f8357fe47599a302f9767.svg";
+const imgImage45 = "/assets/71b862066df77941d15b89c106c291ddcd888a00.svg";
+const imgImage46 = "/assets/0a0207dcb81ea8967c2f8357fe47599a302f9767.svg";
 
 // Arrow icons
-const imgLeftArrow = "http://localhost:3845/assets/dbe7504d81343173293fc7b1e1a5df9a9c618e2c.svg";
-const imgRightArrow = "http://localhost:3845/assets/49e68b13da682e80b091c4faa6a996fcefbbeb36.svg";
-const imgBlogArrow = "http://localhost:3845/assets/fc77663448a36794eefa1cf9abfa2313454af665.svg";
+const imgLeftArrow = "/assets/dbe7504d81343173293fc7b1e1a5df9a9c618e2c.svg";
+const imgRightArrow = "/assets/49e68b13da682e80b091c4faa6a996fcefbbeb36.svg";
+const imgBlogArrow = "/assets/fc77663448a36794eefa1cf9abfa2313454af665.svg";
 
 // Blog images
-const imgImage48 = "http://localhost:3845/assets/4fb884a0cef509b72695d5aa4be91f4a2d5135e0.png";
+const imgImage48 = "/assets/4fb884a0cef509b72695d5aa4be91f4a2d5135e0.png";
 
 export default function PrivateEquityPage() {
   return (
-    <div className="min-h-screen bg-[#F4F4F4]">
+    <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section */}

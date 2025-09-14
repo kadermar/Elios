@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
 import EliosTalentDropdown from "./EliosTalentDropdown";
 import ConnectDropdown from "./ConnectDropdown";
+import Button from "./Button";
+import Logo from "./Logo";
+import Link from "./Link";
 
-const imgEliosLogo = "/elios-logo-alt.svg";
 const imgCarat = "/caret.svg";
-const imgArrow = "/nav-arrow-alt.svg";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -129,15 +129,7 @@ export default function Navigation() {
       isScrolled ? 'bg-white/25 backdrop-blur-sm' : 'bg-transparent'
     }`} data-name="Nav">
       <div className="flex items-center justify-between max-w-full lg:max-w-[1638px] px-4 lg:px-0 py-[30px] md:py-[60px] relative rounded-[8px] w-full" data-name="Wrapper">
-        <Link href="/" className="h-[49.999px] relative w-[126.2px]" data-name="Elios Logo">
-          <Image
-            alt="Elios"
-            src={imgEliosLogo}
-            width={126}
-            height={50}
-            className="block max-w-none w-full h-full"
-          />
-        </Link>
+        <Logo variant={isScrolled ? "icon" : "full"} size="md" href="/" />
         
         {/* Mobile menu button */}
         <button 
@@ -182,16 +174,12 @@ export default function Navigation() {
             </div>
           </div>
           
-          <Link href="/insights" className="flex gap-1.5 items-center justify-start relative cursor-pointer hover:opacity-70 transition-opacity" data-name="Link">
-            <div className="font-semibold leading-[0] not-italic relative text-[#09141f] text-[16px] text-center text-nowrap">
-              <p className="leading-[22px] whitespace-pre">Elios Insights</p>
-            </div>
+          <Link href="/insights" variant="nav" className="text-nowrap">
+            Elios Insights
           </Link>
           
-          <Link href="/about" className="flex gap-1.5 items-center justify-start relative cursor-pointer hover:opacity-70 transition-opacity" data-name="Link">
-            <div className="font-semibold leading-[0] not-italic relative text-[#09141f] text-[16px] text-center text-nowrap">
-              <p className="leading-[22px] whitespace-pre">About</p>
-            </div>
+          <Link href="/about" variant="nav" className="text-nowrap">
+            About
           </Link>
           
           <div 
@@ -218,30 +206,24 @@ export default function Navigation() {
         </div>
         
         <div className="flex gap-3 items-center justify-start relative" data-name="Button Row">
-          <Link href="/request-talent" className="flex gap-[3px] items-center justify-center px-[22px] py-[18px] relative rounded-[12px] hover:bg-gray-50 transition-colors" data-name="Min Secondary Button">
-            <div className="font-semibold leading-[0] not-italic relative text-[14px] text-black text-center text-nowrap">
-              <p className="leading-[20px] whitespace-pre">Request Talent</p>
-            </div>
-          </Link>
+          <Button 
+            variant="secondary" 
+            size="md" 
+            href="/request-talent"
+            className="px-[22px] py-[18px] rounded-[12px]"
+          >
+            Request Talent
+          </Button>
           
-          <Link href="/book-demo" className="bg-[#fa6a20] flex gap-2 items-center justify-center px-5 py-4 relative rounded-[8px] hover:bg-[#e85a10] transition-colors" data-name="Min Primary Button">
-            <div className="font-semibold leading-[0] not-italic relative text-[14px] text-center text-nowrap text-white">
-              <p className="leading-[20px] whitespace-pre">Book a Demo</p>
-            </div>
-            <div className="relative w-3 h-3">
-              <div className="absolute inset-[15.67%_15%]">
-                <div className="absolute inset-[-7.8%_-7.65%]">
-                  <Image
-                    alt="Arrow"
-                    src={imgArrow}
-                    width={12}
-                    height={12}
-                    className="block max-w-none w-full h-full"
-                  />
-                </div>
-              </div>
-            </div>
-          </Link>
+          <Button 
+            variant="primary" 
+            size="lg" 
+            href="/book-demo" 
+            showArrow={true}
+            className="px-5 py-4 rounded-[8px]"
+          >
+            Book a Demo
+          </Button>
         </div>
       </div>
 
@@ -280,16 +262,22 @@ export default function Navigation() {
             </div>
             
             <div className="flex flex-col gap-4 pt-8 border-t border-gray-200">
-              <Link href="/request-talent" className="bg-gray-100 flex items-center justify-center px-6 py-4 rounded-[12px] hover:bg-gray-200 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-                <div className="font-semibold text-[16px] text-black">
-                  Request Talent
-                </div>
-              </Link>
-              <Link href="/book-demo" className="bg-[#fa6a20] flex items-center justify-center px-6 py-4 rounded-[8px] hover:bg-[#e85a10] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-                <div className="font-semibold text-[16px] text-white">
-                  Book a Demo
-                </div>
-              </Link>
+              <Button 
+                variant="secondary" 
+                href="/request-talent" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="bg-gray-100 hover:bg-gray-200 px-6 py-4 rounded-[12px] w-full"
+              >
+                Request Talent
+              </Button>
+              <Button 
+                variant="primary" 
+                href="/book-demo" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="px-6 py-4 rounded-[8px] w-full"
+              >
+                Book a Demo
+              </Button>
             </div>
           </div>
         </div>

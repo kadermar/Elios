@@ -10,7 +10,7 @@ const imgCtaArrow = "/cta-arrow.svg";
 
 export default function TechnologyPage() {
   return (
-    <div className="min-h-screen bg-[#F4F4F4]">
+    <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section */}

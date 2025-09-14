@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Tagline from "./Tagline";
+import Button from "./Button";
 
 const imgImage56 = "/services-image-56.png";
 const imgImage58 = "/services-image-58.png";
@@ -15,16 +17,7 @@ export default function Services() {
     <div className="box-border content-stretch flex flex-col gap-[60px] md:gap-[90px] items-center justify-center px-4 md:px-0 py-[80px] md:py-[152px] relative size-full" data-name="Services" data-node-id="65:1164">
       <div className="content-stretch flex flex-col gap-[80px] md:gap-[120px] items-center justify-center max-w-full lg:max-w-[1638px] relative shrink-0 w-full" data-name="Wrapper" data-node-id="65:1191">
         <div className="content-stretch flex flex-col gap-10 items-start justify-center relative shrink-0 w-full" data-name="Subhead Section" data-node-id="65:1192">
-          <div className="box-border content-stretch flex gap-2.5 items-center justify-center px-0 py-[18px] relative rounded-[9px] shrink-0" data-name="Tagline" data-node-id="65:1193">
-            <div className="h-[13px] relative shrink-0 w-4" data-node-id="65:1194">
-              <div className="absolute inset-[-3.99%_-8.8%_-11.36%_-1.63%]">
-                <Image alt="" src={imgVector622} width={16} height={13} className="block max-w-none size-full" />
-              </div>
-            </div>
-            <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[#fa6a20] text-[16px] md:text-[20px] text-nowrap uppercase" data-node-id="65:1195">
-              <p className="leading-[24px] whitespace-pre">services</p>
-            </div>
-          </div>
+          <Tagline text="services" className="px-0 py-[18px]" />
           <div className="font-semibold leading-[1.1] md:leading-[0.9] not-italic relative shrink-0 text-[#09141f] text-[32px] md:text-[48px] lg:text-[64px] text-center md:text-left tracking-[-1.6px] md:tracking-[-2.4px] lg:tracking-[-3.2px] w-full" data-node-id="65:1196">
             <p className="whitespace-pre-wrap md:whitespace-pre">Two Offerings, One Mission</p>
           </div>
@@ -90,18 +83,14 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-              <Link href="/request-talent" className="content-stretch flex gap-2.5 items-center justify-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity" data-node-id="65:1273">
-                <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[#fa6a20] text-[24px] text-nowrap tracking-[-0.48px]" data-node-id="65:1274">
-                  <p className="leading-[24px] whitespace-pre">Request Talent</p>
-                </div>
-                <div className="relative shrink-0 size-[22px]" data-name="Line Rounded/Arrow rigth" data-node-id="65:1275">
-                  <div className="absolute inset-[15.67%_15%]" data-name="Arrow rigth" id="node-I65_1275-4940_34491">
-                    <div className="absolute inset-[-5.68%_-5.57%_-5.67%_-5.56%]">
-                      <Image alt="" src={img} width={22} height={22} className="block max-w-none size-full" />
-                    </div>
-                  </div>
-                </div>
-              </Link>
+              <Button 
+                variant="secondary" 
+                href="/request-talent" 
+                showArrow={true}
+                className="text-[#fb5d0b] hover:text-[#d45413] bg-transparent hover:bg-transparent text-[24px] px-0 py-0"
+              >
+                Request Talent
+              </Button>
             </div>
           </div>
           <div className="bg-white box-border content-stretch flex flex-col gap-[30px] md:gap-[46px] h-auto lg:h-auto items-center justify-center overflow-clip pb-8 md:pb-12 pt-6 px-4 md:px-6 relative rounded-[15px] w-full lg:flex-1 shrink-0" data-node-id="65:1276">
@@ -164,18 +153,14 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-              <Link href="/book-demo" className="content-stretch flex gap-2.5 items-center justify-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity" data-node-id="65:1351">
-                <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[#fa6a20] text-[24px] text-nowrap tracking-[-0.48px]" data-node-id="65:1352">
-                  <p className="leading-[24px] whitespace-pre">Book a Demo</p>
-                </div>
-                <div className="relative shrink-0 size-[22px]" data-name="Line Rounded/Arrow rigth" data-node-id="65:1353">
-                  <div className="absolute inset-[15.67%_15%]" data-name="Arrow rigth" id="node-I65_1353-4940_34491">
-                    <div className="absolute inset-[-5.68%_-5.57%_-5.67%_-5.56%]">
-                      <Image alt="" src={img} width={22} height={22} className="block max-w-none size-full" />
-                    </div>
-                  </div>
-                </div>
-              </Link>
+              <Button 
+                variant="secondary" 
+                href="/book-demo" 
+                showArrow={true}
+                className="text-[#fb5d0b] hover:text-[#d45413] bg-transparent hover:bg-transparent text-[24px] px-0 py-0"
+              >
+                Book a Demo
+              </Button>
             </div>
           </div>
         </div>

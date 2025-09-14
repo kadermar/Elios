@@ -1,18 +1,18 @@
 "use client";
 
 import Image from "next/image";
+import Tagline from "./Tagline";
 
-const imgImage28 = "http://localhost:3845/assets/7baf860083bbdda66f2251745278bcd47b4c491e.png";
-const imgImage29 = "http://localhost:3845/assets/551ed2980549fa343b4799d89e7d90596684ff5f.png";
-const imgVector622 = "http://localhost:3845/assets/18721c6591626d2156d2f18b97a5158dcf117d0c.svg";
-const imgVector623 = "http://localhost:3845/assets/f5a56e90af2890d56ede60dda452b8a4e69e3703.svg";
-const imgBenefitInput = "http://localhost:3845/assets/61e6c1ef4e93d313535c3ff87eb9b97eb9e7a814.svg";
-const imgVector619 = "http://localhost:3845/assets/0e5e5dd8d54f30dd61efaef6207c981cfecb5066.svg";
-const imgFrame = "http://localhost:3845/assets/3cbf7bf337c82a16bb7ad2fd83163fc121e390b8.svg";
-const imgVector621 = "http://localhost:3845/assets/cc4c50ba893dca62688e0c4b7c6be24278a56362.svg";
-const imgVector = "http://localhost:3845/assets/d4fd7987d50ae04faf3d5471067390a16178a4c5.svg";
-const imgVector620 = "http://localhost:3845/assets/be516dea91d3cec9aec337cba040ad0eac03f154.svg";
-const imgFrame1 = "http://localhost:3845/assets/7cc0678467e0a7481db000db20b15dd74f44cece.svg";
+const imgImage28 = "/assets/7baf860083bbdda66f2251745278bcd47b4c491e.png";
+const imgImage29 = "/assets/551ed2980549fa343b4799d89e7d90596684ff5f.png";
+const imgVector622 = "/assets/3656ef6b456537fb32f92022845eaecdd1a81f93.svg";
+const imgBenefitInput = "/assets/145568baaf7be24b0c1f1dd11124d63a6f502e91.svg";
+const imgVector619 = "/assets/26c81478297773cb4d59ec641e3b598842c6beda.svg";
+const imgFrame = "/assets/289664b520aa5e3322e395c329e23c9dc01b8d52.svg";
+const imgVector621 = "/assets/4179c8afb7ea566af721e8ee8da6f97ad9117281.svg";
+const imgVector = "/assets/726a95972625b5aa6568795136463d562dfbee82.svg";
+const imgVector620 = "/assets/36a6d1ff7fe4882ef7e4618138af35cfbeb800ff.svg";
+const imgFrame1 = "/assets/62867704be67e6fbf6d435012623983939a8a7df.svg";
 
 export default function OurProcess() {
   return (
@@ -20,19 +20,10 @@ export default function OurProcess() {
       <div className="content-stretch flex flex-col gap-[120px] items-center justify-center max-w-[1638px] relative shrink-0 w-full" data-name="Wrapper" data-node-id="65:1101">
         <div className="content-stretch flex flex-col gap-[50px] items-center justify-center max-w-[830px] relative shrink-0 w-full" data-name="Subhead Section" data-node-id="65:1102">
           <div className="content-stretch flex flex-col gap-[30px] items-center justify-start relative shrink-0 w-full" data-node-id="65:1103">
-            <div className="box-border content-stretch flex gap-2.5 items-center justify-center px-0 py-[18px] relative rounded-[9px] shrink-0" data-name="Tagline" data-node-id="65:1104">
-              <div className="h-[13px] relative shrink-0 w-4" data-node-id="65:1105">
-                <div className="absolute inset-[-3.99%_-8.8%_-11.36%_-1.63%]">
-                  <Image alt="" src={imgVector622} width={16} height={13} className="block max-w-none size-full" />
-                </div>
-              </div>
-              <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[#fa6a20] text-[20px] text-nowrap uppercase" data-node-id="65:1106">
-                <p className="leading-[24px] whitespace-pre">our process</p>
-              </div>
-            </div>
+            <Tagline text="our process" className="px-0 py-[18px]" />
             <div className="font-semibold leading-none min-w-full not-italic relative shrink-0 text-[#09141f] text-[64px] text-center tracking-[-3.2px]" data-node-id="65:1107" style={{ width: "min-content" }}>
-              <p className="mb-0">Elios doesn't just improve hiring.</p>
-              <p className="">We reimagine It.</p>
+              <p className="mb-0">Elios doesn&apos;t just improve hiring.</p>
+              <p className="">We reimagine it.</p>
             </div>
           </div>
           <div className="font-normal leading-[0] not-italic relative shrink-0 text-[#535960] text-[24px] text-center w-[684px]" data-node-id="65:1108">
@@ -42,115 +33,119 @@ export default function OurProcess() {
         
         {/* Desktop Flow Chart */}
         <div className="hidden lg:block" data-name="Flow Chart">
-          <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative" data-node-id="65:1109">
-            {/* Connecting line top right */}
-            <div className="[grid-area:1_/_1] h-0 ml-[780.206px] mt-[213px] relative w-[112.002px]" data-node-id="65:1110">
-              <div className="absolute bottom-[-1px] left-0 right-0 top-[-1px]">
-                <Image alt="" src={imgVector623} width={112} height={2} className="block max-w-none size-full" />
+          <div className="relative w-[944px] h-[344px]" data-name="Content=Elios Diagram 1" data-node-id="2398:25996">
+            {/* Top section marker */}
+            <div className="absolute left-[607.67px] top-[159.17px] w-[11px] h-[0.81px]" data-node-id="2398:25941">
+              <div className="absolute inset-0">
+                <Image alt="" src={imgVector622} width={11} height={1} className="block max-w-none size-full" />
               </div>
             </div>
             
             {/* Center circle with pattern */}
-            <div className="[grid-area:1_/_1] flex items-center justify-center ml-[448.206px] mt-[47px] relative size-[332px]">
+            <div className="absolute left-[362.41px] top-[38px] w-[268.45px] h-[268.45px] flex items-center justify-center">
               <div className="flex-none rotate-[180deg] scale-y-[-100%]">
-                <div className="relative size-[332px]" data-name="Benefit Input" data-node-id="65:1111">
+                <div className="relative w-[268.45px] h-[268.45px]" data-name="Benefit Input" data-node-id="2398:25942">
                   <div className="absolute inset-[-0.9%_-5.42%_-18.98%_-5.42%]">
-                    <Image alt="" src={imgBenefitInput} width={332} height={332} className="block max-w-none size-full" />
+                    <Image alt="" src={imgBenefitInput} width={268} height={268} className="block max-w-none size-full" />
                   </div>
                 </div>
               </div>
             </div>
             
-            {/* Expert Recruiters - Bottom Left */}
-            <div className="[grid-area:1_/_1] grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-[167px] place-items-start relative" data-name="Expert Recruiters" data-node-id="65:1139">
+            {/* Expert Recruiters - Left */}
+            <div className="absolute left-0 top-[135.03px]" data-name="Expert Recruiters" data-node-id="2398:25970">
               {/* Connecting line */}
-              <div className="[grid-area:1_/_1] h-0 ml-[213px] mt-[46px] relative w-[281.5px]" data-node-id="65:1140">
-                <div className="absolute bottom-[-1px] left-0 right-0 top-[-1px]">
-                  <Image alt="" src={imgVector619} width={282} height={2} className="block max-w-none size-full" />
+              <div className="absolute left-[172.23px] top-[37.2px] w-[227.62px] h-[0.81px]" data-node-id="2398:25971">
+                <div className="absolute inset-0">
+                  <Image alt="" src={imgVector619} width={228} height={1} className="block max-w-none size-full" />
                 </div>
               </div>
               {/* Badge */}
-              <div className="[grid-area:1_/_1] bg-[rgba(255,255,255,0.8)] ml-0 mt-0 relative rounded-[60px]" data-name="Frame" data-node-id="65:1141">
-                <div className="box-border content-stretch flex flex-col gap-[15px] items-center justify-center overflow-clip px-10 py-5 relative">
-                  <div className="relative shrink-0 size-6" data-name="Frame" data-node-id="65:1142">
-                    <Image alt="" src={imgFrame} width={24} height={24} className="block max-w-none size-full" />
+              <div className="absolute left-0 top-0 bg-[rgba(255,255,255,0.8)] rounded-[48.52px]" data-name="Frame" data-node-id="2398:25972">
+                <div className="box-border content-stretch flex flex-col gap-[12.13px] items-center justify-center overflow-clip px-[32.34px] py-[16.17px] relative">
+                  <div className="relative shrink-0 w-[19.41px] h-[19.41px]" data-name="Frame" data-node-id="2398:25973">
+                    <Image alt="" src={imgFrame} width={19} height={19} className="block max-w-none size-full" />
                   </div>
-                  <div className="font-normal leading-[0] not-italic relative shrink-0 text-[20px] text-black text-center text-nowrap tracking-[-0.2px]" data-node-id="65:1144">
-                    <p className="leading-[24px] whitespace-pre">Expert Recruiters</p>
+                  <div className="font-aptos-regular leading-[0] not-italic relative shrink-0 text-[16.17px] text-black text-center text-nowrap tracking-[-0.1617px]" data-node-id="2398:25975">
+                    <p className="leading-[19.41px] whitespace-pre">Expert Recruiters</p>
                   </div>
                 </div>
-                <div aria-hidden="true" className="absolute border-2 border-solid border-white inset-0 pointer-events-none rounded-[60px] shadow-[0px_71px_20px_0px_rgba(0,0,0,0),0px_45px_18px_0px_rgba(0,0,0,0.01),0px_25px_15px_0px_rgba(0,0,0,0.03),0px_11px_11px_0px_rgba(0,0,0,0.04),0px_3px_6px_0px_rgba(0,0,0,0.05)]" />
+                <div aria-hidden="true" className="absolute border-[1.62px] border-solid border-white inset-0 pointer-events-none rounded-[48.52px] shadow-[0px_57.41px_16.17px_0px_rgba(0,0,0,0),0px_36.39px_14.55px_0px_rgba(0,0,0,0.01),0px_20.21px_12.13px_0px_rgba(0,0,0,0.03),0px_8.89px_8.89px_0px_rgba(0,0,0,0.04),0px_2.43px_4.85px_0px_rgba(0,0,0,0.05)]" />
               </div>
             </div>
             
             {/* Elios Talent Network - Top */}
-            <div className="[grid-area:1_/_1] grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[117.5px] mt-0 place-items-start relative" data-name="Elios Talent Network" data-node-id="65:1145">
+            <div className="absolute left-[95.01px] top-0" data-name="Elios Talent Network" data-node-id="2398:25976">
               {/* Connecting line */}
-              <div className="[grid-area:1_/_1] h-[75px] ml-[125.396px] mt-[57px] relative w-[278px]" data-node-id="65:1146">
+              <div className="absolute left-[101.39px] top-[46.09px] w-[224.79px] h-[60.64px]" data-node-id="2398:25977">
                 <div className="absolute bottom-[-1.33%] left-[-0.36%] right-0 top-0">
-                  <Image alt="" src={imgVector621} width={278} height={75} className="block max-w-none size-full" />
+                  <Image alt="" src={imgVector621} width={225} height={61} className="block max-w-none size-full" />
                 </div>
               </div>
               {/* Badge */}
-              <div className="[grid-area:1_/_1] bg-[rgba(255,255,255,0.8)] ml-0 mt-0 relative rounded-[60px]" data-name="Frame" data-node-id="65:1147">
-                <div className="box-border content-stretch flex flex-col gap-[15px] items-center justify-center overflow-clip px-10 py-5 relative">
-                  <div className="h-[17px] relative shrink-0 w-5" data-name="Vector" data-node-id="65:1148">
+              <div className="absolute left-0 top-0 bg-[rgba(255,255,255,0.8)] rounded-[48.52px]" data-name="Frame" data-node-id="2398:25978">
+                <div className="box-border content-stretch flex flex-col gap-[12.13px] items-center justify-center overflow-clip px-[32.34px] py-[16.17px] relative">
+                  <div className="h-[13.75px] relative shrink-0 w-[16.17px]" data-name="Vector" data-node-id="2398:25979">
                     <div className="absolute inset-[-5.88%_-5%]">
-                      <Image alt="" src={imgVector} width={20} height={17} className="block max-w-none size-full" />
+                      <Image alt="" src={imgVector} width={16} height={14} className="block max-w-none size-full" />
                     </div>
                   </div>
-                  <div className="font-normal leading-[0] not-italic relative shrink-0 text-[20px] text-black text-center text-nowrap tracking-[-0.2px]" data-node-id="65:1149">
-                    <p className="leading-[24px] whitespace-pre">Elios Talent Network</p>
+                  <div className="font-aptos-regular leading-[0] not-italic relative shrink-0 text-[16.17px] text-black text-center text-nowrap tracking-[-0.1617px]" data-node-id="2398:25980">
+                    <p className="leading-[19.41px] whitespace-pre">Elios Talent Network</p>
                   </div>
                 </div>
-                <div aria-hidden="true" className="absolute border-2 border-solid border-white inset-0 pointer-events-none rounded-[60px] shadow-[0px_71px_20px_0px_rgba(0,0,0,0),0px_45px_18px_0px_rgba(0,0,0,0.01),0px_25px_15px_0px_rgba(0,0,0,0.03),0px_11px_11px_0px_rgba(0,0,0,0.04),0px_3px_6px_0px_rgba(0,0,0,0.05)]" />
+                <div aria-hidden="true" className="absolute border-[1.62px] border-solid border-white inset-0 pointer-events-none rounded-[48.52px] shadow-[0px_57.41px_16.17px_0px_rgba(0,0,0,0),0px_36.39px_14.55px_0px_rgba(0,0,0,0.01),0px_20.21px_12.13px_0px_rgba(0,0,0,0.03),0px_8.89px_8.89px_0px_rgba(0,0,0,0.04),0px_2.43px_4.85px_0px_rgba(0,0,0,0.05)]" />
               </div>
             </div>
             
             {/* Elios Insights Platform - Bottom */}
-            <div className="[grid-area:1_/_1] grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[109.5px] mt-[276px] place-items-start relative" data-node-id="65:1150">
+            <div className="absolute left-[88.54px] top-[223.17px]" data-node-id="2398:25981">
               {/* Connecting line */}
-              <div className="[grid-area:1_/_1] flex h-[75px] items-center justify-center ml-[133.396px] mt-0 relative w-[278px]">
+              <div className="absolute left-[107.86px] top-0 w-[224.79px] h-[60.64px] flex items-center justify-center">
                 <div className="flex-none scale-y-[-100%]">
-                  <div className="h-[75px] relative w-[278px]" data-node-id="65:1151">
+                  <div className="h-[60.64px] relative w-[224.79px]" data-node-id="2398:25982">
                     <div className="absolute bottom-[-1.33%] left-[-0.36%] right-0 top-0">
-                      <Image alt="" src={imgVector620} width={278} height={75} className="block max-w-none size-full" />
+                      <Image alt="" src={imgVector620} width={225} height={61} className="block max-w-none size-full" />
                     </div>
                   </div>
                 </div>
               </div>
               {/* Badge */}
-              <div className="[grid-area:1_/_1] bg-[rgba(255,255,255,0.8)] ml-0 mt-[60px] relative rounded-[60px]" data-name="Frame" data-node-id="65:1152">
-                <div className="box-border content-stretch flex flex-col gap-[15px] items-center justify-center overflow-clip px-10 py-5 relative">
-                  <div className="relative shrink-0 size-6" data-name="Frame" data-node-id="65:1153">
-                    <Image alt="" src={imgFrame1} width={24} height={24} className="block max-w-none size-full" />
+              <div className="absolute left-0 top-[48.51px] bg-[rgba(255,255,255,0.8)] rounded-[48.52px]" data-name="Frame" data-node-id="2398:25983">
+                <div className="box-border content-stretch flex flex-col gap-[12.13px] items-center justify-center overflow-clip px-[32.34px] py-[16.17px] relative">
+                  <div className="relative shrink-0 w-[19.41px] h-[19.41px]" data-name="Frame" data-node-id="2398:25984">
+                    <Image alt="" src={imgFrame1} width={19} height={19} className="block max-w-none size-full" />
                   </div>
-                  <div className="font-normal leading-[0] not-italic relative shrink-0 text-[20px] text-black text-center text-nowrap tracking-[-0.2px]" data-node-id="65:1156">
-                    <p className="leading-[24px] whitespace-pre">Elios Insights Platform</p>
+                  <div className="font-aptos-regular leading-[0] not-italic relative shrink-0 text-[16.17px] text-black text-center text-nowrap tracking-[-0.1617px]" data-node-id="2398:25987">
+                    <p className="leading-[19.41px] whitespace-pre">Elios Insights Platform</p>
                   </div>
                 </div>
-                <div aria-hidden="true" className="absolute border-2 border-solid border-white inset-0 pointer-events-none rounded-[60px] shadow-[0px_71px_20px_0px_rgba(0,0,0,0),0px_45px_18px_0px_rgba(0,0,0,0.01),0px_25px_15px_0px_rgba(0,0,0,0.03),0px_11px_11px_0px_rgba(0,0,0,0.04),0px_3px_6px_0px_rgba(0,0,0,0.05)]" />
+                <div aria-hidden="true" className="absolute border-[1.62px] border-solid border-white inset-0 pointer-events-none rounded-[48.52px] shadow-[0px_57.41px_16.17px_0px_rgba(0,0,0,0),0px_36.39px_14.55px_0px_rgba(0,0,0,0.01),0px_20.21px_12.13px_0px_rgba(0,0,0,0.03),0px_8.89px_8.89px_0px_rgba(0,0,0,0.04),0px_2.43px_4.85px_0px_rgba(0,0,0,0.05)]" />
               </div>
             </div>
             
             {/* Candidate Photos - Right Side */}
-            <div className="[grid-area:1_/_1] grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[919.208px] mt-10 place-items-start relative" data-name="Candidate Photos" data-node-id="65:1157">
+            <div className="absolute left-[723px] top-[32.34px]" data-name="Candidate Photos" data-node-id="2398:25988">
               {/* Back card - light blue, rotated */}
-              <div className="[grid-area:1_/_1] flex h-[0px] items-center justify-center ml-[59.999px] mt-20 relative w-[0px]">
+              <div className="absolute left-[48.51px] top-[64.69px] w-[204.22px] h-[274.55px] flex items-center justify-center">
                 <div className="flex-none rotate-[11.35deg]">
-                  <div className="bg-[#e0f1fe] box-border content-stretch flex flex-col gap-2.5 h-[307px] items-center justify-center overflow-clip p-[10px] relative rounded-bl-[10px] rounded-br-[10px] rounded-tl-[80px] rounded-tr-[10px] shadow-[0px_71px_20px_0px_rgba(0,0,0,0),0px_45px_18px_0px_rgba(0,0,0,0.01),0px_25px_15px_0px_rgba(0,0,0,0.03),0px_11px_11px_0px_rgba(0,0,0,0.04),0px_3px_6px_0px_rgba(0,0,0,0.05)]" data-name="Frame" data-node-id="65:1158">
-                    <div className="basis-0 bg-center bg-cover bg-no-repeat grow min-h-px min-w-px rounded-bl-[3px] rounded-br-[2px] rounded-tl-[70px] rounded-tr-[2px] shrink-0 w-44" data-name="image 28" data-node-id="65:1159" style={{ backgroundImage: `url('${imgImage28}')` }} />
-                    <div className="font-normal leading-[0] not-italic relative shrink-0 text-[20px] text-[rgba(255,255,255,0)] text-center tracking-[-0.8px] w-[146px]" data-node-id="65:1160">
-                      <p className="leading-[24px]">The Perfect Candidate</p>
+                  <div className="bg-[#e0f1fe] box-border content-stretch flex flex-col gap-[8.09px] h-[248.23px] items-center justify-center overflow-clip p-[8.09px] relative rounded-bl-[8.09px] rounded-br-[8.09px] rounded-tl-[64.69px] rounded-tr-[8.09px] shadow-[0px_57.41px_16.17px_0px_rgba(0,0,0,0),0px_36.39px_14.55px_0px_rgba(0,0,0,0.01),0px_20.21px_12.13px_0px_rgba(0,0,0,0.03),0px_8.89px_8.89px_0px_rgba(0,0,0,0.04),0px_2.43px_4.85px_0px_rgba(0,0,0,0.05)]" data-name="Frame" data-node-id="2398:25989">
+                    <div className="basis-0 grow min-h-px min-w-px rounded-bl-[2.43px] rounded-br-[1.62px] rounded-tl-[56.6px] rounded-tr-[1.62px] shrink-0 w-[142.31px] relative overflow-hidden" data-name="image 28" data-node-id="2398:25990">
+                      <Image alt="Candidate" src={imgImage28} fill className="object-cover" />
+                    </div>
+                    <div className="font-aptos-regular leading-[0] not-italic relative shrink-0 text-[16.17px] text-[rgba(255,255,255,0)] text-center tracking-[-0.6469px] w-[118.05px]" data-node-id="2398:25991">
+                      <p className="leading-[19.41px]">The Perfect Candidate</p>
                     </div>
                   </div>
                 </div>
               </div>
               {/* Front card - teal */}
-              <div className="[grid-area:1_/_1] bg-[#063852] box-border content-stretch flex flex-col gap-2.5 h-[307px] items-center justify-center ml-0 mt-0 overflow-clip p-[10px] relative rounded-[10px] shadow-[0px_71px_20px_0px_rgba(0,0,0,0),0px_45px_18px_0px_rgba(0,0,0,0.01),0px_25px_15px_0px_rgba(0,0,0,0.03),0px_11px_11px_0px_rgba(0,0,0,0.04),0px_3px_6px_0px_rgba(0,0,0,0.05)]" data-name="Frame" data-node-id="65:1161">
-                <div className="basis-0 bg-center bg-cover bg-no-repeat grow min-h-px min-w-px rounded-[2px] shrink-0 w-44" data-name="image 28" data-node-id="65:1162" style={{ backgroundImage: `url('${imgImage29}')` }} />
-                <div className="font-normal leading-[0] not-italic relative shrink-0 text-[20px] text-center text-white tracking-[-0.8px] w-[146px]" data-node-id="65:1163">
-                  <p className="leading-[20px]">The Perfect Candidate</p>
+              <div className="absolute left-0 top-0 bg-[#063852] box-border content-stretch flex flex-col gap-[8.09px] h-[248.23px] items-center justify-center overflow-clip p-[8.09px] rounded-[8.09px] shadow-[0px_57.41px_16.17px_0px_rgba(0,0,0,0),0px_36.39px_14.55px_0px_rgba(0,0,0,0.01),0px_20.21px_12.13px_0px_rgba(0,0,0,0.03),0px_8.89px_8.89px_0px_rgba(0,0,0,0.04),0px_2.43px_4.85px_0px_rgba(0,0,0,0.05)]" data-name="Frame" data-node-id="2398:25992">
+                <div className="basis-0 grow min-h-px min-w-px rounded-[1.62px] shrink-0 w-[142.31px] relative overflow-hidden" data-name="image 29" data-node-id="2398:25993">
+                  <Image alt="Candidate" src={imgImage29} fill className="object-cover" />
+                </div>
+                <div className="font-aptos-regular leading-[0] not-italic relative shrink-0 text-[16.17px] text-center text-white tracking-[-0.6469px] w-[118.05px]" data-node-id="2398:25994">
+                  <p className="leading-[16.17px]">The Perfect Candidate</p>
                 </div>
               </div>
             </div>

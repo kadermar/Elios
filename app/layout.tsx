@@ -13,8 +13,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-aptos antialiased overflow-x-hidden">
-        <div className="min-h-screen overflow-x-hidden">
+      <body className="font-aptos antialiased overflow-x-hidden relative bg-[#F4F4F4]">
+        <div className="min-h-screen overflow-x-hidden relative">
           {children}
         </div>
       </body>

@@ -4,15 +4,15 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Image assets from Figma design
-const imgVector622 = "http://localhost:3845/assets/18721c6591626d2156d2f18b97a5158dcf117d0c.svg";
-const imgTechIcon = "http://localhost:3845/assets/ed20a5b5871d5471661917089862185541b64acc.svg";
-const imgHealthcareIcon = "http://localhost:3845/assets/60c7142738da60dadcbe2ff0624215123d0a873d.svg";
-const imgEngineeringIcon = "http://localhost:3845/assets/1c5c457543dead4d930eb84e293016c37e44ac4b.svg";
-const imgEnergyIcon = "http://localhost:3845/assets/be7de6960d2ca82797aadbc5aaf7abc21495d8f0.svg";
-const imgArrowRight = "http://localhost:3845/assets/d30f514f5135aa681851286d93d37f2d1c4b351c.svg";
-const imgBlogImage = "http://localhost:3845/assets/4fb884a0cef509b72695d5aa4be91f4a2d5135e0.png";
-const imgCtaBackground = "http://localhost:3845/assets/941d1e71b7568930660afa0b73e67105fc6cbf40.png";
-const imgCtaArrow = "http://localhost:3845/assets/af95064ccab6ee359bc75f7a09db40c0162fd9cd.svg";
+const imgVector622 = "/assets/18721c6591626d2156d2f18b97a5158dcf117d0c.svg";
+const imgTechIcon = "/assets/ed20a5b5871d5471661917089862185541b64acc.svg";
+const imgHealthcareIcon = "/assets/60c7142738da60dadcbe2ff0624215123d0a873d.svg";
+const imgEngineeringIcon = "/assets/1c5c457543dead4d930eb84e293016c37e44ac4b.svg";
+const imgEnergyIcon = "/assets/be7de6960d2ca82797aadbc5aaf7abc21495d8f0.svg";
+const imgArrowRight = "/assets/d30f514f5135aa681851286d93d37f2d1c4b351c.svg";
+const imgBlogImage = "/assets/4fb884a0cef509b72695d5aa4be91f4a2d5135e0.png";
+const imgCtaBackground = "/assets/941d1e71b7568930660afa0b73e67105fc6cbf40.png";
+const imgCtaArrow = "/assets/af95064ccab6ee359bc75f7a09db40c0162fd9cd.svg";
 
 export default function IndustriesPage() {
   return (

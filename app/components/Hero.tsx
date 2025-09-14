@@ -1,11 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import Button from "./Button";
 
 const imgProfileDropdownMenu1 = "/hero-dashboard.png";
-const imgGroup = "/samsung-group.svg";
-const imgDrataWordmarkDark01 = "/drata-wordmark.svg";
-const imgGoldmanSachsLogo01 = "/goldman-sachs.svg";
-const imgAmplifyChangeLogo01 = "/amplify-change.svg";
 
 export default function Hero() {
   return (
@@ -19,47 +16,24 @@ export default function Hero() {
             <div className="font-normal leading-[0] min-w-full not-italic relative shrink-0 text-[#09141f] text-[16px] md:text-[20px] lg:text-[24px]" data-node-id="65:832" style={{ width: "min-content" }}>
               <p className="leading-[1.35]">Elios combines elite recruiters with an intelligence layer that cuts the noise and moves the right people forward—fast.</p>
             </div>
-            <div className="content-stretch flex flex-col sm:flex-row gap-3 items-start justify-start relative shrink-0 w-full sm:w-auto" data-name="Button Row" data-node-id="65:833">
-              <Link href="/book-demo" className="bg-[#fa6a20] box-border content-stretch flex gap-3 md:gap-4 h-[50px] md:h-[60px] items-center justify-center px-4 md:pl-[22px] md:pr-2 py-3 md:py-3.5 relative rounded-[12px] shrink-0 cursor-pointer hover:bg-[#e85a10] transition-colors w-full sm:w-auto" data-name="Primary Button" data-node-id="65:834">
-                <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[14px] md:text-[16px] text-center text-nowrap text-white" data-node-id="65:836">
-                  <p className="leading-[20px] whitespace-pre">Book a Demo</p>
-                </div>
-                <div className="bg-white box-border content-stretch flex gap-2.5 items-center justify-center p-[8px] md:p-[10px] relative rounded-[7px] shrink-0 size-[36px] md:size-[46px]" data-node-id="65:837">
-                  <div className="relative shrink-0 size-3 md:size-4" data-name="Line Rounded/Arrow rigth" data-node-id="65:838">
-                    <div className="absolute inset-[15.67%_15%]" data-name="Arrow rigth" id="node-I65_838-4940_34491">
-                      <div className="absolute inset-[-7.8%_-7.66%_-7.8%_-7.65%]">
-                        <Image alt="Arrow" src="/connect-cta-arrow.svg" width={16} height={16} className="block max-w-none size-full" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-              <Link href="/request-talent" className="box-border content-stretch flex gap-[3px] items-center justify-center px-4 md:px-[22px] py-3 md:py-[18px] relative rounded-[12px] self-stretch shrink-0 cursor-pointer hover:bg-gray-50 transition-colors w-full sm:w-auto" data-name="Secondary Button" data-node-id="65:839">
-                <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[14px] md:text-[16px] text-black text-center text-nowrap" data-node-id="65:841">
-                  <p className="leading-[20px] whitespace-pre">Request Talent</p>
-                </div>
-              </Link>
-            </div>
-          </div>
-          <div className="content-stretch flex flex-wrap gap-4 md:gap-[52px] items-center justify-center md:justify-start opacity-50 relative shrink-0" data-name="Logo Reel" data-node-id="65:843">
-            <div className="h-[28px] md:h-[38px] overflow-clip relative shrink-0 w-[68px] md:w-[90px]" data-name="Weatherford Logo" data-node-id="65:844">
-              <div className="text-gray-600 text-xs md:text-sm font-medium flex items-center justify-center h-full">
-                Weatherford
-              </div>
-            </div>
-            <div className="h-2.5 md:h-3.5 overflow-clip relative shrink-0 w-[68px] md:w-[90px]" data-name="Samsung Logo" data-node-id="65:878">
-              <div className="absolute bottom-[-0.12%] left-0 right-0 top-0" data-name="Group" data-node-id="65:879">
-                <Image alt="Samsung" src={imgGroup} width={90} height={14} className="block max-w-none size-full" />
-              </div>
-            </div>
-            <div className="h-2.5 md:h-3.5 relative shrink-0 w-[60px] md:w-20" data-name="Drata Logo" data-node-id="65:881">
-              <Image alt="Drata" src={imgDrataWordmarkDark01} width={80} height={14} className="block max-w-none size-full" />
-            </div>
-            <div className="h-[22px] md:h-[30px] relative shrink-0 w-[54px] md:w-[72px]" data-name="Goldman Sachs Logo" data-node-id="65:887">
-              <Image alt="Goldman Sachs" src={imgGoldmanSachsLogo01} width={72} height={30} className="block max-w-none size-full" />
-            </div>
-            <div className="h-[22px] md:h-[30px] relative shrink-0 w-[74px] md:w-[98px]" data-name="Amplify Change Logo" data-node-id="65:889">
-              <Image alt="Amplify Change" src={imgAmplifyChangeLogo01} width={98} height={30} className="block max-w-none size-full" />
+            <div className="content-stretch flex flex-col sm:flex-row gap-3 items-start justify-start relative shrink-0 w-full sm:w-auto" data-name="Button Row">
+              <Button 
+                variant="primary" 
+                size="lg" 
+                href="/book-demo" 
+                showArrow={true}
+                className="w-full sm:w-auto"
+              >
+                Book a Demo
+              </Button>
+              <Button 
+                variant="secondary" 
+                size="lg" 
+                href="/request-talent"
+                className="w-full sm:w-auto"
+              >
+                Request Talent
+              </Button>
             </div>
           </div>
         </div>

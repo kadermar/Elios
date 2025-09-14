@@ -4,78 +4,59 @@ import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { BlogPost, BlogCategory, BlogAPI, BlogUtils } from "../lib/blogData";
 
 const imgImage56 = "/blog-hero-bg.png";
 const imgImage44 = "/blog-article-bg.png";
 const imgImage48 = "/blog-article-image.png";
 const img = "/cta-arrow.svg";
 const img1 = "/hero-arrow.svg";
-const imgProfileDropdownMenu1 = "http://localhost:3845/assets/a5646353145800288e648f5fe27f13f824531797.png";
-const imgHeroArrow = "http://localhost:3845/assets/dbfc7fa3b59b3bc1d708ecb442d7b149635903f4.svg";
-const imgProfileDropdownMenu2 = "http://localhost:3845/assets/1026c93c2f0cc786fb8f3edf6ebc6bf177a470e8.svg";
+const imgProfileDropdownMenu1 = "/assets/a5646353145800288e648f5fe27f13f824531797.png";
+const imgHeroArrow = "/assets/dbfc7fa3b59b3bc1d708ecb442d7b149635903f4.svg";
+const imgProfileDropdownMenu2 = "/assets/1026c93c2f0cc786fb8f3edf6ebc6bf177a470e8.svg";
 
-const categories = [
-  "All Categories",
-  "Technology", 
-  "Recruiting",
-  "Industry",
-  "Career Advice",
-  "Talent Strategy"
-];
-
-const blogPosts = [
-  {
-    title: "Why Speed Matters: How Faster Hiring Gives Companies a Competitive Edge",
-    author: "Duran Workman",
-    readTime: "4m read",
-    category: "Recruiting",
-    slug: "why-speed-matters-hiring"
-  },
-  {
-    title: "AI + Human Expertise: The Winning Formula for Smarter Recruiting",
-    author: "Sarah Chen",
-    readTime: "5m read",
-    category: "Technology",
-    slug: "ai-human-expertise"
-  },
-  {
-    title: "Top 5 Hiring Trends Every Business Should Watch in 2025",
-    author: "Michael Torres",
-    readTime: "3m read",
-    category: "Industry",
-    slug: "top-5-hiring-trends-2025"
-  },
-  {
-    title: "Building High-Performance Teams: Lessons from the Tech Giants",
-    author: "Emma Johnson",
-    readTime: "6m read",
-    category: "Talent Strategy",
-    slug: "building-high-performance-teams"
-  },
-  {
-    title: "The Hidden Costs of Bad Hires and How to Avoid Them",
-    author: "David Kim",
-    readTime: "4m read",
-    category: "Recruiting",
-    slug: "hidden-costs-bad-hires"
-  },
-  {
-    title: "Remote Work Revolution: Adapting Your Hiring Strategy for 2025",
-    author: "Lisa Martinez",
-    readTime: "5m read",
-    category: "Industry",
-    slug: "remote-work-revolution"
-  }
-];
 
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [email, setEmail] = useState("");
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [categories, setCategories] = useState<string[]>(["All Categories"]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    loadBlogData();
+  }, []);
+
+  const loadBlogData = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      
+      // Load posts and categories in parallel
+      const [postsResponse, categoriesResponse] = await Promise.all([
+        BlogAPI.getAllPosts({ published: true }),
+        BlogAPI.getCategories()
+      ]);
+      
+      setPosts(postsResponse.posts);
+      
+      // Build categories array with "All Categories" first
+      const categoryNames = categoriesResponse.map(cat => cat.name);
+      setCategories(["All Categories", ...categoryNames]);
+      
+    } catch (err) {
+      setError('Unable to load blog content. Please try again later.');
+      console.error('Error loading blog data:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const filteredPosts = selectedCategory === "All Categories" 
-    ? blogPosts 
-    : blogPosts.filter(post => post.category === selectedCategory);
+    ? posts 
+    : posts.filter(post => post.categories?.includes(selectedCategory));
 
   return (
     <div className="bg-[#f4f4f4] min-h-screen">
@@ -101,64 +82,94 @@ export default function BlogPage() {
       <div className="box-border content-stretch flex flex-col gap-[90px] items-center justify-center pb-[100px] pt-0 px-4 md:px-0 relative w-full">
         <div className="content-stretch flex gap-[90px] items-center justify-start max-w-[1638px] relative w-full">
           <div className="relative w-full border-b border-[rgba(0,0,0,0.2)]">
-            <div className="flex items-center justify-start overflow-x-auto scrollbar-hide">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`box-border flex gap-9 items-center justify-center px-[30px] py-[26px] relative whitespace-nowrap ${
-                    selectedCategory === category 
-                      ? 'border-b-[3px] border-black' 
-                      : ''
-                  }`}
-                >
-                  <div className={`font-aptos font-semibold leading-[0] not-italic relative text-[16px] text-center text-nowrap ${
-                    selectedCategory === category 
-                      ? 'text-[#09141f]' 
-                      : 'text-[#6d7175]'
-                  }`}>
-                    <p className="leading-[22px] whitespace-pre">{category}</p>
-                  </div>
-                </button>
-              ))}
-            </div>
+            {loading ? (
+              <div className="flex items-center justify-center py-[26px]">
+                <div className="animate-pulse text-[#6d7175]">Loading categories...</div>
+              </div>
+            ) : error ? (
+              <div className="flex items-center justify-center py-[26px]">
+                <div className="text-red-500">Error loading categories</div>
+              </div>
+            ) : (
+              <div className="flex items-center justify-start overflow-x-auto scrollbar-hide">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`box-border flex gap-9 items-center justify-center px-[30px] py-[26px] relative whitespace-nowrap ${
+                      selectedCategory === category 
+                        ? 'border-b-[3px] border-black' 
+                        : ''
+                    }`}
+                  >
+                    <div className={`font-aptos font-semibold leading-[0] not-italic relative text-[16px] text-center text-nowrap ${
+                      selectedCategory === category 
+                        ? 'text-[#09141f]' 
+                        : 'text-[#6d7175]'
+                    }`}>
+                      <p className="leading-[22px] whitespace-pre">{category}</p>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
         {/* Blog Posts Grid */}
         <div className="content-stretch flex flex-col gap-[90px] items-center justify-center max-w-[1638px] relative w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[50px] w-full">
-            {filteredPosts.map((post, index) => (
-              <Link key={index} href={`/blog/${post.slug}`} className="flex flex-col gap-[30px] items-start justify-center cursor-pointer hover:transform hover:scale-105 transition-transform">
-                <div className="box-border flex flex-col gap-[30px] h-[292px] items-start justify-end overflow-hidden pb-6 pt-10 px-6 relative rounded-[15px] w-full bg-gradient-to-br from-blue-500 to-purple-600">
-                  <div className="absolute inset-0">
-                    <Image 
-                      alt="Blog post" 
-                      src={imgImage48} 
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="flex flex-col gap-6 items-start justify-start relative w-full">
-                  <div className="font-aptos font-semibold leading-[1.2] text-[#09141f] text-[24px] md:text-[32px] tracking-[-0.96px] hover:text-[#fa6a20] transition-colors">
-                    {post.title}
-                  </div>
-                  <div className="flex font-aptos gap-2.5 items-center justify-start leading-[0] not-italic relative text-[#121212] text-[16px]">
-                    <div className="relative">
-                      <p className="leading-[32px] text-nowrap whitespace-pre">{post.author}</p>
+          {loading ? (
+            <div className="flex items-center justify-center py-20">
+              <div className="animate-pulse text-[#6d7175] text-[24px]">Loading blog posts...</div>
+            </div>
+          ) : error ? (
+            <div className="flex flex-col items-center justify-center py-20 gap-4">
+              <div className="text-red-500 text-[24px]">Error loading blog posts</div>
+              <button 
+                onClick={loadBlogData}
+                className="bg-[#fa6a20] text-white px-6 py-3 rounded-lg hover:bg-[#e85a10] transition-colors"
+              >
+                Try Again
+              </button>
+            </div>
+          ) : filteredPosts.length === 0 ? (
+            <div className="flex items-center justify-center py-20">
+              <div className="text-[#6d7175] text-[24px]">No blog posts found{selectedCategory !== "All Categories" ? ` in ${selectedCategory}` : ""}</div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[50px] w-full">
+              {filteredPosts.map((post) => (
+                <Link key={post.id} href={`/blog/${post.slug}`} className="flex flex-col gap-[30px] items-start justify-center cursor-pointer hover:transform hover:scale-105 hover:z-20 transition-all relative">
+                  <div className="box-border flex flex-col gap-[30px] h-[292px] items-start justify-end overflow-hidden pb-6 pt-10 px-6 relative rounded-[15px] w-full bg-gradient-to-br from-blue-500 to-purple-600">
+                    <div className="absolute inset-0">
+                      <Image 
+                        alt={post.title} 
+                        src={post.featuredImage || imgImage48} 
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                    <div className="relative">
-                      <p className="leading-[32px] text-nowrap whitespace-pre">·</p>
+                  </div>
+                  <div className="flex flex-col gap-6 items-start justify-start relative w-full">
+                    <div className="font-aptos font-semibold leading-[1.2] text-[#09141f] text-[24px] md:text-[32px] tracking-[-0.96px] hover:text-[#fa6a20] transition-colors">
+                      {post.title}
                     </div>
-                    <div className="relative">
-                      <p className="leading-[32px] text-nowrap whitespace-pre">{post.readTime}</p>
+                    <div className="flex font-aptos gap-2.5 items-center justify-start leading-[0] not-italic relative text-[#121212] text-[16px]">
+                      <div className="relative">
+                        <p className="leading-[32px] text-nowrap whitespace-pre">{post.author?.name || 'Unknown Author'}</p>
+                      </div>
+                      <div className="relative">
+                        <p className="leading-[32px] text-nowrap whitespace-pre">·</p>
+                      </div>
+                      <div className="relative">
+                        <p className="leading-[32px] text-nowrap whitespace-pre">{BlogUtils.formatReadTime(post.readTime)}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
