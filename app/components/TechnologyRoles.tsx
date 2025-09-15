@@ -65,7 +65,7 @@ export default function TechnologyRoles() {
           {/* Row 1 */}
           <div className="[grid-area:1_/_1] bg-white box-border content-stretch flex flex-col h-[260px] items-start justify-between overflow-clip px-8 py-10 relative rounded-[6px] shrink-0 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer group">
             <div className="shrink-0 size-6 group-hover:scale-110 transition-transform duration-300">
-              <Image src="/assets/tech-icons/software-development.svg" alt="Software Development" width={24} height={24} className="w-full h-full" />
+              <Image src="/icons/code.svg" alt="Software Development" width={24} height={24} className="w-full h-full" />
             </div>
             <div className="content-stretch flex flex-col gap-4 items-start justify-start leading-[0] not-italic relative shrink-0 text-[#0f1012] w-full">
               <div className="font-['Aptos:Semibold',_sans-serif] relative shrink-0 text-[22px] text-nowrap tracking-[-0.66px]">
@@ -89,7 +89,7 @@ export default function TechnologyRoles() {
 
           <div className="[grid-area:1_/_2] bg-white box-border content-stretch flex flex-col h-[260px] items-start justify-between overflow-clip px-8 py-10 relative rounded-[6px] shrink-0 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer group">
             <div className="shrink-0 size-6 group-hover:scale-110 transition-transform duration-300">
-              <Image src="/assets/tech-icons/data-science.svg" alt="Data Science & AI" width={24} height={24} className="w-full h-full" />
+              <Image src="/icons/data.svg" alt="Data Science & AI" width={24} height={24} className="w-full h-full" />
             </div>
             <div className="content-stretch flex flex-col gap-4 items-start justify-start leading-[0] not-italic relative shrink-0 text-[#0f1012] w-full">
               <div className="font-['Aptos:Semibold',_sans-serif] relative shrink-0 text-[22px] text-nowrap tracking-[-0.66px]">
@@ -113,7 +113,7 @@ export default function TechnologyRoles() {
 
           <div className="[grid-area:1_/_3] bg-white box-border content-stretch flex flex-col h-[260px] items-start justify-between overflow-clip px-8 py-10 relative rounded-[6px] shrink-0 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer group">
             <div className="shrink-0 size-6 group-hover:scale-110 transition-transform duration-300">
-              <Image src="/assets/tech-icons/cloud-devops.svg" alt="Cloud & DevOps" width={24} height={24} className="w-full h-full" />
+              <Image src="/icons/cloud-download.svg" alt="Cloud & DevOps" width={24} height={24} className="w-full h-full" />
             </div>
             <div className="content-stretch flex flex-col gap-4 items-start justify-start leading-[0] not-italic relative shrink-0 text-[#0f1012] w-full">
               <div className="font-['Aptos:Semibold',_sans-serif] relative shrink-0 text-[22px] text-nowrap tracking-[-0.66px]">
@@ -138,7 +138,7 @@ export default function TechnologyRoles() {
           {/* Row 2 */}
           <div className="[grid-area:2_/_1] bg-white box-border content-stretch flex flex-col h-[260px] items-start justify-between overflow-clip px-8 py-10 relative rounded-[6px] shrink-0 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer group">
             <div className="shrink-0 size-6 group-hover:scale-110 transition-transform duration-300">
-              <Image src="/assets/tech-icons/cybersecurity.svg" alt="Cybersecurity" width={24} height={24} className="w-full h-full" />
+              <Image src="/icons/shield-check.svg" alt="Cybersecurity" width={24} height={24} className="w-full h-full" />
             </div>
             <div className="content-stretch flex flex-col gap-4 items-start justify-start leading-[0] not-italic relative shrink-0 text-[#0f1012] w-full">
               <div className="font-['Aptos:Semibold',_sans-serif] relative shrink-0 text-[22px] text-nowrap tracking-[-0.66px]">
@@ -162,7 +162,7 @@ export default function TechnologyRoles() {
 
           <div className="[grid-area:2_/_2] bg-white box-border content-stretch flex flex-col h-[260px] items-start justify-between overflow-clip px-8 py-10 relative rounded-[6px] shrink-0 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer group">
             <div className="shrink-0 size-6 group-hover:scale-110 transition-transform duration-300">
-              <Image src="/assets/tech-icons/product-management.svg" alt="Product & Project Managers" width={24} height={24} className="w-full h-full" />
+              <Image src="/icons/briefcase-02.svg" alt="Product & Project Managers" width={24} height={24} className="w-full h-full" />
             </div>
             <div className="content-stretch flex flex-col gap-4 items-start justify-start leading-[0] not-italic relative shrink-0 text-[#0f1012] w-full">
               <div className="font-['Aptos:Semibold',_sans-serif] relative shrink-0 text-[22px] text-nowrap tracking-[-0.66px]">
@@ -186,7 +186,7 @@ export default function TechnologyRoles() {
 
           <div className="[grid-area:2_/_3] bg-white box-border content-stretch flex flex-col h-[260px] items-start justify-between overflow-clip px-8 py-10 relative rounded-[6px] shrink-0 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer group">
             <div className="shrink-0 size-6 group-hover:scale-110 transition-transform duration-300">
-              <Image src="/assets/tech-icons/it-infrastructure.svg" alt="IT Infrastructure & Support" width={24} height={24} className="w-full h-full" />
+              <Image src="/icons/tool.svg" alt="IT Infrastructure & Support" width={24} height={24} className="w-full h-full" />
             </div>
             <div className="content-stretch flex flex-col gap-4 items-start justify-start leading-[0] not-italic relative shrink-0 text-[#0f1012] w-full">
               <div className="font-['Aptos:Semibold',_sans-serif] relative shrink-0 text-[22px] text-nowrap tracking-[-0.66px]">
