@@ -2,6 +2,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import TechnologyHero from "../components/TechnologyHero";
 
 // Placeholder images - these would be replaced with actual assets from Figma
 const imgVector622 = "/vector-622.svg";
@@ -10,31 +11,13 @@ const imgCtaArrow = "/cta-arrow.svg";
 
 export default function TechnologyPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#faf8f5]">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-[208px] pb-[80px]">
-        <div className="max-w-[1638px] mx-auto px-4">
-          <div className="max-w-[694px]">
-            <h1 className="font-aptos-semibold text-[96px] leading-[96px] tracking-[-5.76px] text-[#09141f] mb-10">
-              Accelerate technology hiring
-            </h1>
-            <p className="font-aptos-regular text-[24px] leading-[32px] text-[#09141f] mb-12 max-w-[694px]">
-              From startups looking for their first dev to multi-billion dollar enterprises scaling teams, we deliver the right tech talent when you need it most.
-            </p>
-            <div className="flex gap-3">
-              <Link href="/book-demo" className="bg-[#fa6a20] flex items-center gap-4 px-[22px] py-3.5 rounded-[12px] hover:bg-[#e85a10] transition-colors">
-                <span className="font-aptos-semibold text-[16px] text-white">Book a Demo</span>
-                <div className="bg-white rounded-[7px] p-[10px]">
-                  <Image src={imgCtaArrow} alt="Arrow" width={16} height={16} />
-                </div>
-              </Link>
-              <Link href="/request-talent" className="flex items-center px-[22px] py-[18px] rounded-[12px] hover:bg-gray-50 transition-colors">
-                <span className="font-aptos-semibold text-[16px] text-black">Get Tech Talent</span>
-              </Link>
-            </div>
-          </div>
+      <section className="pt-[174px] pb-[100px] bg-[#faf8f5] relative overflow-hidden">
+        <div className="max-w-[1638px] mx-auto h-[700px] px-0">
+          <TechnologyHero />
         </div>
       </section>
 
