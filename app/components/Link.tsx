@@ -54,8 +54,8 @@ export default function Link({
       active: "text-[#fb5d0b]",
     },
     footer: {
-      base: "text-[#535960] hover:text-[#fb5d0b] transition-colors duration-200",
-      active: "text-[#0f1012]",
+      base: "text-[#0f1012] hover:text-[#fb5d0b] transition-colors duration-200",
+      active: "text-[#fb5d0b]",
     },
     nav: {
       base: "text-[#09141f] hover:text-[#fb5d0b] hover:opacity-100 transition-all duration-200",

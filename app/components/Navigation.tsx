@@ -287,10 +287,10 @@ export default function Navigation() {
     
     {/* Dropdown positioned outside nav to avoid backdrop-blur inheritance */}
     {showDropdown && (
-      <div 
-        className="fixed left-1/2 transform -translate-x-1/2 z-[9999] pointer-events-auto"
-        style={{ 
-          top: isScrolled ? '150px' : '174px', 
+      <div
+        className="fixed left-1/2 transform -translate-x-1/2 z-[9999] pointer-events-auto w-full max-w-[1800px] px-4"
+        style={{
+          top: isScrolled ? '80px' : '120px',
           isolation: 'isolate',
           willChange: 'transform'
         }}
@@ -306,8 +306,8 @@ export default function Navigation() {
     {showConnectDropdown && (
       <div 
         className="fixed left-1/2 transform -translate-x-1/2 z-[9999] pointer-events-auto"
-        style={{ 
-          top: isScrolled ? '150px' : '174px', 
+        style={{
+          top: isScrolled ? '80px' : '120px',
           isolation: 'isolate',
           willChange: 'transform'
         }}

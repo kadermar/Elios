@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Icon from "./Icon";
 
 // Default arrow icon for primary buttons
 const defaultArrowIcon = "/nav-arrow-alt.svg";
@@ -35,7 +36,7 @@ export default function Button({
   type = "button",
 }: ButtonProps) {
   // Base styles
-  const baseStyles = "inline-flex items-center justify-center font-aptos-semibold text-center transition-all duration-200 cursor-pointer";
+  const baseStyles = "group inline-flex items-center justify-center font-aptos-semibold text-center transition-all duration-200 cursor-pointer";
   
   // Variant styles
   const variantStyles = {
@@ -49,7 +50,7 @@ export default function Button({
   const sizeStyles = {
     sm: "p-[16px] text-[14px] leading-[20px] rounded-[8px] gap-2",
     md: "px-[20px] py-[12px] text-[16px] leading-[20px] rounded-[8px] gap-[8px]",
-    lg: variant === "primary" ? "pl-6 pr-2 py-2 text-[16px] leading-[20px] rounded-[12px] gap-4" : "px-6 py-2 text-[16px] leading-[20px] rounded-[12px] gap-4 h-[62px]",
+    lg: variant === "primary" ? "pl-6 pr-2 py-2 text-[16px] leading-[20px] rounded-[12px] gap-4 h-[62px]" : "px-6 py-2 text-[16px] leading-[20px] rounded-[12px] gap-4 h-[62px]",
   };
 
   // Combine all styles
@@ -80,10 +81,34 @@ export default function Button({
       )}
       <div className={
         variant === "primary" && size === "lg"
-          ? "font-['Aptos:SemiBold',_sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-center text-nowrap text-white"
+          ? "relative shrink-0 text-nowrap"
           : variant === "primary" && size === "sm"
-          ? "font-['Aptos:SemiBold',_sans-serif] leading-[0] not-italic relative shrink-0 text-[14px] text-center text-nowrap text-white"
+          ? "relative shrink-0 text-nowrap"
           : ""
+      } style={
+        variant === "primary" && size === "lg"
+          ? {
+              color: 'var(--Neutral-White, #FFF)',
+              textAlign: 'center' as const,
+              fontFeatureSettings: "'liga' off, 'clig' off",
+              fontFamily: 'var(--Typeface-Family-Body, Aptos)',
+              fontSize: 'var(--Typeface-Size-Paragraph-md, 16px)',
+              fontStyle: 'normal',
+              fontWeight: 600,
+              lineHeight: '20px'
+            }
+          : variant === "primary" && size === "sm"
+          ? {
+              color: 'var(--Neutral-White, #ffffff)',
+              textAlign: 'center' as const,
+              fontFeatureSettings: "'liga' off, 'clig' off",
+              fontFamily: 'var(--Typeface-Family-Body, Aptos)',
+              fontSize: '14px',
+              fontStyle: 'normal',
+              fontWeight: 600,
+              lineHeight: '20px'
+            }
+          : undefined
       }>
         {variant === "primary" && (size === "lg" || size === "sm") ? (
           <p className="leading-[20px] whitespace-pre">{children}</p>
@@ -93,17 +118,11 @@ export default function Button({
       </div>
       {iconSrc && iconPosition === "right" && variant === "primary" && size === "lg" ? (
         <div className="bg-white box-border content-stretch flex gap-2.5 items-center justify-center p-[10px] relative rounded-[7px] shrink-0 size-[46px]">
-          <div className="shrink-0 size-4">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3.33333 8H12.6667M12.6667 8L8.66667 4M12.6667 8L8.66667 12" stroke="#fb5d0b" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
+          <Icon type="arrow" size="regular" />
         </div>
       ) : iconSrc && iconPosition === "right" && variant === "primary" && size === "sm" ? (
         <div className="shrink-0 size-4">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M3.33333 8H12.6667M12.6667 8L8.66667 4M12.6667 8L8.66667 12" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
+          <Icon type="arrow" size="sm" color="#ffffff" className="group-hover:!text-white hover:!text-white" />
         </div>
       ) : iconSrc && iconPosition === "right" ? (
         <div className="relative w-4 h-4">

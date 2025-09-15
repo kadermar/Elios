@@ -2,6 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Icon from "./Icon";
+import Button from "./Button";
+
+const imgTalentGlobe = "/images/talet-globe-colorized.png";
+const imgWarpSpeed = "/images/warp-speed-colorized.png";
 
 interface ServiceCardProps {
   type?: "Talent" | "Insights";
@@ -9,12 +14,10 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ type = "Talent", className = "" }: ServiceCardProps) {
-  const isTalent = type === "Talent";
-  
   const config = {
     Talent: {
       title: "Elios Talent",
-      description: "Our high-touch recruiting service. Powered by experienced recruiters who work side-by-side our clients to fill critical roles.",
+      description: "Our high-touch recruiting service, powered by experienced recruiters who work with clients to fill critical roles. We blend deep industry knowledge with AI-enhanced workflows, to deliver a human-centered experience that ensures long-lasting organizational impact.",
       features: [
         "Dedicated recruiters who know your industry inside and out",
         "Curated network built from 1000s of successful placements",
@@ -23,137 +26,113 @@ export default function ServiceCard({ type = "Talent", className = "" }: Service
       ],
       buttonText: "Request Talent",
       buttonHref: "/request-talent",
-      bgImage: "/service-talent-bg.png",
-      bgOverlay: "/service-card-flare.svg",
-      bgClass: "bg-gradient-to-br from-orange-50 to-orange-100"
+      bgImage: imgTalentGlobe
     },
     Insights: {
       title: "Elios Insights",
-      description: "Our high-touch recruiting service. Powered by experienced recruiters who work side-by-side our clients to fill critical roles.",
+      description: "Our AI layer transforms your ATS into a hiring intelligence powerhouse. Our platform automates recruiter workflows while surfacing top candidates faster, empowering your teams to focus on high-value conversations and strong decision-making.",
       features: [
-        "Dedicated recruiters who know your industry inside and out",
-        "Curated network built from 1000s of successful placements",
-        "Structured process for intake, shortlisting, and interview prep",
-        "Human judgment supported by data and market insights"
+        "AI matching on top of your ATS",
+        "Automated scheduling, feedback, and interview coordination",
+        "Real-time dashboards for funnel health and KPIs",
+        "Recruiter-in-the-loop so humans stay in control"
       ],
-      buttonText: "Request Talent",
-      buttonHref: "/insights",
-      bgImage: "/service-insights-bg.png",
-      bgOverlay: null,
-      bgClass: "bg-gradient-to-br from-blue-50 to-blue-100"
+      buttonText: "Book a Demo",
+      buttonHref: "/book-demo",
+      bgImage: imgWarpSpeed
     }
   };
 
   const currentConfig = config[type];
 
   return (
-    <div className={`bg-white rounded-[6px] border border-[#ececec] overflow-hidden ${className}`}>
-      <div className="flex flex-col">
-        {/* Image Section */}
-        <div className="relative h-[351px] w-full overflow-hidden bg-stone-100">
-          {/* Background pattern/image */}
-          <div className="absolute inset-0">
-            <Image
-              src={currentConfig.bgImage}
-              alt=""
-              fill
-              className="object-cover mix-blend-multiply"
-            />
-          </div>
-          
-          {/* Overlay effect for Talent variant */}
-          {currentConfig.bgOverlay && (
-            <div className="absolute inset-0 mix-blend-screen">
-              <Image
-                src={currentConfig.bgOverlay}
-                alt=""
-                fill
-                className="object-cover opacity-60"
-              />
-            </div>
-          )}
+    <div className={`basis-0 bg-white grow min-h-px min-w-px relative rounded-[6px] shrink-0 ${className}`}>
+      <div className="box-border content-stretch flex flex-col gap-8 items-start justify-start overflow-clip pb-16 pt-4 px-4 relative size-full">
+        {/* Image Container */}
+        <div className="content-stretch flex gap-2.5 h-[350px] items-start justify-start overflow-clip relative shrink-0 w-full">
+          <div className="aspect-[1682/1682] basis-0 bg-center bg-cover bg-no-repeat grow min-h-px min-w-px rounded-[4px] shrink-0" style={{ backgroundImage: `url('${currentConfig.bgImage}')` }} />
         </div>
 
-        {/* Content Section */}
-        <div className="p-8 pb-16">
-          <div className="flex flex-col gap-8">
-            {/* Header */}
-            <div className="flex flex-col gap-6">
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-[#09141f] text-[36px] leading-[36px] font-semibold tracking-[-1.8px]">
-                    {currentConfig.title}
-                  </h3>
-                  
-                  {/* Icon placeholder - globe or graph icon */}
-                  <div className="w-[62px] h-[62px] rounded-[16px] border border-[#e6e6e6] flex items-center justify-center">
-                    {isTalent ? (
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M2 12h20" />
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                      </svg>
-                    ) : (
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M18 20V10" />
-                        <path d="M12 20V4" />
-                        <path d="M6 20v-6" />
-                      </svg>
-                    )}
+        {/* Content */}
+        <div className="box-border content-stretch flex flex-col gap-8 items-start justify-start px-6 py-0 relative shrink-0 w-full">
+          <div className="content-stretch flex flex-col gap-6 items-start justify-start relative shrink-0 w-full">
+            <div className="content-stretch flex flex-col gap-4 items-start justify-start relative shrink-0 w-full">
+              {/* Header */}
+              <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
+                <div
+                  className="relative shrink-0 text-nowrap"
+                  style={{
+                    color: '#09141F',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--Typeface-Family-Heading, Aptos)',
+                    fontSize: 'var(--Typeface-Size-H4, 36px)',
+                    fontStyle: 'normal',
+                    fontWeight: 600,
+                    lineHeight: '36px',
+                    letterSpacing: '-1.8px'
+                  }}
+                >
+                  <p className="whitespace-pre">{currentConfig.title}</p>
+                </div>
+                <div className="content-stretch flex items-center justify-center relative rounded-[16px] shrink-0 size-[62px]">
+                  <div aria-hidden="true" className="absolute border border-[#e6e6e6] border-solid inset-0 pointer-events-none rounded-[16px]" />
+                  <Icon type={type === "Talent" ? "globe-03" : "data"} size="regular" color="#09141f" />
+                </div>
+              </div>
+
+              {/* Description */}
+              <div
+                className="relative shrink-0 w-full"
+                style={{
+                  color: 'var(--Neutral-Medium-Gray, #595959)',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: 'var(--Typeface-Family-Body, Aptos)',
+                  fontSize: 'var(--Typeface-Size-Paragraph-md, 16px)',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: '20px'
+                }}
+              >
+                <p>{currentConfig.description}</p>
+              </div>
+            </div>
+
+            {/* Features List */}
+            <div className="content-stretch flex flex-col gap-2 items-start justify-start relative shrink-0 w-full">
+              {currentConfig.features.map((feature, index) => (
+                <div key={index} className="content-stretch flex gap-2 items-center justify-start relative shrink-0 w-full">
+                  <div className="shrink-0 size-4 flex items-center justify-center">
+                    <Icon type="check" size="sm" color="#0f1012" />
+                  </div>
+                  <div className="h-full relative shrink-0 w-[540px]" style={{
+                    color: '#000',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--Typeface-Family-Body, Aptos)',
+                    fontSize: 'var(--Typeface-Size-Paragraph-sm, 14px)',
+                    fontStyle: 'normal',
+                    fontWeight: 600,
+                    lineHeight: '18px'
+                  }}>
+                    <p>{feature}</p>
                   </div>
                 </div>
-                
-                <p className="text-[#595959] text-[16px] leading-[20px]">
-                  {currentConfig.description}
-                </p>
-              </div>
-              
-              {/* Features List */}
-              <div className="flex flex-col gap-2">
-                {currentConfig.features.map((feature, index) => (
-                  <div key={index} className="flex gap-2 items-start">
-                    <div className="w-4 h-4 mt-0.5 flex-shrink-0">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path 
-                          d="M13.5 4.5L6 12L2.5 8.5" 
-                          stroke="#fb5d0b" 
-                          strokeWidth="2" 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    <p className="text-[14px] leading-[18px] font-semibold text-black flex-1">
-                      {feature}
-                    </p>
-                  </div>
-                ))}
-              </div>
+              ))}
             </div>
-
-            {/* Button */}
-            <Link 
-              href={currentConfig.buttonHref}
-              className="bg-[#fb5d0b] hover:bg-[#e85a10] rounded-[12px] h-[62px] flex items-center justify-center gap-4 pl-6 pr-2 transition-colors"
-            >
-              <span className="text-white text-[16px] leading-[20px] font-semibold">
-                {currentConfig.buttonText}
-              </span>
-              <div className="bg-white rounded-[7px] w-[46px] h-[46px] flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path 
-                    d="M6 3L11 8L6 13" 
-                    stroke="#fb5d0b" 
-                    strokeWidth="2" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </Link>
           </div>
+
+          {/* Button */}
+          <Button
+            variant="primary"
+            size="lg"
+            href={currentConfig.buttonHref}
+            showArrow={true}
+            className="shrink-0"
+          >
+            {currentConfig.buttonText}
+          </Button>
         </div>
       </div>
+      <div aria-hidden="true" className="absolute border border-[#ececec] border-solid inset-0 pointer-events-none rounded-[6px]" />
     </div>
   );
 }

@@ -31,17 +31,6 @@ export default function CaseStudyLink({
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 rounded-3xl pointer-events-none" />
 
       <div className="relative z-10 content-stretch flex flex-col gap-8 items-start justify-end size-full">
-        <div className="content-stretch flex items-start justify-start relative w-full">
-          <div className="bg-white box-border flex h-16 items-center justify-center p-4 relative rounded-2xl shrink-0 w-16">
-            <Image
-              alt={logoAlt}
-              src={logoSrc}
-              width={32}
-              height={32}
-              className="block max-w-none"
-            />
-          </div>
-        </div>
         <div className="content-stretch flex flex-col gap-4 items-start justify-start relative w-full">
           <div
             className="relative w-full"

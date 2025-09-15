@@ -23,12 +23,8 @@ export default function Home() {
         <Testimonials />
         <WhoWeAre />
         <Faq />
-        <div className="relative">
-          <Footer />
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 px-4 md:px-0">
-            <CTA />
-          </div>
-        </div>
+        <CTA />
+        <Footer />
       </main>
     </div>
   );

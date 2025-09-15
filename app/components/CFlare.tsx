@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 const imgCFlare = "/images/c-flare.svg";
 
 interface CFlareProps {
@@ -10,13 +8,12 @@ interface CFlareProps {
 
 export default function CFlare({ className = "" }: CFlareProps) {
   return (
-    <div className={`relative size-full ${className}`} data-name="C Flare" data-node-id="2514:12225">
-      <div className="absolute inset-[-8.8%_-8.59%]">
-        <Image
+    <div className={`absolute h-[727px] left-[-233px] top-[305.4px] w-[745px] ${className}`} data-name="C Flare">
+      <div className="absolute inset-[-15.68%_-15.3%]">
+        <img
           alt=""
-          src={imgCFlare}
-          fill
           className="block max-w-none size-full"
+          src={imgCFlare}
         />
       </div>
     </div>

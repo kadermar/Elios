@@ -3,6 +3,7 @@
 import Accordion from "./Accordion";
 import Tagline from "./Tagline";
 import Link from "./Link";
+import Icon from "./Icon";
 
 const faqData = [
   {
@@ -30,53 +31,90 @@ const faqData = [
 
 export default function Faq() {
   return (
-    <section className="w-full py-24 md:py-[152px] pb-[400px]">
-      <div className="max-w-[1638px] mx-auto px-4 md:px-8 lg:px-12">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-[162px] items-start">
+    <section className="box-border content-stretch flex flex-col items-center justify-center px-16 py-36 relative size-full">
+      <div className="gap-6 grid grid-cols-[repeat(4,_minmax(0px,_1fr))] grid-rows-[repeat(1,_minmax(0px,_1fr))] h-[508px] max-w-[1700px] relative shrink-0 w-full">
+        <div className="[grid-area:1_/_1_/_auto_/_span_2] content-stretch flex flex-col gap-6 items-start justify-start relative self-start shrink-0">
           {/* Left Side - Header Content */}
-          <div className="flex flex-col gap-12 lg:gap-[50px] max-w-[668px] w-full lg:flex-shrink-0">
-            <div className="flex flex-col gap-6 lg:gap-[30px]">
-              <Tagline text="FAQ" />
-              <h2 className="font-semibold text-[#09141f] text-[48px] md:text-[64px] lg:text-[72px] leading-[1.1] md:leading-none tracking-[-2.4px] md:tracking-[-3.6px]">
-                Questions?<br />
-                We've got answers.
-              </h2>
+          <div className="content-stretch flex flex-col gap-6 items-start justify-start relative size-full">
+            <div className="content-stretch flex flex-col gap-6 h-[164px] items-start justify-center relative shrink-0 w-full">
+              <div className="content-stretch flex flex-col gap-4 items-start justify-center relative shrink-0 w-full">
+                <Tagline text="frequently asked questions" />
+                <div
+                  className="min-w-full relative shrink-0"
+                  style={{
+                    color: '#0f1012',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--Typeface-Family-Heading, Aptos)',
+                    fontSize: 'var(--Typeface-Size-H2, 54px)',
+                    fontStyle: 'normal',
+                    fontWeight: 600,
+                    lineHeight: '54px',
+                    letterSpacing: '-3.24px',
+                    width: 'min-content'
+                  }}
+                >
+                  <p>
+                    Questions?<br />
+                    We've got answers.
+                  </p>
+                </div>
+              </div>
             </div>
-            
-            <p className="text-[#535960] text-[20px] md:text-[24px] leading-[28px] md:leading-[32px] max-w-[550px]">
-              Find quick answers to common questions about Elios. Still curious? We can help.
-            </p>
-            
-            <Link 
-              href="/connect" 
-              className="inline-flex items-center gap-2 text-[#09141f] text-[20px] font-semibold underline hover:text-[#fb5d0b] transition-colors"
+
+            <div
+              className="min-w-full relative shrink-0"
+              style={{
+                color: '#595959',
+                fontFeatureSettings: "'liga' off, 'clig' off",
+                fontFamily: 'var(--Typeface-Family-Body, Aptos)',
+                fontSize: 'var(--Typeface-Size-Paragraph-lg, 20px)',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: '24px',
+                width: 'min-content'
+              }}
             >
-              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" className="flex-shrink-0">
-                <path 
-                  d="M2 8.5L17 8.5M17 8.5L10 1.5M17 8.5L10 15.5" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                />
-              </svg>
-              Connect With Us
+              <p>
+                Find quick answers to common questions about Elios.<br />
+                Still curious? We can help.
+              </p>
+            </div>
+
+            <Link
+              href="/connect"
+              className="box-border content-stretch flex gap-2 items-center justify-center p-[8px] relative rounded-[12px] shrink-0 hover:bg-gray-50 transition-colors"
+            >
+              <div className="shrink-0 size-6">
+                <Icon type="message-chat-square" size="regular" />
+              </div>
+              <div
+                className="relative shrink-0 text-center text-nowrap"
+                style={{
+                  color: '#0f1012',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: 'var(--Typeface-Family-Body, Aptos)',
+                  fontSize: '16px',
+                  fontStyle: 'normal',
+                  fontWeight: 600,
+                  lineHeight: '20px'
+                }}
+              >
+                <p className="whitespace-pre">Connect With Us</p>
+              </div>
             </Link>
           </div>
+        </div>
 
-          {/* Right Side - Accordion */}
-          <div className="flex-1 w-full">
-            <div className="flex flex-col gap-3">
-              {faqData.map((faq, index) => (
-                <Accordion
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                  isOpenByDefault={faq.isOpenByDefault || false}
-                />
-              ))}
-            </div>
-          </div>
+        {/* Right Side - Accordion */}
+        <div className="[grid-area:1_/_3_/_auto_/_span_2] content-stretch cursor-pointer flex flex-col gap-2 items-start justify-center relative self-start shrink-0">
+          {faqData.map((faq, index) => (
+            <Accordion
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              isOpenByDefault={faq.isOpenByDefault || false}
+            />
+          ))}
         </div>
       </div>
     </section>

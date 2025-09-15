@@ -34,7 +34,7 @@ const imgBlogImage = "/assets/4fb884a0cef509b72695d5aa4be91f4a2d5135e0.png";
 // Arrow icons
 const imgLeftArrow = "/assets/2d56d273687f7ca7f8f80d7ae6ef37db0161556a.svg";
 const imgRightArrow = "/assets/3b127c2618ad07524cc9b5abe9358a26d932a3f2.svg";
-const imgBlogArrow = "/assets/fc77663448a36794eefa1cf9abfa2313454af665.svg";
+const imgBlogArrow = "/arrow-right.svg";
 
 export default function HealthcarePage() {
   return (
@@ -523,7 +523,7 @@ export default function HealthcarePage() {
               <div className="size-[22px] relative">
                 <div className="absolute inset-[15.67%_15%]">
                   <div className="absolute inset-[-5.67%_-5.57%_-5.68%_-5.57%]">
-                    <Image src="/assets/fc77663448a36794eefa1cf9abfa2313454af665.svg" alt="Arrow" width={22} height={22} className="block max-w-none size-full" />
+                    <Image src={imgBlogArrow} alt="Arrow" width={22} height={22} className="block max-w-none size-full" />
                   </div>
                 </div>
               </div>

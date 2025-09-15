@@ -237,7 +237,7 @@ export default function JobListings() {
                   <p className="leading-[22px] whitespace-pre">Sort: Most Relevant</p>
                 </div>
                 <div className="relative shrink-0 size-3.5">
-                  <img alt="" className="block max-w-none size-full" src="/assets/573932348127699381859fe288dac033a32dfbc4.svg" />
+                  <img alt="" className="block max-w-none size-full" src="/caret.svg" />
                 </div>
               </div>
             </div>

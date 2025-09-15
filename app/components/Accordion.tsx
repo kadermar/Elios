@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Icon from "./Icon";
 
 const imgCloseIcon = "/accordion-close-icon.svg";
 
@@ -40,34 +41,14 @@ export default function Accordion({
           </h3>
           
           {/* Icon */}
-          <div 
+          <div
             className={`flex items-center justify-center w-[30px] h-[30px] rounded-[4px] transition-all duration-200 ${
-              isOpen 
-                ? 'bg-[#0f1012]' 
+              isOpen
+                ? 'bg-[#0f1012]'
                 : 'bg-[#fb5d0b]'
             }`}
           >
-            {isOpen ? (
-              // Close icon (×) - white on black background
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-white">
-                <path
-                  d="M12 4L4 12M4 4L12 12"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ) : (
-              // Plus icon (+) - white on orange background
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-white">
-                <path
-                  d="M8 3.5V12.5M3.5 8H12.5"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            )}
+            <Icon type={isOpen ? "close-x" : "plus"} size="regular" color="#ffffff" />
           </div>
         </div>
         

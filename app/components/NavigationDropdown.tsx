@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Icon from "./Icon";
 
 interface DropdownMenuItem {
   icon: string;
@@ -44,15 +45,8 @@ export default function NavigationDropdown({
         onMouseEnter={() => setIsOpen(true)}
       >
         <span>{title}</span>
-        <div className="w-4 h-4">
-          <svg
-            className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
+        <div className={`transition-transform ${isOpen ? 'rotate-180' : ''}`}>
+          <Icon type="chevron-down" size="sm" />
         </div>
       </button>
 
@@ -129,11 +123,7 @@ export default function NavigationDropdown({
                     <span className="font-semibold text-[14px] text-[#0f1012] leading-[18px]">
                       {section.title}
                     </span>
-                    <div className="w-4 h-4">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </div>
+                    <Icon type="chevron-right" size="sm" />
                   </div>
                   
                   <div className="flex flex-col items-start justify-start w-full">

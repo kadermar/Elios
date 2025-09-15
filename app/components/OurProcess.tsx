@@ -19,15 +19,41 @@ export default function OurProcess() {
   return (
     <div className="box-border content-stretch flex flex-col gap-[90px] items-center justify-center px-0 py-[152px] relative size-full" data-name="Our Process" data-node-id="65:1074">
       <div className="content-stretch flex flex-col gap-[120px] items-center justify-center max-w-[1638px] relative shrink-0 w-full" data-name="Wrapper" data-node-id="65:1101">
-        <div className="content-stretch flex flex-col gap-6 items-start justify-center relative size-full" data-name="Subhead Section" data-node-id="65:1102">
-          <div className="content-stretch flex flex-col gap-4 items-start justify-center relative shrink-0 w-full" data-name="Top">
-            <Tagline text="services" />
-            <div className="font-['Aptos:Semibold',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#0f1012] text-[54px] text-nowrap tracking-[-3.24px]">
-              <p className="leading-[54px] whitespace-pre">Two offerings. One Mission.</p>
-            </div>
+        <div className="content-stretch flex flex-col gap-6 items-center justify-center relative size-full" data-name="Subhead Section" data-node-id="216:3975">
+          <div className="content-stretch flex flex-col gap-4 items-center justify-center relative shrink-0 w-full" data-name="Top">
+            <Tagline text="our process" className="content-stretch" />
+            <h1
+              className="relative shrink-0 text-nowrap whitespace-pre"
+              style={{
+                color: 'var(--Neutral-Charcoal, #0F1012)',
+                textAlign: 'center',
+                fontFeatureSettings: "'liga' off, 'clig' off",
+                fontFamily: 'var(--Typeface-Family-Heading, Aptos)',
+                fontSize: 'var(--Typeface-Size-H2, 54px)',
+                fontStyle: 'normal',
+                fontWeight: 600,
+                lineHeight: '54px',
+                letterSpacing: '-3.24px'
+              }}
+            >
+              <div className="mb-0">Elios doesn&apos;t just improve hiring.</div>
+              <div>We reimagine it.</div>
+            </h1>
           </div>
-          <div className="font-['Aptos:Regular',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#535960] text-[20px] w-[635px]">
-            <p className="leading-[24px]">Elios blends high-touch recruiters (Elios Talent) with an AI platform (Elios Insights) that sits over your ATS. We deliver explainable Candidate FitScores, orchestrate scheduling, and standardize feedback—keeping humans in the loop for faster, fairer hiring.</p>
+          <div
+            className="relative shrink-0 w-[635px]"
+            style={{
+              color: 'var(--Neutral-Medium-Gray, #595959)',
+              textAlign: 'center',
+              fontFeatureSettings: "'liga' off, 'clig' off",
+              fontFamily: 'var(--Typeface-Family-Body, Aptos)',
+              fontSize: 'var(--Typeface-Size-Paragraph-lg, 20px)',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              lineHeight: '24px'
+            }}
+          >
+            <p>Our AI automation handles the busywork so recruiters can focus on what matters most: connecting top talent to the right roles.</p>
           </div>
         </div>
         

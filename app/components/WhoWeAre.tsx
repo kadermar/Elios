@@ -2,129 +2,213 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Tagline from "./Tagline";
 
 const imgEliosTalentJasonLeonardRemovebgPreview12 = "/who-we-are-jason-leonard.png";
 const imgEliosTalentDuranWorkmanRemovebgPreview1 = "/who-we-are-duran-workman.png";
 const imgEliosTalentNicoleGreenleaRemovebgPreview1 = "/who-we-are-nicole-greenlea.png";
-const imgVector622 = "/vector-622.svg";
 const imgEliosTalentJasonLeonardRemovebgPreview13 = "/who-we-are-jason-mask.svg";
 const imgEliosTalentDuranWorkmanRemovebgPreview2 = "/who-we-are-duran-mask.svg";
 const imgEliosTalentNicoleGreenleaRemovebgPreview2 = "/who-we-are-nicole-mask.svg";
-const imgFrame = "/who-we-are-industry-icon.svg";
-const imgFrame1 = "/who-we-are-technology-icon.svg";
-const imgFrame2 = "/who-we-are-recruiting-icon.svg";
-const img = "/who-we-are-arrow.svg";
 
 export default function WhoWeAre() {
   return (
-    <div className="box-border content-stretch flex flex-col gap-[90px] items-center justify-center px-0 py-[152px] relative size-full" data-name="Who We Are" data-node-id="65:1569">
-      <div className="bg-black box-border content-stretch flex flex-col gap-[100px] items-center justify-center overflow-clip px-0 py-20 relative rounded-[25px] shrink-0 w-[1656px]" data-name="Section" data-node-id="65:1575">
-        <div className="bg-black box-border content-stretch flex flex-col gap-[120px] items-center justify-start overflow-clip px-60 py-[120px] relative rounded-[25px] shrink-0 w-[1656px]" data-node-id="65:1576">
-          <div className="content-stretch flex flex-col gap-[30px] items-center justify-start relative shrink-0 w-[726px]" data-node-id="65:1577">
-            <div className="box-border content-stretch flex gap-2.5 items-center justify-center px-0 py-[18px] relative rounded-[9px] shrink-0" data-name="Tagline" data-node-id="65:1578">
-              <div className="h-[13px] relative shrink-0 w-4" data-node-id="65:1579">
-                <div className="absolute inset-[-3.99%_-8.8%_-11.36%_-1.63%]">
-                  <Image alt="" src={imgVector622} width={16} height={13} className="block max-w-none size-full" />
-                </div>
-              </div>
-              <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[#fa6a20] text-[20px] text-nowrap tracking-[-0.4px] uppercase" data-node-id="65:1580">
-                <p className="leading-[24px] whitespace-pre">WHO WE ARE</p>
-              </div>
-            </div>
-            <div className="font-semibold leading-[0] min-w-full not-italic relative shrink-0 text-[64px] text-center text-white tracking-[-3.2px]" data-node-id="65:1581" style={{ width: "min-content" }}>
-              <p className="leading-none">The team behind the change</p>
+    <div className="bg-[#0f1012] box-border content-stretch flex flex-col items-center justify-center px-16 py-36 relative size-full overflow-hidden" data-name="Section">
+      {/* First C Flare Background */}
+      <div className="absolute flex h-[570.117px] items-center justify-center left-[-297.39px] top-[-42.6px] w-[693.588px] z-0">
+        <div className="flex-none rotate-[101.471deg]">
+          <div className="h-[615px] relative w-[456.951px]">
+            <div className="absolute inset-[-18.54%_-24.95%]">
+              <Image alt="" className="block max-w-none size-full" src="/images/c-flare.svg" fill />
             </div>
           </div>
-          <div className="content-stretch flex gap-[30px] h-[531px] items-center justify-center relative shrink-0 w-full" data-node-id="65:1582">
-            <div className="flex gap-4 items-center justify-center relative shrink-0" data-node-id="65:1583">
-              <div className="relative w-[200px] h-[240px]">
-                <div className="absolute inset-0 rounded-lg overflow-hidden">
-                  <Image 
-                    alt="Nicole Greenlea" 
-                    src={imgEliosTalentNicoleGreenleaRemovebgPreview1} 
-                    width={200} 
-                    height={240} 
-                    className="object-cover w-full h-full transform rotate-[-2deg]" 
-                  />
-                </div>
-              </div>
-              <div className="relative w-[240px] h-[280px]">
-                <div className="absolute inset-0 rounded-lg overflow-hidden">
-                  <Image 
-                    alt="Duran Workman" 
-                    src={imgEliosTalentDuranWorkmanRemovebgPreview1} 
-                    width={240} 
-                    height={280} 
-                    className="object-cover w-full h-full" 
-                  />
-                </div>
-              </div>
-              <div className="relative w-[200px] h-[240px]">
-                <div className="absolute inset-0 rounded-lg overflow-hidden">
-                  <Image 
-                    alt="Jason Leonard" 
-                    src={imgEliosTalentJasonLeonardRemovebgPreview12} 
-                    width={200} 
-                    height={240} 
-                    className="object-cover w-full h-full transform rotate-[2deg]" 
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="content-stretch flex flex-col gap-16 items-start justify-center relative shrink-0 w-[504px]" data-node-id="65:1593">
-              <div className="content-stretch flex flex-col gap-6 items-start justify-start relative shrink-0 w-full" data-node-id="65:1594">
-                <div className="content-stretch flex gap-2.5 items-center justify-center relative shrink-0 w-full" data-node-id="65:1595">
-                  <div className="relative shrink-0 size-[50px]" data-name="Frame" data-node-id="65:1596">
-                    <Image alt="" src={imgFrame} width={50} height={50} className="block max-w-none size-full" />
-                  </div>
-                  <div className="aspect-[549/15] basis-0 font-bold grow leading-[0] min-h-px min-w-px not-italic relative shrink-0 text-[20px] text-white" data-node-id="65:1598">
-                    <p className="leading-[24px]">Industry Veterans</p>
-                  </div>
-                </div>
-                <div className="font-normal leading-[0] not-italic relative shrink-0 text-[#d0d4d7] text-[16px] w-full" data-node-id="65:1599">
-                  <p className="leading-[24px]">We&apos;ve run teams, scaled organizations, and felt the pain of critical roles sitting open. That experience drives how we solve today&apos;s staffing challenges.</p>
-                </div>
-              </div>
-              <div className="content-stretch flex flex-col gap-6 items-start justify-start relative shrink-0 w-full" data-node-id="65:1600">
-                <div className="content-stretch flex gap-2.5 items-center justify-center relative shrink-0 w-full" data-node-id="65:1601">
-                  <div className="relative shrink-0 size-[50px]" data-name="Frame" data-node-id="65:1602">
-                    <Image alt="" src={imgFrame1} width={50} height={50} className="block max-w-none size-full" />
-                  </div>
-                  <div className="basis-0 font-bold grow leading-[0] min-h-px min-w-px not-italic relative shrink-0 text-[20px] text-white" data-node-id="65:1604">
-                    <p className="leading-[24px]">Technology Leaders</p>
-                  </div>
-                </div>
-                <div className="font-normal leading-[0] not-italic relative shrink-0 text-[#d0d4d7] text-[16px] w-full" data-node-id="65:1605">
-                  <p className="leading-[24px]">We know the power of data and automation. That&apos;s why we&apos;ve built tools that strip away inefficiencies and give recruiters time back for the human moments that matter.</p>
-                </div>
-              </div>
-              <div className="content-stretch flex flex-col gap-6 items-start justify-start relative shrink-0 w-full" data-node-id="65:1606">
-                <div className="content-stretch flex gap-2.5 items-center justify-center relative shrink-0 w-full" data-node-id="65:1607">
-                  <div className="relative shrink-0 size-[50px]" data-name="Frame" data-node-id="65:1608">
-                    <Image alt="" src={imgFrame2} width={50} height={50} className="block max-w-none size-full" />
-                  </div>
-                  <div className="basis-0 font-bold grow leading-[0] min-h-px min-w-px not-italic relative shrink-0 text-[20px] text-white" data-node-id="65:1613">
-                    <p className="leading-[24px]">Recruiting Experts</p>
-                  </div>
-                </div>
-                <div className="font-normal leading-[0] not-italic relative shrink-0 text-[#d0d4d7] text-[16px] w-full" data-node-id="65:1614">
-                  <p className="leading-[24px]">After thousands of interviews and placements, we know what makes a match work. Elios combines that expertise with AI to raise the standard for hiring everywhere.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <Link href="/about" className="group content-stretch flex gap-2.5 items-center justify-center relative shrink-0 cursor-pointer hover:shadow-[0_0_6px_rgba(250,106,32,0.15)] hover:bg-orange-50 transition-all duration-200 rounded-lg p-4 -m-4" data-node-id="65:1615">
-            <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[24px] text-nowrap text-white group-hover:text-[#fa6a20] transition-colors duration-200 tracking-[-0.48px]" data-node-id="65:1616">
-              <p className="leading-[24px] whitespace-pre">See More About Us</p>
-            </div>
-            <div className="relative shrink-0 size-[22px] transition-all duration-200" data-name="Line Rounded/Arrow rigth" data-node-id="65:1617">
-              <div className="absolute inset-[15.67%_15%]" data-name="Arrow rigth" id="node-I65_1617-4940_34491">
-                <div className="absolute inset-[-5.67%_-5.57%_-5.68%_-5.56%] bg-white group-hover:bg-[#fa6a20] transition-colors duration-200" style={{maskImage: `url(${img})`, maskSize: 'contain', maskRepeat: 'no-repeat', maskPosition: 'center'}}>
-                </div>
-              </div>
-            </div>
-          </Link>
         </div>
+      </div>
+      {/* Second C Flare Background */}
+      <div className="absolute flex h-[740.687px] items-center justify-center left-[-493px] top-[85.4px] w-[728.201px] z-0">
+        <div className="flex-none rotate-[101.471deg]">
+          <div className="h-[615px] relative w-[631px]">
+            <div className="absolute inset-[-18.54%_-18.07%]">
+              <Image alt="" className="block max-w-none size-full" src="/images/c-flare.svg" fill />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col gap-[104px] items-center justify-center max-w-[1800px] relative shrink-0 w-full z-10" data-name="Content">
+        <div className="content-stretch flex flex-col gap-6 items-center justify-center relative shrink-0 w-full" data-name="Subhead Section">
+          <div className="content-stretch flex flex-col gap-4 items-center justify-center relative shrink-0 w-full" data-name="Top">
+            <Tagline text="who we are" />
+            <div
+              className="relative shrink-0 text-center text-nowrap"
+              style={{
+                color: 'var(--Neutral-White, #FFF)',
+                fontFeatureSettings: "'liga' off, 'clig' off",
+                fontFamily: 'var(--Typeface-Family-Heading, Aptos)',
+                fontSize: 'var(--Typeface-Size-H2, 54px)',
+                fontStyle: 'normal',
+                fontWeight: 600,
+                lineHeight: '54px',
+                letterSpacing: '-3.24px'
+              }}
+            >
+              <p className="whitespace-pre">The Team Behind the Hiring Revolution</p>
+            </div>
+          </div>
+        </div>
+        <div className="gap-6 grid grid-cols-[repeat(2,_minmax(0px,_1fr))] grid-rows-[repeat(1,_minmax(0px,_1fr))] h-[460px] relative shrink-0 w-full">
+          <div className="[grid-area:1_/_2] content-stretch flex flex-col gap-10 items-start justify-center max-w-[580px] relative shrink-0" data-name="Container">
+            <div className="content-stretch flex flex-col gap-4 items-start justify-start relative shrink-0 w-full" data-name="Text">
+              <div className="content-stretch flex gap-2 items-center justify-center relative shrink-0 w-full" data-name="Top Bar">
+                <Image
+                  src="/who-we-are-industry-icon.svg"
+                  alt="Industry Veterans"
+                  width={24}
+                  height={24}
+                  className="shrink-0 size-6"
+                />
+                <div
+                  className="basis-0 grow min-h-px min-w-px relative shrink-0"
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--Typeface-Family-Body, Aptos)',
+                    fontSize: 'var(--Typeface-Size-Paragraph-lg, 20px)',
+                    fontStyle: 'normal',
+                    fontWeight: 600,
+                    lineHeight: '24px'
+                  }}
+                >
+                  <p>Industry Veterans</p>
+                </div>
+              </div>
+              <div
+                className="relative shrink-0 w-full"
+                style={{
+                  color: '#D0D4D7',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: 'var(--Typeface-Family-Body, Aptos)',
+                  fontSize: 'var(--Typeface-Size-Paragraph-md, 16px)',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: '20px'
+                }}
+              >
+                <p>We&apos;ve run teams, scaled organizations, and experienced the frustration of critical roles sitting open for months. That shared experience drives our obsession with solving today&apos;s staffing challenges.</p>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-4 items-start justify-start relative shrink-0 w-full" data-name="Text">
+              <div className="content-stretch flex gap-2 items-center justify-center relative shrink-0 w-full" data-name="Top Bar">
+                <Image
+                  src="/who-we-are-technology-icon.svg"
+                  alt="Technology Leaders"
+                  width={24}
+                  height={24}
+                  className="shrink-0 size-6"
+                />
+                <div
+                  className="basis-0 grow min-h-px min-w-px relative shrink-0"
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--Typeface-Family-Body, Aptos)',
+                    fontSize: 'var(--Typeface-Size-Paragraph-lg, 20px)',
+                    fontStyle: 'normal',
+                    fontWeight: 600,
+                    lineHeight: '24px'
+                  }}
+                >
+                  <p>Technology Leaders</p>
+                </div>
+              </div>
+              <div
+                className="relative shrink-0 w-full"
+                style={{
+                  color: '#D0D4D7',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: 'var(--Typeface-Family-Body, Aptos)',
+                  fontSize: 'var(--Typeface-Size-Paragraph-md, 16px)',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: '20px'
+                }}
+              >
+                <p>We understand the power of data and automation. That&apos;s why we&apos;ve built tools that eliminate inefficiencies and give recruiters time back for the human interactions that drive successful placements.</p>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-4 items-start justify-start relative shrink-0 w-full" data-name="Text">
+              <div className="content-stretch flex gap-2 items-center justify-center relative shrink-0 w-full" data-name="Top Bar">
+                <Image
+                  src="/who-we-are-recruiting-icon.svg"
+                  alt="Recruiting Experts"
+                  width={24}
+                  height={24}
+                  className="shrink-0 size-6"
+                />
+                <div
+                  className="basis-0 grow min-h-px min-w-px relative shrink-0"
+                  style={{
+                    color: '#FFF',
+                    fontFeatureSettings: "'liga' off, 'clig' off",
+                    fontFamily: 'var(--Typeface-Family-Body, Aptos)',
+                    fontSize: 'var(--Typeface-Size-Paragraph-lg, 20px)',
+                    fontStyle: 'normal',
+                    fontWeight: 600,
+                    lineHeight: '24px'
+                  }}
+                >
+                  <p>Recruiting Experts</p>
+                </div>
+              </div>
+              <div
+                className="relative shrink-0 w-full"
+                style={{
+                  color: '#D0D4D7',
+                  fontFeatureSettings: "'liga' off, 'clig' off",
+                  fontFamily: 'var(--Typeface-Family-Body, Aptos)',
+                  fontSize: 'var(--Typeface-Size-Paragraph-md, 16px)',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: '20px'
+                }}
+              >
+                <p>With thousands of interviews and successful placements, we found what separates lasting hires from costly mismatches. Elios combines that expertise with AI to raise the standard for hiring precision.</p>
+              </div>
+            </div>
+          </div>
+          <div className="[grid-area:1_/_1] content-stretch flex flex-col gap-2.5 items-center justify-center relative shrink-0" data-name="Container">
+            <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-name="Elios Team">
+              <div className="[grid-area:1_/_1] grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[354.887px] mt-[78.6px] place-items-start relative" data-name="Mask group" style={{ width: "calc(1px * ((var(--transform-inner-height) * 0.06700757145881653) + (var(--transform-inner-width) * 0.9977524876594543)))", height: "calc(1px * ((var(--transform-inner-width) * 0.06700757145881653) + (var(--transform-inner-height) * 0.9977524876594543)))" }}>
+                <div className="[grid-area:1_/_1] flex h-[353.9px] items-center justify-center ml-[-31.083px] mt-[-33.62px] relative w-[353.9px]">
+                  <div className="flex-none rotate-[3.842deg]">
+                    <div className="bg-center bg-cover bg-no-repeat mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[31.539px_35.627px] mask-size-[289.113px_308.379px] opacity-90 size-[332.39px]" data-name="EliosTalent_JasonLeonard-removebg-preview (1) 2" style={{ backgroundImage: `url('${imgEliosTalentJasonLeonardRemovebgPreview12}')`, maskImage: `url('${imgEliosTalentJasonLeonardRemovebgPreview13}')` }} />
+                  </div>
+                </div>
+              </div>
+              <div className="[grid-area:1_/_1] grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-[106.685px] mt-0 place-items-start relative" data-name="Mask group">
+                <div className="[grid-area:1_/_1] bg-center bg-cover bg-no-repeat mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[5.615px_-0.111px] mask-size-[419.962px_464.639px] ml-[-5.615px] mt-[0.112px] size-[432.715px]" data-name="EliosTalent_DuranWorkman-removebg-preview 1" style={{ backgroundImage: `url('${imgEliosTalentDuranWorkmanRemovebgPreview1}')`, maskImage: `url('${imgEliosTalentDuranWorkmanRemovebgPreview2}')` }} />
+              </div>
+              <div className="[grid-area:1_/_1] grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-[78.599px] place-items-start relative" data-name="Mask group" style={{ width: "calc(1px * ((var(--transform-inner-height) * 0.03751681372523308) + (var(--transform-inner-width) * 0.9992960095405579)))", height: "calc(1px * ((var(--transform-inner-width) * 0.03751681372523308) + (var(--transform-inner-height) * 0.9992960095405579)))" }}>
+                <div className="[grid-area:1_/_1] flex h-[316.034px] items-center justify-center ml-[-32.37px] mt-[-19.984px] relative w-[316.034px]">
+                  <div className="flex-none rotate-[357.85deg]">
+                    <div className="bg-center bg-cover bg-no-repeat mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[33.097px_21.198px] mask-size-[249.832px_281.844px] size-[304.831px]" data-name="EliosTalent_NicoleGreenlea-removebg-preview 1" style={{ backgroundImage: `url('${imgEliosTalentNicoleGreenleaRemovebgPreview1}')`, maskImage: `url('${imgEliosTalentNicoleGreenleaRemovebgPreview2}')` }} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Link href="/about" className="box-border content-stretch flex gap-2 items-center justify-center p-[8px] relative rounded-[12px] shrink-0 hover:bg-white/10 transition-colors duration-200" data-name="Button-Tertiary-lg">
+          <div className="font-['Aptos:SemiBold',_sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-center text-nowrap text-white">
+            <p className="leading-[20px] whitespace-pre">See More About Us</p>
+          </div>
+          <Image
+            src="/who-we-are-arrow.svg"
+            alt="Arrow"
+            width={24}
+            height={24}
+            className="shrink-0 size-6"
+          />
+        </Link>
       </div>
     </div>
   );
