@@ -12,9 +12,9 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen relative">
+    <div className="relative min-h-screen flex flex-col">
       <Navigation />
-      <main className="pt-[174px] relative z-10">
+      <main className="pt-[174px] relative z-10 flex-grow">
         <Hero />
         <CaseStudies />
         <OurProcess />
@@ -24,8 +24,8 @@ export default function Home() {
         <WhoWeAre />
         <Faq />
         <CTA />
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }

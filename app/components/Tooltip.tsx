@@ -2,43 +2,46 @@
 
 import { ReactNode } from "react";
 
-// Inline SVG for tooltip pointer
-const TooltipPointer = () => (
-  <svg width="23" height="15" viewBox="0 0 23 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M11.5 0L22.5 14.5H0.5L11.5 0Z" fill="white"/>
-  </svg>
-);
+const img = "/tooltip-arrow.svg";
 
 interface TooltipProps {
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
   position?: "top" | "bottom" | "left" | "right";
 }
 
 export default function Tooltip({ children, className = "", position = "bottom" }: TooltipProps) {
-  return (
-    <div className={`content-stretch flex flex-col items-center justify-start relative ${className}`} data-name="Tooltip">
-      {position === "top" && (
-        <div className="h-[14.75px] relative shrink-0 w-[22.517px] rotate-180 mb-0" data-name="Polygon">
+  const defaultContent = "Complete hiring processes from intake to signed offers. Our hybrid approach has enabled full team builds and critical role fills in under a week through AI-accelerated sourcing combined with recruiting expertise and streamlined decision-making.";
+
+  if (position === "top") {
+    return (
+      <div className={`content-stretch flex flex-col items-center justify-start relative size-full ${className}`} data-name="Tooltip" data-node-id="3102:72510">
+        <div className="h-[14.75px] relative shrink-0 w-[22.517px] rotate-180" data-name="Polygon" id="node-I3102_72510-2793_5909">
           <div className="absolute bottom-[8.79%] left-0 right-0 top-0">
-            <TooltipPointer />
+            <img alt="" className="block max-w-none size-full" src={img} />
           </div>
         </div>
-      )}
-      
-      <div className="bg-white box-border content-stretch flex gap-2.5 items-center justify-center p-[16px] relative rounded-[8px] shadow-[0px_66px_18px_0px_rgba(0,0,0,0),0px_42px_17px_0px_rgba(0,0,0,0.01),0px_24px_14px_0px_rgba(0,0,0,0.02),0px_10px_10px_0px_rgba(0,0,0,0.03),0px_3px_6px_0px_rgba(0,0,0,0.04)] shrink-0 w-full" data-name="Tooltip Content">
-        <div className="basis-0 font-['Aptos:Regular',_sans-serif] grow leading-[0] min-h-px min-w-px not-italic relative shrink-0 text-[#0f1012] text-[14px]">
-          <div className="leading-[18px]">{children}</div>
+        <div className="bg-white box-border content-stretch flex gap-2.5 items-center justify-center p-[16px] relative rounded-[8px] shadow-[0px_66px_18px_0px_rgba(0,0,0,0),0px_42px_17px_0px_rgba(0,0,0,0.01),0px_24px_14px_0px_rgba(0,0,0,0.02),0px_10px_10px_0px_rgba(0,0,0,0.03),0px_3px_6px_0px_rgba(0,0,0,0.04)] shrink-0 w-full" data-name="Tooltip" id="node-I3102_72510-2793_5907">
+          <div className="basis-0 font-['Aptos:Regular',_sans-serif] grow leading-[0] min-h-px min-w-px not-italic relative shrink-0 text-[#0f1012] text-[14px]" id="node-I3102_72510-2793_5908">
+            <p className="leading-[18px]">{children || defaultContent}</p>
+          </div>
         </div>
       </div>
-      
-      {position === "bottom" && (
-        <div className="h-[14.75px] relative shrink-0 w-[22.517px] mt-0" data-name="Polygon">
-          <div className="absolute bottom-[8.79%] left-0 right-0 top-0">
-            <TooltipPointer />
-          </div>
+    );
+  }
+
+  return (
+    <div className={`content-stretch flex flex-col items-center justify-start relative size-full ${className}`} data-name="Tooltip" data-node-id="3102:72510">
+      <div className="bg-white box-border content-stretch flex gap-2.5 items-center justify-center p-[16px] relative rounded-[8px] shadow-[0px_66px_18px_0px_rgba(0,0,0,0),0px_42px_17px_0px_rgba(0,0,0,0.01),0px_24px_14px_0px_rgba(0,0,0,0.02),0px_10px_10px_0px_rgba(0,0,0,0.03),0px_3px_6px_0px_rgba(0,0,0,0.04)] shrink-0 w-full" data-name="Tooltip" id="node-I3102_72510-2793_5907">
+        <div className="basis-0 font-['Aptos:Regular',_sans-serif] grow leading-[0] min-h-px min-w-px not-italic relative shrink-0 text-[#0f1012] text-[14px]" id="node-I3102_72510-2793_5908">
+          <p className="leading-[18px]">{children || defaultContent}</p>
         </div>
-      )}
+      </div>
+      <div className="h-[14.75px] relative shrink-0 w-[22.517px]" data-name="Polygon" id="node-I3102_72510-2793_5909">
+        <div className="absolute bottom-[8.79%] left-0 right-0 top-0">
+          <img alt="" className="block max-w-none size-full" src={img} />
+        </div>
+      </div>
     </div>
   );
 }

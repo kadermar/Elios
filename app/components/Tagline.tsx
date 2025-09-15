@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const imgBeamVector = "/assets/4c38ab617c6f56c437ddce5238aa049bc1f2f716.svg";
+const imgBeamVector = "/assets/tagline-beam.svg";
 
 interface TaglineProps {
   text: string;

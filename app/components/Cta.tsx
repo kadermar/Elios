@@ -4,14 +4,14 @@ import Image from "next/image";
 import Link from "./Link";
 
 // Image assets from Figma
-const imgGlobeEarthLinesGray = "http://localhost:3845/assets/2c3c6d803ce5193dbd288b76e837f875db87a948.png";
-const imgDFlare = "http://localhost:3845/assets/faec7fa478fb1ef43b030a068a5fbddb6bd7b42c.svg";
-const imgDFlare1 = "http://localhost:3845/assets/ddfa3930672611b5e21d4de6eba1d2cfafce09d8.svg";
+const imgGlobeEarthLinesGray = "/globe-earth-lines-gray.png";
+const imgDFlare = "/d-flare.svg";
+const imgDFlare1 = "/d-flare-1.svg";
 
 export default function CTA() {
   return (
     <div
-      className="bg-[#e0f1fe] box-border content-stretch flex flex-col items-center justify-start px-16 py-36 relative size-full"
+      className="bg-[#e0f1fe] box-border content-stretch flex flex-col items-center justify-start px-16 py-36 relative size-full overflow-hidden"
       data-name="Section"
     >
       {/* Globe Background */}
@@ -26,21 +26,33 @@ export default function CTA() {
 
       {/* Left D Flare */}
       <div
-        className="absolute bottom-[-318.61px] h-[614.209px] opacity-80 translate-x-[-50%] w-[804.943px] -z-10"
+        className="absolute bottom-[-318.61px] h-[614.209px] opacity-80 translate-x-[-50%] w-[804.943px] z-0 pointer-events-none"
         data-name="D Flare"
         style={{ left: "calc(50% - 485.529px)" }}
       >
         <div className="absolute inset-[-10.42%_-7.95%]">
-          <img alt="" className="block max-w-none size-full" src={imgDFlare} />
+          <Image
+            src={imgDFlare}
+            alt=""
+            width={804}
+            height={614}
+            className="block max-w-none size-full"
+          />
         </div>
       </div>
 
       {/* Right D Flare */}
-      <div className="absolute flex h-[773.087px] items-center justify-center right-[-172.68px] top-[331.85px] w-[722.338px] -z-10">
+      <div className="absolute flex h-[773.087px] items-center justify-center right-[-172.68px] top-[331.85px] w-[722.338px] z-0 pointer-events-none">
         <div className="flex-none rotate-[207.139deg]">
           <div className="h-[614px] opacity-80 relative w-[497px]" data-name="D Flare">
             <div className="absolute inset-[-10.42%_-12.88%]">
-              <img alt="" className="block max-w-none size-full" src={imgDFlare1} />
+              <Image
+                src={imgDFlare1}
+                alt=""
+                width={497}
+                height={614}
+                className="block max-w-none size-full"
+              />
             </div>
           </div>
         </div>

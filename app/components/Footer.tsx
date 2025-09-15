@@ -89,7 +89,7 @@ export default function Footer() {
           </div>
 
           {/* Footer Bottom */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-6 pb-2 border-t border-gray-100 min-h-[48px]">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-6 pb-2 min-h-[48px]">
             {/* Copyright */}
             <div className="flex items-center">
               <div className="font-['Aptos:Regular',_sans-serif] leading-none text-[#0f1012] text-[14px]">

@@ -12,10 +12,14 @@
   --font-sans: var(--font-aptos);
 }
 
-body {
+html, body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-aptos);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* Custom utilities for Figma exact matching */

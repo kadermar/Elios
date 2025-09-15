@@ -1,79 +1,126 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import StaffingHero from "../components/StaffingHero";
+import StaffingSubhead from "../components/StaffingSubhead";
+import StaffingTabBar from "../components/StaffingTabBar";
+import StaffingGrid from "../components/StaffingGrid";
+import Testimonials from "../components/Testimonials";
+import Tagline from "../components/Tagline";
+import Button from "../components/Button";
+import CTA from "../components/CTA";
 
 export default function StaffingServicesPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#faf8f5]">
       <Navigation />
-      <main className="pt-32 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Staffing Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive talent solutions designed to meet your organization's unique needs
-              and drive sustainable growth.
-            </p>
-          </div>
-          <div className="mt-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Direct Hire</h3>
-                <p className="text-gray-600 mb-4">
-                  Permanent placement services for executive, professional, and technical roles 
-                  across all industries.
-                </p>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Executive search</li>
-                  <li>• Professional placement</li>
-                  <li>• Technical recruiting</li>
-                  <li>• Specialized roles</li>
-                </ul>
-              </div>
-              <div className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Contract Staffing</h3>
-                <p className="text-gray-600 mb-4">
-                  Flexible staffing solutions for project-based work, seasonal needs, 
-                  and specialized expertise.
-                </p>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Project-based roles</li>
-                  <li>• Interim leadership</li>
-                  <li>• Seasonal staffing</li>
-                  <li>• Specialized consulting</li>
-                </ul>
-              </div>
-              <div className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Contract-to-Hire</h3>
-                <p className="text-gray-600 mb-4">
-                  Evaluate candidates through contract work before making permanent 
-                  hiring decisions.
-                </p>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Risk mitigation</li>
-                  <li>• Cultural fit assessment</li>
-                  <li>• Skills validation</li>
-                  <li>• Flexible conversion</li>
-                </ul>
-              </div>
-              <div className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Talent Advisory</h3>
-                <p className="text-gray-600 mb-4">
-                  Strategic consulting to optimize your talent acquisition and 
-                  retention strategies.
-                </p>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Talent strategy</li>
-                  <li>• Market analysis</li>
-                  <li>• Compensation benchmarking</li>
-                  <li>• Process optimization</li>
-                </ul>
+
+      {/* Hero Section */}
+      <section className="pt-[174px] pb-[100px] bg-[#faf8f5] relative overflow-hidden">
+        <div className="max-w-[1638px] mx-auto h-[700px] px-16">
+          <StaffingHero />
+        </div>
+      </section>
+
+      {/* Subhead Section */}
+      <section className="py-[100px] bg-[#faf8f5]">
+        <div className="max-w-[1638px] mx-auto px-4">
+          <StaffingSubhead />
+        </div>
+      </section>
+
+      {/* Tab Bar Section */}
+      <section className="bg-[#faf8f5]">
+        <div className="max-w-[1638px] mx-auto px-16">
+          <StaffingTabBar />
+        </div>
+      </section>
+
+      {/* Grid Section */}
+      <section className="py-[152px] bg-[#faf8f5] overflow-visible">
+        <div className="max-w-[1638px] mx-auto px-16 overflow-visible">
+          <StaffingGrid />
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* Blog/Knowledge Section */}
+      <section className="py-36">
+        <div className="max-w-[1700px] mx-auto px-16">
+          {/* Header */}
+          <div className="flex flex-col gap-6 items-center justify-center mb-16">
+            <div className="flex flex-col gap-4 items-center justify-center">
+              <Tagline text="featured blog posts" />
+              <div className="font-['Aptos:Semibold',_sans-serif] leading-[54px] not-italic relative shrink-0 text-[#0f1012] text-[54px] text-center text-nowrap tracking-[-3.24px]">
+                Latest Insights from Elios
               </div>
             </div>
           </div>
+
+          {/* Blog Articles */}
+          <div className="flex gap-6 items-start justify-start mb-16">
+            {/* Article 1 */}
+            <div className="flex-1 flex flex-col gap-6">
+              <div className="h-[280px] bg-cover bg-center rounded-[6px] overflow-hidden relative" style={{ backgroundImage: 'url(/assets/blog/woman-speaking.png)' }}>
+              </div>
+              <div className="flex flex-col gap-4">
+                <h3 className="font-['Aptos:Semibold',_sans-serif] leading-[28px] not-italic relative shrink-0 text-[#09141f] text-[28px] tracking-[-0.84px]">
+                  Why speed matters: How faster hiring gives companies a Competitive Edge
+                </h3>
+                <div className="flex font-['Aptos:Regular',_sans-serif] gap-1 items-center justify-start leading-[20px] not-italic relative shrink-0 text-[#121212] text-[16px] text-nowrap">
+                  <span>Duran Workman</span>
+                  <span>·</span>
+                  <span>4m read</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Article 2 */}
+            <div className="flex-1 flex flex-col gap-6">
+              <div className="h-[280px] bg-cover bg-center rounded-[6px] overflow-hidden relative" style={{ backgroundImage: 'url(/assets/blog/woman-speaking.png)' }}>
+              </div>
+              <div className="flex flex-col gap-4">
+                <h3 className="font-['Aptos:Semibold',_sans-serif] leading-[28px] not-italic relative shrink-0 text-[#09141f] text-[28px] tracking-[-0.84px]">
+                  How to supercharge your hiring
+                </h3>
+                <div className="flex font-['Aptos:Regular',_sans-serif] gap-1 items-center justify-start leading-[20px] not-italic relative shrink-0 text-[#121212] text-[16px] text-nowrap">
+                  <span>Duran Workman</span>
+                  <span>·</span>
+                  <span>4m read</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Article 3 */}
+            <div className="flex-1 flex flex-col gap-6">
+              <div className="h-[280px] bg-cover bg-center rounded-[6px] overflow-hidden relative" style={{ backgroundImage: 'url(/assets/blog/woman-speaking.png)' }}>
+              </div>
+              <div className="flex flex-col gap-4">
+                <h3 className="font-['Aptos:Semibold',_sans-serif] leading-[28px] not-italic relative shrink-0 text-[#09141f] text-[28px] tracking-[-0.84px]">
+                  Where have all the good talents gone?
+                </h3>
+                <div className="flex font-['Aptos:Regular',_sans-serif] gap-1 items-center justify-start leading-[20px] not-italic relative shrink-0 text-[#121212] text-[16px] text-nowrap">
+                  <span>Duran Workman</span>
+                  <span>·</span>
+                  <span>4m read</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* See All Button */}
+          <div className="flex items-center justify-center">
+            <Button href="/blog" variant="tertiary" size="lg" showArrow={true}>
+              See All Blog Posts
+            </Button>
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* CTA Section */}
+      <CTA />
+
       <Footer />
     </div>
   );

@@ -36,9 +36,9 @@ export default function BarChartIllustration({ className = "" }: BarChartIllustr
             >
               <Icon type="help" size="regular" color="white" />
               {hoveredHelp === 'traditional' && (
-                <div className="absolute right-0 top-6 z-10">
-                  <Tooltip position="bottom">
-                    Traditional hiring processes typically involve multiple rounds of interviews, extensive paperwork, and lengthy decision-making cycles, resulting in 30+ day timeframes.
+                <div className="absolute bottom-full mb-2 right-0 z-10 w-80">
+                  <Tooltip position="top">
+                    Industry standard for conventional recruiting firms. Manual processes, limited candidate pools, and sequential workflows create bottlenecks that delay business-critical hires and slow organizational momentum.
                   </Tooltip>
                 </div>
               )}
@@ -94,9 +94,9 @@ export default function BarChartIllustration({ className = "" }: BarChartIllustr
             >
               <Icon type="help" size="regular" color="white" />
               {hoveredHelp === 'ai-only' && (
-                <div className="absolute right-0 top-6 z-10">
-                  <Tooltip position="bottom">
-                    AI-only hiring relies solely on automated screening and algorithms, which can reduce time but may miss nuanced candidate qualities that human insight provides.
+                <div className="absolute bottom-full mb-2 right-0 z-10 w-80">
+                  <Tooltip position="top">
+                    Average timeline for AI-first recruiting platforms. While automation speeds initial sourcing, lack of human expertise in cultural fit assessment and relationship management often extends final hiring decisions and reduces placement quality.
                   </Tooltip>
                 </div>
               )}
@@ -148,9 +148,9 @@ export default function BarChartIllustration({ className = "" }: BarChartIllustr
             >
               <Icon type="help" size="regular" color="white" />
               {hoveredHelp === 'elios' && (
-                <div className="absolute right-0 top-6 z-10">
-                  <Tooltip position="bottom">
-                    Elios combines the best of both worlds: AI efficiency for screening and human expertise for final decisions, delivering quality hires in just 7 days.
+                <div className="absolute bottom-full mb-2 right-0 z-10 w-80">
+                  <Tooltip position="top">
+                    Complete hiring processes from intake to signed offers. Our hybrid approach has enabled full team builds and critical role fills in under a week through AI-accelerated sourcing combined with recruiting expertise and streamlined decision-making.
                   </Tooltip>
                 </div>
               )}

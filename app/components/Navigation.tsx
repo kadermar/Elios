@@ -20,7 +20,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -126,8 +126,12 @@ export default function Navigation() {
   return (
     <>
     <nav className={`fixed top-0 left-0 right-0 z-40 flex flex-col gap-[10px] items-center justify-center self-stretch w-full transition-all duration-300 ${
-      isScrolled ? 'bg-white/25 backdrop-blur-sm' : 'bg-transparent'
-    }`} data-name="Nav">
+      isScrolled ? 'bg-white/90 backdrop-blur-md shadow-lg border-b border-gray-200/50' : 'bg-transparent'
+    }`} data-name="Nav" style={isScrolled ? {
+      backdropFilter: 'blur(20px) saturate(180%)',
+      WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+      backgroundColor: 'rgba(255, 255, 255, 0.85)'
+    } : {}}>
       <div className="flex items-center justify-between max-w-full lg:max-w-[1638px] px-4 lg:px-0 py-[30px] md:py-[60px] relative rounded-[8px] w-full" data-name="Wrapper">
         <Logo variant={isScrolled ? "icon" : "full"} size="md" href="/" />
         

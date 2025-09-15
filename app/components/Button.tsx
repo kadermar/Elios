@@ -10,7 +10,7 @@ const defaultArrowIcon = "/nav-arrow-alt.svg";
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "dropdown" | "icon";
+  variant?: "primary" | "secondary" | "tertiary" | "dropdown" | "icon";
   size?: "sm" | "md" | "lg";
   href?: string;
   onClick?: () => void;
@@ -42,6 +42,7 @@ export default function Button({
   const variantStyles = {
     primary: "bg-[#fb5d0b] text-white hover:bg-[#d45413] active:bg-[#b8460f] disabled:bg-gray-300 disabled:text-gray-500",
     secondary: "bg-transparent text-[#0f1012] hover:bg-gray-50 active:bg-gray-100 border border-transparent hover:border-gray-200 disabled:text-gray-400",
+    tertiary: "bg-transparent text-[#0f1012] hover:bg-gray-50 active:bg-gray-100 disabled:text-gray-400",
     dropdown: "bg-transparent text-[#0f1012] hover:bg-gray-50 active:bg-gray-100 disabled:text-gray-400",
     icon: "bg-transparent text-[#0f1012] hover:bg-gray-50 active:bg-gray-100 disabled:text-gray-400",
   };
@@ -69,7 +70,7 @@ export default function Button({
   const buttonContent = (
     <>
       {iconSrc && iconPosition === "left" && (
-        <div className="relative w-4 h-4">
+        <div className="relative w-4 h-4 flex items-center justify-center">
           <Image
             src={iconSrc}
             alt=""
@@ -121,11 +122,15 @@ export default function Button({
           <Icon type="arrow" size="regular" />
         </div>
       ) : iconSrc && iconPosition === "right" && variant === "primary" && size === "sm" ? (
-        <div className="shrink-0 size-4">
+        <div className="shrink-0 size-4 flex items-center justify-center">
           <Icon type="arrow" size="sm" color="#ffffff" className="group-hover:!text-white hover:!text-white" />
         </div>
+      ) : iconSrc && iconPosition === "right" && variant === "tertiary" && size === "lg" ? (
+        <div className="shrink-0 size-6 flex items-center justify-center">
+          <Icon type="arrow" size="regular" color="#0f1012" />
+        </div>
       ) : iconSrc && iconPosition === "right" ? (
-        <div className="relative w-4 h-4">
+        <div className="relative w-4 h-4 flex items-center justify-center">
           <Image
             src={iconSrc}
             alt=""
@@ -136,7 +141,7 @@ export default function Button({
         </div>
       ) : null}
       {variant === "dropdown" && !iconSrc && (
-        <div className="relative w-3.5 h-3.5">
+        <div className="relative w-3.5 h-3.5 flex items-center justify-center">
           <Image
             src="/caret.svg"
             alt=""
