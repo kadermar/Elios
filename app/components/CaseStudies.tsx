@@ -16,6 +16,11 @@ const imgGroup = "/samsung-logo-alt.svg";
 const img = "/arrow-left.svg";
 const img1 = "/arrow-right.svg";
 
+interface CaseStudiesProps {
+  title?: string;
+  taglineText?: string;
+}
+
 const testimonials = [
   {
     company: "Amplify Change",
@@ -63,7 +68,10 @@ const testimonials = [
   }
 ];
 
-export default function CaseStudies() {
+export default function CaseStudies({
+  title = "Proven results. Real impact.",
+  taglineText = "Case Studies"
+}: CaseStudiesProps = {}) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -133,9 +141,9 @@ export default function CaseStudies() {
       {/* Header Section - Constrained */}
       <div className="flex flex-col gap-6 items-start justify-center self-stretch px-4 lg:px-12 relative w-full mb-[60px] md:mb-[90px] z-10" data-name="Subhead Section">
         <div className="flex flex-col gap-4 items-start justify-center self-stretch relative w-full" data-name="Top">
-          <Tagline text="Case Studies" />
+          <Tagline text={taglineText} />
           <div className="font-semibold leading-[54px] not-italic relative text-[#0f1012] text-[54px] whitespace-nowrap tracking-[-3.24px]">
-            Proven results. Real impact.
+            {title}
           </div>
         </div>
       </div>
