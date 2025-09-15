@@ -2,6 +2,8 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import CTA from "../components/CTA";
+import CaseStudies from "../components/CaseStudies";
 
 // Hero assets
 const imgArrow = "/assets/af95064ccab6ee359bc75f7a09db40c0162fd9cd.svg";
@@ -200,130 +202,10 @@ export default function PrivateEquityPage() {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-[152px]">
-        <div className="max-w-[1638px] mx-auto px-4">
-          {/* Header */}
-          <div className="mb-[90px]">
-            <div className="flex items-center gap-2.5 mb-10">
-              <Image src={imgVector622} alt="" width={16} height={13} />
-              <span className="font-aptos-semibold text-[20px] text-[#fa6a20] uppercase tracking-[-0.4px]">
-                CASE STUDIES
-              </span>
-            </div>
-            <h2 className="font-aptos-semibold text-[64px] leading-[0.9] tracking-[-3.2px] text-[#09141f]">
-              Private Equity Case Studies
-            </h2>
-          </div>
-
-          {/* Case Study Cards */}
-          <div className="flex gap-5 mb-[90px] overflow-x-auto">
-            {/* AmplifyChange Case Study */}
-            <div className="min-w-[480px] h-[564px] rounded-[15px] overflow-hidden relative bg-gradient-to-br from-purple-900 to-blue-900">
-              <div className="absolute top-10 left-6 right-6 flex justify-start">
-                <Image src={imgAmplifyChange} alt="AmplifyChange" width={162} height={50} />
-              </div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white rounded-[4px] p-[30px]">
-                  <div className="space-y-[50px]">
-                    <p className="font-aptos-semibold text-[32px] leading-[32px] tracking-[-0.96px] text-[#09141f]">
-                      "We cannot believe how much we needed the Insights platform.
-                    </p>
-                    <p className="font-aptos-regular text-[16px] leading-[32px] text-[#121212]">
-                      Darren Styles, CEO of Amplify Change
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Weatherford Case Study */}
-            <div className="min-w-[480px] h-[564px] rounded-[15px] overflow-hidden relative bg-gradient-to-br from-orange-800 to-yellow-600">
-              <div className="absolute top-10 left-6 right-6 flex justify-start">
-                <Image src={imgWeatherford} alt="Weatherford" width={144} height={60} />
-              </div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-[#fae6a4] rounded-[4px] p-[30px]">
-                  <div className="space-y-[50px]">
-                    <p className="font-aptos-semibold text-[32px] leading-[32px] tracking-[-0.96px] text-[#09141f]">
-                      "Elios simplified our entire hiring process."
-                    </p>
-                    <p className="font-aptos-regular text-[16px] leading-[32px] text-[#121212]">
-                      Darren Styles, CEO of Amplify Change
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Drata Case Study */}
-            <div className="min-w-[480px] h-[564px] rounded-[15px] overflow-hidden relative bg-gradient-to-br from-blue-600 to-red-600">
-              <div className="absolute top-10 left-6 right-6 flex justify-start">
-                <Image src={imgDrata} alt="Drata" width={154} height={27} />
-              </div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-[#e0f1fe] rounded-[4px] p-[30px]">
-                  <div className="space-y-[50px]">
-                    <p className="font-aptos-semibold text-[32px] leading-[32px] tracking-[-0.96px] text-[#09141f]">
-                      "We cannot believe how much we needed the Insights platform."
-                    </p>
-                    <p className="font-aptos-regular text-[16px] leading-[32px] text-[#121212]">
-                      Darren Styles, CEO of Amplify Change
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Samsung Case Study */}
-            <div className="min-w-[480px] h-[564px] rounded-[15px] overflow-hidden relative bg-gradient-to-br from-gray-800 to-blue-900">
-              <div className="absolute top-10 left-6 right-6 flex justify-start">
-                <Image src={imgSamsung} alt="Samsung" width={189} height={29} />
-              </div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white rounded-[4px] px-[30px] py-[50px]">
-                  <div className="space-y-[50px]">
-                    <p className="font-aptos-semibold text-[32px] leading-[32px] tracking-[-0.96px] text-[#404453]">
-                      "Wow. There's so many words."
-                    </p>
-                    <p className="font-aptos-regular text-[20px] leading-[32px] text-[#404453]">
-                      * Darren Styles, CEO of Amplify Change
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Goldman Sachs Case Study */}
-            <div className="min-w-[480px] h-[564px] rounded-[15px] overflow-hidden relative bg-gradient-to-br from-blue-800 to-gray-700">
-              <div className="absolute top-10 left-6 right-6 flex justify-start">
-                <Image src={imgGoldmanSachs} alt="Goldman Sachs" width={120} height={50} />
-              </div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-[#fae6a4] rounded-[4px] px-[30px] py-[50px]">
-                  <div className="space-y-[50px]">
-                    <p className="font-aptos-semibold text-[32px] leading-[32px] tracking-[-0.96px] text-[#09141f]">
-                      "Elios simplified our entire hiring process."
-                    </p>
-                    <p className="font-aptos-regular text-[20px] leading-[32px] text-[#404453]">
-                      * Darren Styles, CEO of Amplify Change
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Carousel Navigation */}
-          <div className="flex gap-5">
-            <button className="bg-white rounded-[12px] p-7 shadow-sm hover:shadow-md transition-shadow">
-              <Image src={imgLeftArrow} alt="Previous" width={24} height={24} />
-            </button>
-            <button className="bg-white rounded-[12px] p-7 shadow-sm hover:shadow-md transition-shadow">
-              <Image src={imgRightArrow} alt="Next" width={24} height={24} />
-            </button>
-          </div>
-        </div>
-      </section>
+      <CaseStudies
+        title="Private Equity Case Studies"
+        taglineText="Case Studies"
+      />
 
       {/* Blog Section */}
       <section className="pt-[152px] pb-[400px]">
@@ -430,6 +312,9 @@ export default function PrivateEquityPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <CTA />
 
       <Footer />
     </div>

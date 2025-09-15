@@ -65,6 +65,30 @@ const defaultTechnologyArticles: BlogArticle[] = [
   }
 ];
 
+const defaultHealthcareArticles: BlogArticle[] = [
+  {
+    title: "Why Speed Matters: How Faster Hiring Gives Companies a Competitive Edge",
+    author: "Duran Workman",
+    readTime: "4m read",
+    image: "/assets/blog/woman-speaking.png",
+    href: "/blog/why-speed-matters-faster-hiring-competitive-edge"
+  },
+  {
+    title: "AI + Human Expertise: The Winning Formula for Smarter Recruiting",
+    author: "Duran Workman",
+    readTime: "4m read",
+    image: "/assets/blog/woman-speaking.png",
+    href: "/blog/ai-human-expertise-winning-formula-smarter-recruiting"
+  },
+  {
+    title: "Top 5 Hiring Trends Every Business Should Watch in 2025",
+    author: "Duran Workman",
+    readTime: "4m read",
+    image: "/assets/blog/woman-speaking.png",
+    href: "/blog/top-5-hiring-trends-business-watch-2025"
+  }
+];
+
 export default function BlogSection({
   title = "Latest Insights from Elios",
   tagline = "featured blog posts",
@@ -116,5 +140,5 @@ export default function BlogSection({
   );
 }
 
-// Export technology-specific articles for use in technology page
-export { defaultTechnologyArticles };
+// Export specific articles for different pages
+export { defaultTechnologyArticles, defaultHealthcareArticles };
