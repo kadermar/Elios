@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 945 945" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 4664">
+<path id="Intersect" d="M381.892 -1.16415e-10C494.738 -1.16415e-10 578.205 66.2559 597.286 165.946L715.641 47.5908L750.995 82.9453C822.979 161.572 832.227 262.717 777.355 343.578H783.17L782.404 344.344H945.003V381.118C945.003 510.06 858.498 600.646 734.452 600.646H601.42V601.412H600.642V944.998H563.102C450.252 944.998 366.784 878.738 347.706 779.043L229.354 897.395L193.996 862.037C122.017 783.412 112.769 682.271 167.637 601.412H161.821L162.587 600.646H0L0 563.872C5.26667e-05 434.93 86.5052 344.344 210.551 344.344H343.573V343.578H344.352V-1.16415e-10L381.892 -1.16415e-10Z" fill="url(#paint0_linear_3479_21242)" fill-opacity="0.8"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_3479_21242" x1="945.003" y1="472.499" x2="86.7699" y2="549.644" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF6908"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>

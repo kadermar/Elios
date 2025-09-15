@@ -1,10 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
+import InsightsHero from '../components/InsightsHero';
+import Faq from '../components/Faq';
 import Footer from '../components/Footer';
 
 const imgProfileDropdownMenu1 = "/assets/a5646353145800288e648f5fe27f13f824531797.png";
-const imgHeroArrow = "/assets/dbfc7fa3b59b3bc1d708ecb442d7b149635903f4.svg";
-const imgProfileDropdownMenu2 = "/assets/1026c93c2f0cc786fb8f3edf6ebc6bf177a470e8.svg";
 
 // Platform Overview assets
 const imgVector622 = "/assets/18721c6591626d2156d2f18b97a5158dcf117d0c.svg";
@@ -30,47 +30,7 @@ export default function InsightsPage() {
         <Navigation />
         
         {/* Hero Section */}
-        <div className="box-border content-stretch flex flex-col items-center justify-start px-4 md:px-0 py-[70px] relative size-full bg-[#F4F4F4]" data-name="Hero">
-          <div className="content-stretch flex flex-col lg:flex-row gap-8 md:gap-[140px] items-center justify-start max-w-full lg:max-w-[1638px] relative shrink-0 w-full px-4 md:px-8 lg:px-[141px]" data-name="Wrapper">
-            <div className="content-stretch flex flex-col gap-8 md:gap-[100px] items-start justify-start relative shrink-0 w-full lg:w-[694px]" data-name="Hero Text">
-              <div className="content-stretch flex flex-col gap-6 md:gap-10 items-start justify-start relative shrink-0 w-full" data-name="Top">
-                <div className="font-aptos font-semibold leading-[0] min-w-full not-italic relative shrink-0 text-[#09141f] text-[36px] md:text-[64px] lg:text-[96px] tracking-[-2px] md:tracking-[-4px] lg:tracking-[-5.76px]" style={{ width: "min-content" }}>
-                  <p className="leading-[1.1] md:leading-[64px] lg:leading-[96px]">Elios Insights: The AI Talent Intelligence Platform</p>
-                </div>
-                <div className="font-aptos leading-[0] min-w-full not-italic relative shrink-0 text-[#09141f] text-[16px] md:text-[20px] lg:text-[24px]" style={{ width: "min-content" }}>
-                  <p className="leading-[1.35] md:leading-[32px]">Supercharge recruiting from intake to offer with AI-powered automation and human expertise where it matters most.</p>
-                </div>
-                <div className="content-stretch flex flex-col sm:flex-row gap-3 items-start justify-start relative shrink-0 w-full sm:w-auto" data-name="Button Row">
-                  <div className="bg-[#fa6a20] box-border content-stretch flex gap-3 md:gap-4 h-[50px] md:h-[60px] items-center justify-center px-4 md:pl-[22px] md:pr-2 py-3 md:py-3.5 relative rounded-[12px] shrink-0 cursor-pointer hover:bg-[#e85a10] transition-colors w-full sm:w-auto" data-name="Primary Button">
-                    <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[14px] md:text-[16px] text-center text-nowrap text-white">
-                      <p className="leading-[20px] whitespace-pre">Book a Demo</p>
-                    </div>
-                    <div className="bg-white box-border content-stretch flex gap-2.5 items-center justify-center p-[8px] md:p-[10px] relative rounded-[7px] shrink-0 size-[36px] md:size-[46px]">
-                      <div className="relative shrink-0 size-3 md:size-4" data-name="Line Rounded/Arrow rigth">
-                        <div className="absolute inset-[15.67%_15%]" data-name="Arrow rigth">
-                          <div className="absolute inset-[-7.8%_-7.65%_-7.8%_-7.66%]">
-                            <img alt="" className="block max-w-none size-full" src={imgHeroArrow} />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="hidden lg:block grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-name="Hero Image">
-              <div className="[grid-area:1_/_1] grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-[15.88px] place-items-start relative" data-name="Software">
-                <div className="[grid-area:1_/_1] bg-center bg-cover bg-no-repeat h-[600px] xl:h-[1043.12px] ml-[0.001px] mt-0 rounded-[15px] shadow-[0px_138.351px_38.79px_0px_rgba(216,134,19,0),0px_87.924px_34.911px_0px_rgba(216,134,19,0.01),0px_49.134px_29.739px_0px_rgba(216,134,19,0.05),0px_21.981px_21.981px_0px_rgba(216,134,19,0.09),0px_5.172px_11.637px_0px_rgba(216,134,19,0.1)] w-[1000px] xl:w-[1854.44px]" data-name="Profile Dropdown Menu 1" style={{ 
-                  backgroundImage: `url('${imgProfileDropdownMenu1}')`, 
-                  maskImage: `url('${imgProfileDropdownMenu2}')`,
-                  maskSize: '1541px 958px',
-                  maskPosition: '-78.58px -15.88px',
-                  maskRepeat: 'no-repeat'
-                }} />
-              </div>
-            </div>
-          </div>
-        </div>
+        <InsightsHero />
         
         {/* Platform Overview Section */}
         <div className="bg-white box-border content-stretch flex flex-col gap-[90px] items-center justify-center px-4 md:px-0 py-[120px] md:py-[152px] relative size-full" data-name="Platform Overview">
@@ -338,7 +298,10 @@ export default function InsightsPage() {
             </div>
           </div>
         </div>
-        
+
+        {/* FAQ Section */}
+        <Faq />
+
         <Footer />
       </div>
     </div>
