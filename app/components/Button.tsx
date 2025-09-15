@@ -47,9 +47,9 @@ export default function Button({
 
   // Size styles
   const sizeStyles = {
-    sm: "px-[16px] py-[8px] text-[14px] leading-[20px] rounded-[8px] gap-[8px]",
+    sm: "p-[16px] text-[14px] leading-[20px] rounded-[8px] gap-2",
     md: "px-[20px] py-[12px] text-[16px] leading-[20px] rounded-[8px] gap-[8px]",
-    lg: "px-[24px] py-[16px] text-[16px] leading-[20px] rounded-[12px] gap-[12px]",
+    lg: variant === "primary" ? "pl-6 pr-2 py-2 text-[16px] leading-[20px] rounded-[12px] gap-4" : "px-6 py-2 text-[16px] leading-[20px] rounded-[12px] gap-4 h-[62px]",
   };
 
   // Combine all styles
@@ -69,27 +69,53 @@ export default function Button({
     <>
       {iconSrc && iconPosition === "left" && (
         <div className="relative w-4 h-4">
-          <Image 
-            src={iconSrc} 
-            alt="" 
-            width={16} 
-            height={16} 
+          <Image
+            src={iconSrc}
+            alt=""
+            width={16}
+            height={16}
             className="block max-w-none w-full h-full"
           />
         </div>
       )}
-      <span>{children}</span>
-      {iconSrc && iconPosition === "right" && (
+      <div className={
+        variant === "primary" && size === "lg"
+          ? "font-['Aptos:SemiBold',_sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-center text-nowrap text-white"
+          : variant === "primary" && size === "sm"
+          ? "font-['Aptos:SemiBold',_sans-serif] leading-[0] not-italic relative shrink-0 text-[14px] text-center text-nowrap text-white"
+          : ""
+      }>
+        {variant === "primary" && (size === "lg" || size === "sm") ? (
+          <p className="leading-[20px] whitespace-pre">{children}</p>
+        ) : (
+          <span>{children}</span>
+        )}
+      </div>
+      {iconSrc && iconPosition === "right" && variant === "primary" && size === "lg" ? (
+        <div className="bg-white box-border content-stretch flex gap-2.5 items-center justify-center p-[10px] relative rounded-[7px] shrink-0 size-[46px]">
+          <div className="shrink-0 size-4">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3.33333 8H12.6667M12.6667 8L8.66667 4M12.6667 8L8.66667 12" stroke="#fb5d0b" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      ) : iconSrc && iconPosition === "right" && variant === "primary" && size === "sm" ? (
+        <div className="shrink-0 size-4">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3.33333 8H12.6667M12.6667 8L8.66667 4M12.6667 8L8.66667 12" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
+      ) : iconSrc && iconPosition === "right" ? (
         <div className="relative w-4 h-4">
-          <Image 
-            src={iconSrc} 
-            alt="" 
-            width={16} 
-            height={16} 
+          <Image
+            src={iconSrc}
+            alt=""
+            width={16}
+            height={16}
             className="block max-w-none w-full h-full"
           />
         </div>
-      )}
+      ) : null}
       {variant === "dropdown" && !iconSrc && (
         <div className="relative w-3.5 h-3.5">
           <Image

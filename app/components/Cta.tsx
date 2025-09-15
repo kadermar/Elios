@@ -51,21 +51,20 @@ export default function CTA() {
           
           {/* Button Row */}
           <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">
-            <Button 
-              variant="primary" 
-              size="lg" 
+            <Button
+              variant="primary"
+              size="lg"
               href="/book-demo"
               showArrow={true}
-              className="min-w-[180px]"
             >
               Book a Demo
             </Button>
-            
-            <Button 
-              variant="secondary" 
-              size="lg" 
+
+            <Button
+              variant="secondary"
+              size="lg"
               href="/request-talent"
-              className="min-w-[180px] bg-white"
+              className="bg-white"
             >
               Request Talent
             </Button>

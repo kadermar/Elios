@@ -206,21 +206,19 @@ export default function Navigation() {
         </div>
         
         <div className="flex gap-3 items-center justify-start relative" data-name="Button Row">
-          <Button 
-            variant="secondary" 
-            size="md" 
+          <Button
+            variant="secondary"
+            size="md"
             href="/request-talent"
-            className="px-[22px] py-[18px] rounded-[12px]"
           >
             Request Talent
           </Button>
-          
-          <Button 
-            variant="primary" 
-            size="lg" 
-            href="/book-demo" 
+
+          <Button
+            variant="primary"
+            size="sm"
+            href="/book-demo"
             showArrow={true}
-            className="px-5 py-4 rounded-[8px]"
           >
             Book a Demo
           </Button>
@@ -262,19 +260,22 @@ export default function Navigation() {
             </div>
             
             <div className="flex flex-col gap-4 pt-8 border-t border-gray-200">
-              <Button 
-                variant="secondary" 
-                href="/request-talent" 
+              <Button
+                variant="secondary"
+                size="md"
+                href="/request-talent"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="bg-gray-100 hover:bg-gray-200 px-6 py-4 rounded-[12px] w-full"
+                className="w-full"
               >
                 Request Talent
               </Button>
-              <Button 
-                variant="primary" 
-                href="/book-demo" 
+              <Button
+                variant="primary"
+                size="sm"
+                href="/book-demo"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="px-6 py-4 rounded-[8px] w-full"
+                showArrow={true}
+                className="w-full"
               >
                 Book a Demo
               </Button>

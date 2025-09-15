@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import CaseStudyLinkSmall from "./CaseStudyLinkSmall";
 
 const imgImage47 = "/elios-difference-bg.png";
 const imgVector622 = "/vector-622.svg";
@@ -82,34 +83,13 @@ export default function EliosDifference() {
             </div>
           </div>
         </div>
-        <div className="bg-gradient-to-r from-[#2e3544] relative rounded-[15px] shrink-0 to-[#7384aa]" data-name="Case Study Link" data-node-id="65:1437">
-          <div className="box-border content-stretch flex gap-[30px] items-center justify-start overflow-hidden px-[30px] py-10 relative rounded-[15px]">
-            <div className="absolute bg-center bg-cover bg-no-repeat h-[1509px] left-0 top-[-319.57px] w-[1006px]" data-name="image 47" data-node-id="65:1438" style={{ backgroundImage: `url('${imgImage47}')` }} />
-            <div className="content-stretch flex flex-col gap-[34px] items-start justify-start relative shrink-0 w-[610px]" data-node-id="65:1439">
-              <div className="content-stretch flex gap-2.5 items-center justify-center relative shrink-0 w-full" data-node-id="65:1440">
-                <div className="basis-0 font-semibold grow leading-[0] min-h-px min-w-px not-italic relative shrink-0 text-[#fa6a20] text-[20px] tracking-[-0.4px] uppercase" data-node-id="65:1441">
-                  <p className="leading-[24px]">case study</p>
-                </div>
-              </div>
-              <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[32px] text-white tracking-[-0.96px] w-[484px]" data-node-id="65:1442">
-                <p className="leading-[32px]">
-                  <span className="">See how we hired a complete team for Weatherford in </span>
-                  <span className="[text-decoration-skip-ink:none] [text-underline-position:from-font] decoration-solid underline">7 days</span>
-                  <span className="">*</span>
-                </p>
-              </div>
-            </div>
-            <div className="bg-white box-border content-stretch flex flex-col gap-2.5 items-start justify-start p-[30px] relative rounded-[15px] shrink-0" data-node-id="65:1443">
-              <div className="relative shrink-0 size-6" data-name="Line Rounded/Arrow rigth" data-node-id="65:1444">
-                <div className="absolute inset-[15.67%_15%]" data-name="Arrow rigth" id="node-I65_1444-4940_34491">
-                  <div className="absolute inset-[-6.07%_-5.95%]">
-                    <Image alt="" src={img} width={24} height={24} className="block max-w-none size-full" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div aria-hidden="true" className="absolute border border-[#cacaca] border-solid inset-[-1px] pointer-events-none rounded-[16px]" />
+        <div className="w-full max-w-[784px]">
+          <CaseStudyLinkSmall 
+            title="*See how we hired a complete team for Weatherford in 7 days"
+            highlightText="7 days"
+            backgroundImage="/elios-difference-case-study-bg.png"
+            href="/case-studies/weatherford"
+          />
         </div>
         <div className="content-stretch flex font-normal gap-[50px] items-center justify-center leading-[0] max-w-[1000px] not-italic relative shrink-0 text-[#535960] text-[16px] w-full" data-name="Disclaimer Text" data-node-id="65:1445">
           <div className="basis-0 grow min-h-px min-w-px relative shrink-0" data-node-id="65:1446">

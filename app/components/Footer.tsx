@@ -28,13 +28,13 @@ export default function Footer() {
                 Hiring Managers
               </h3>
               <div className="flex flex-col gap-3">
-                <Link href="/request-talent" variant="default" size="md" weight="semibold">
+                <Link href="/request-talent" variant="footer" size="md" weight="semibold">
                   Elios Talent
                 </Link>
-                <Link href="/insights" variant="default" size="md" weight="semibold">
+                <Link href="/insights" variant="footer" size="md" weight="semibold">
                   Elios Insights
                 </Link>
-                <Link href="/industries" variant="default" size="md" weight="semibold">
+                <Link href="/industries" variant="footer" size="md" weight="semibold">
                   Industries
                 </Link>
               </div>
@@ -46,10 +46,10 @@ export default function Footer() {
                 Candidates
               </h3>
               <div className="flex flex-col gap-3">
-                <Link href="/jobs" variant="default" size="md" weight="semibold">
+                <Link href="/jobs" variant="footer" size="md" weight="semibold">
                   Explore Jobs
                 </Link>
-                <Link href="/submit-resume" variant="default" size="md" weight="semibold">
+                <Link href="/submit-resume" variant="footer" size="md" weight="semibold">
                   Submit Your Resume
                 </Link>
               </div>
@@ -61,13 +61,13 @@ export default function Footer() {
                 Company
               </h3>
               <div className="flex flex-col gap-3">
-                <Link href="/about" variant="default" size="md" weight="semibold">
+                <Link href="/about" variant="footer" size="md" weight="semibold">
                   About Us
                 </Link>
-                <Link href="/connect" variant="default" size="md" weight="semibold">
+                <Link href="/connect" variant="footer" size="md" weight="semibold">
                   Connect
                 </Link>
-                <Link href="/locations" variant="default" size="md" weight="semibold">
+                <Link href="/locations" variant="footer" size="md" weight="semibold">
                   Where We Serve
                 </Link>
               </div>
@@ -79,13 +79,13 @@ export default function Footer() {
                 Resources
               </h3>
               <div className="flex flex-col gap-3">
-                <Link href="/blog" variant="default" size="md" weight="semibold">
+                <Link href="/blog" variant="footer" size="md" weight="semibold">
                   Blog
                 </Link>
-                <Link href="/case-studies" variant="default" size="md" weight="semibold">
+                <Link href="/case-studies" variant="footer" size="md" weight="semibold">
                   Case Studies
                 </Link>
-                <Link href="/faq" variant="default" size="md" weight="semibold">
+                <Link href="/faq" variant="footer" size="md" weight="semibold">
                   FAQ
                 </Link>
               </div>

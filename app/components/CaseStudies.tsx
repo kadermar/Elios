@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import Tagline from "./Tagline";
+import AFlare from "./AFlare";
 import React, { useRef, useState } from "react";
 
-const imgImage48 = "/testimonial-bg-amplify.png";
-const imgImage47 = "/testimonial-bg-weatherford.png";
-const imgImage52 = "/testimonial-bg-drata.png";
-const imgImage58 = "/testimonial-bg-samsung.png";
+const imgImage48 = "/images/case-study-1.png";
+const imgImage47 = "/images/case-study-2.png";
+const imgImage52 = "/images/case-study-3.png";
+const imgImage58 = "/images/case-study-4.png";
 const imgVector622 = "/vector-622.svg";
 const imgAmplifyChangeLogo01 = "/amplify-change-logo-alt.svg";
 const imgDrataWordmarkDark01 = "/drata-logo-alt.svg";
@@ -19,7 +20,7 @@ const testimonials = [
   {
     company: "Amplify Change",
     logo: imgAmplifyChangeLogo01,
-    title: "Unblocking stalled engineering pipelines",
+    title: "Enabling Velocity for Product & Design Launches",
     bullets: [
       "28 hires in under a week",
       "10x faster cycle time with 0% schedule slippage"
@@ -28,34 +29,34 @@ const testimonials = [
     logoType: "image"
   },
   {
-    company: "Weatherford",
-    logo: "weatherford",
-    title: "Scaling operations across global markets",
+    company: "Amplify Change",
+    logo: imgAmplifyChangeLogo01,
+    title: "Unblocking stalled engineering pipelines",
     bullets: [
-      "45 technical hires in 3 weeks",
-      "Reduced time-to-hire by 60%"
+      "7-month-old requisitions closed in <14 days",
+      "Precision pipelines + decisive hiring clarity"
     ],
     bgImage: imgImage47,
-    logoType: "text"
+    logoType: "image"
   },
   {
-    company: "Drata",
-    logo: imgDrataWordmarkDark01,
-    title: "Building security-first engineering teams",
+    company: "Amplify Change",
+    logo: imgAmplifyChangeLogo01,
+    title: "Capturing New Revenue Without Slowing Core Ops",
     bullets: [
-      "15 senior engineers hired in 2 weeks",
-      "Zero compromise on security clearances"
+      "Blockchain product team staffed in 3 days",
+      "From scope to staffed, no operational slowdown"
     ],
     bgImage: imgImage52,
     logoType: "image"
   },
   {
-    company: "Samsung",
-    logo: imgGroup,
-    title: "Accelerating mobile innovation cycles",
+    company: "Amplify Change",
+    logo: imgAmplifyChangeLogo01,
+    title: "Precision > Volume: Two Candidates, One Perfect Hire",
     bullets: [
-      "50+ engineers across 5 specializations",
-      "Fastest product launch in company history"
+      "2 candidates submitted vs. 50 from others",
+      "First hire covered both roles, second req shelved"
     ],
     bgImage: imgImage58,
     logoType: "image"
@@ -89,26 +90,26 @@ export default function CaseStudies() {
       const cardWidth = container.children[0]?.getBoundingClientRect().width || 0;
       const gap = 20;
       const scrollAmount = cardWidth + gap;
-      
+
       // Update index
-      const newIndex = direction === 'next' 
+      const newIndex = direction === 'next'
         ? (currentIndex + 1) % testimonials.length
         : (currentIndex - 1 + testimonials.length) % testimonials.length;
       setCurrentIndex(newIndex);
-      
+
       // Scroll in the direction
       container.scrollBy({
         left: direction === 'next' ? scrollAmount : -scrollAmount,
         behavior: 'smooth'
       });
-      
+
       // Check if we need to reset position for infinite loop
       setTimeout(() => {
         const currentScroll = container.scrollLeft;
         const maxScroll = container.scrollWidth - container.clientWidth;
         const minThreshold = scrollAmount * 2;
         const maxThreshold = maxScroll - (scrollAmount * 2);
-        
+
         // If we're too far left, jump to the center
         if (currentScroll < minThreshold) {
           const newScroll = currentScroll + (scrollAmount * testimonials.length);
@@ -130,20 +131,29 @@ export default function CaseStudies() {
   return (
     <div className="w-full py-[80px] md:py-[152px] relative overflow-visible" data-name="Case Studies">
       {/* Header Section - Constrained */}
-      <div className="flex flex-col gap-6 md:gap-10 items-center justify-center px-4 lg:px-12 relative w-full mb-[60px] md:mb-[90px]" data-name="Subhead Section">
-        <Tagline text="Case Studies" className="px-0 py-[18px]" />
-        <div className="font-semibold leading-[0] not-italic relative text-[#09141f] text-[36px] md:text-[64px] text-center tracking-[-1.8px] md:tracking-[-3.2px] max-w-4xl">
-          <p className="leading-[1.1] md:leading-[0.9]">Proven Results, Real Impact</p>
+      <div className="flex flex-col gap-6 items-start justify-center self-stretch px-4 lg:px-12 relative w-full mb-[60px] md:mb-[90px] z-10" data-name="Subhead Section">
+        <div className="flex flex-col gap-4 items-start justify-center self-stretch relative w-full" data-name="Top">
+          <Tagline text="Case Studies" />
+          <div className="font-semibold leading-[54px] not-italic relative text-[#0f1012] text-[54px] whitespace-nowrap tracking-[-3.24px]">
+            Proven results. Real impact.
+          </div>
         </div>
       </div>
 
       {/* Carousel Container - Full Width */}
       <div className="relative w-full overflow-visible">
+        {/* A Flare Background */}
+        <div className="absolute h-[601px] left-[-185px] bottom-[-275px] w-[529px] pointer-events-none z-0" data-name="A Flare">
+          <div className="absolute inset-[-13.98%_-15.88%]">
+            <AFlare />
+          </div>
+        </div>
+
         {/* Scroll Container - Full Width with Edge Padding */}
-        <div 
+        <div
           ref={scrollContainerRef}
-          className="flex gap-5 items-stretch overflow-x-auto overflow-y-visible scrollbar-hide scroll-smooth w-full pl-4 pr-4 lg:pl-12 lg:pr-12 py-4"
-          style={{ 
+          className="flex gap-5 items-stretch overflow-x-auto overflow-y-visible scrollbar-hide scroll-smooth w-full pl-4 pr-4 lg:pl-12 lg:pr-12 py-4 relative z-10"
+          style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
             WebkitOverflowScrolling: 'touch',
@@ -164,7 +174,7 @@ export default function CaseStudies() {
             >
               {/* Gradient overlay for better text readability */}
               <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent rounded-[6px]" />
-              
+
               {/* Content Container */}
               <div className="basis-0 content-stretch flex flex-col grow h-full items-start justify-between min-h-px min-w-px relative shrink-0 z-10">
                 {/* Logo Section */}
@@ -188,8 +198,20 @@ export default function CaseStudies() {
 
                 {/* Text Content */}
                 <div className="content-stretch flex flex-col gap-4 md:gap-6 items-start justify-start leading-[0] not-italic relative shrink-0 text-white max-w-[400px] md:max-w-[480px]">
-                  <div className="font-aptos-semibold relative shrink-0 text-[28px] md:text-[36px] tracking-[-1.4px] md:tracking-[-1.8px] w-full">
-                    <p className="leading-[30px] md:leading-[36px]">{testimonial.title}</p>
+                  <div
+                    className="relative shrink-0 w-full"
+                    style={{
+                      color: 'var(--Neutral-White, #FFF)',
+                      fontFeatureSettings: "'liga' off, 'clig' off",
+                      fontFamily: 'var(--Typeface-Family-Heading, Aptos)',
+                      fontSize: 'var(--Typeface-Size-H4, 36px)',
+                      fontStyle: 'normal',
+                      fontWeight: 600,
+                      lineHeight: '36px',
+                      letterSpacing: '-1.8px'
+                    }}
+                  >
+                    <p>{testimonial.title}</p>
                   </div>
                   <div className="font-aptos-regular relative shrink-0 text-[14px] md:text-[16px] w-full">
                     <p className="leading-[18px] md:leading-[20px]">
@@ -203,7 +225,7 @@ export default function CaseStudies() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Hover Effects - Orange border and inner shadow */}
               <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[6px]">
                 {/* Inner shadow */}
@@ -214,63 +236,34 @@ export default function CaseStudies() {
             </div>
           ))}
         </div>
-        
-        {/* Navigation Arrows */}
+
+      </div>
+
+
+      {/* Button Row - Navigation */}
+      <div className="flex items-start gap-3 justify-start mt-16 px-4 lg:px-12 relative z-10" data-name="Button Row">
         <button
           onClick={handlePrev}
-          className="absolute left-6 lg:left-16 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-10 border border-gray-100"
+          className="bg-white box-border flex gap-4 items-center justify-center p-[8px] rounded-[12px] transition-all duration-300 hover:shadow-lg"
           aria-label="Previous testimonial"
         >
-          <Image
-            alt="Previous"
-            src={img1}
-            width={20}
-            height={20}
-            className="block max-w-none rotate-180"
-          />
+          <div className="box-border flex gap-2.5 items-center justify-center p-[10px] rounded-[7px] size-[46px]">
+            <svg className="size-4" viewBox="0 0 16 16" fill="none">
+              <path d="M10 4L6 8L10 12" stroke="#0f1012" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
         </button>
-        
         <button
           onClick={handleNext}
-          className="absolute right-6 lg:right-16 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-10 border border-gray-100"
+          className="bg-white box-border flex gap-4 items-center justify-center p-[8px] rounded-[12px] transition-all duration-300 hover:shadow-lg"
           aria-label="Next testimonial"
         >
-          <Image
-            alt="Next"
-            src={img1}
-            width={20}
-            height={20}
-            className="block max-w-none"
-          />
+          <div className="box-border flex gap-2.5 items-center justify-center p-[10px] rounded-[7px] size-[46px]">
+            <svg className="size-4" viewBox="0 0 16 16" fill="none">
+              <path d="M6 4L10 8L6 12" stroke="#0f1012" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
         </button>
-      </div>
-      
-      {/* Scroll Indicators */}
-      <div className="flex justify-center gap-2 mt-8 px-4 lg:px-12">
-        {testimonials.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => {
-              if (scrollContainerRef.current) {
-                const container = scrollContainerRef.current;
-                const cardWidth = container.children[0]?.getBoundingClientRect().width || 0;
-                const gap = 20;
-                const scrollAmount = (cardWidth + gap) * index;
-                container.scrollTo({
-                  left: scrollAmount,
-                  behavior: 'smooth'
-                });
-                setCurrentIndex(index);
-              }
-            }}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              currentIndex === index 
-                ? 'bg-[#fa6a20] w-8' 
-                : 'bg-gray-300 hover:bg-gray-400'
-            }`}
-            aria-label={`Go to testimonial ${index + 1}`}
-          />
-        ))}
       </div>
     </div>
   );

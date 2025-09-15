@@ -1,138 +1,84 @@
 "use client";
 
-import Image from "next/image";
+import Accordion from "./Accordion";
+import Tagline from "./Tagline";
+import Link from "./Link";
 
-const imgVector622 = "/vector-622.svg";
-const imgVector = "/faq-connect-icon.svg";
-const img = "/faq-plus-icon.svg";
-const img1 = "/faq-close-icon.svg";
+const faqData = [
+  {
+    question: "What is Elios?",
+    answer: "Elios is a hybrid recruiting company with two offerings and one mission: help teams hire faster without sacrificing fit. Elios Talent is our high-touch staffing service run by experienced recruiters who partner with you end-to-end. Elios Insights is our platform—an intelligence layer that sits on top of your ATS to streamline matching, scheduling, and feedback while keeping humans in control. Together, they turn hiring from a bottleneck into an enabler: fewer, better candidates, clearer decisions, and cleaner close plans. Clients keep their existing systems and gain the speed, structure, and visibility they've been missing. Candidates get a transparent, respectful experience with timely prep and feedback.",
+  },
+  {
+    question: "How does Elios Insights work with our ATS and process?",
+    answer: "Elios Insights layers on top of your ATS—you don't have to rip and replace. We translate each role into a structured brief, use job-relevant signals to rank candidates, and automate orchestration like scheduling and feedback capture. Recruiters review every recommendation and make the calls—human-in-the-loop by design. The platform writes back the right data so your ATS remains the source of record, while dashboards show funnel health, time-to-decision, and bottlenecks. Teams spend less time coordinating and more time with finalists. The result is faster cycles, stronger fits, and a process that improves with every search.",
+    isOpenByDefault: true,
+  },
+  {
+    question: "What industries do you serve?",
+    answer: "We specialize in technology, healthcare, energy, private equity, and financial services. Our recruiters have deep domain expertise in each sector, understanding the unique challenges, regulatory requirements, and talent landscapes. Whether you're scaling a SaaS company, building a healthcare innovation team, or staffing energy infrastructure projects, we bring industry-specific knowledge to every search.",
+  },
+  {
+    question: "What is your recruitment process?",
+    answer: "Our process begins with a deep-dive consultation to understand your role requirements, team dynamics, and culture. We then leverage our network and sourcing tools to identify qualified candidates, conduct thorough screenings, and present only the most relevant profiles. Throughout the process, we provide regular updates, facilitate interviews, and support negotiations to ensure a successful placement.",
+  },
+  {
+    question: "I'm a candidate looking for my next job, how can you help?",
+    answer: "We work with top-tier companies across multiple industries and can connect you with opportunities that align with your career goals. Our team provides personalized guidance throughout the interview process, helps you understand company cultures, and negotiates on your behalf. Whether you're actively searching or open to the right opportunity, we're here to help you find your next career move.",
+  },
+];
 
 export default function Faq() {
   return (
-    <div className="box-border content-stretch flex flex-col gap-[90px] items-center justify-center pb-[400px] pt-[152px] px-0 relative size-full" data-name="FAQ" data-node-id="65:1639">
-      <div className="content-stretch flex gap-[162px] items-start justify-start max-w-[1638px] relative shrink-0 w-full" data-name="Wrapper" data-node-id="65:1666">
-        <div className="content-stretch flex flex-col gap-[50px] items-start justify-center max-w-[830px] relative shrink-0 w-[668px]" data-name="Subhead Section" data-node-id="65:1667">
-          <div className="content-stretch flex flex-col gap-[30px] items-start justify-start relative shrink-0 w-full" data-node-id="65:1668">
-            <div className="box-border content-stretch flex gap-2.5 items-center justify-center px-0 py-[18px] relative rounded-[9px] shrink-0" data-name="Tagline" data-node-id="65:1669">
-              <div className="h-[13px] relative shrink-0 w-4" data-node-id="65:1670">
-                <div className="absolute inset-[-3.99%_-8.8%_-11.36%_-1.63%]">
-                  <Image alt="" src={imgVector622} width={16} height={13} className="block max-w-none size-full" />
-                </div>
-              </div>
-              <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[#fa6a20] text-[20px] text-nowrap tracking-[-0.4px] uppercase" data-node-id="65:1671">
-                <p className="leading-[24px] whitespace-pre">FAQ</p>
-              </div>
+    <section className="w-full py-24 md:py-[152px] pb-[400px]">
+      <div className="max-w-[1638px] mx-auto px-4 md:px-8 lg:px-12">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-[162px] items-start">
+          {/* Left Side - Header Content */}
+          <div className="flex flex-col gap-12 lg:gap-[50px] max-w-[668px] w-full lg:flex-shrink-0">
+            <div className="flex flex-col gap-6 lg:gap-[30px]">
+              <Tagline text="FAQ" />
+              <h2 className="font-semibold text-[#09141f] text-[48px] md:text-[64px] lg:text-[72px] leading-[1.1] md:leading-none tracking-[-2.4px] md:tracking-[-3.6px]">
+                Questions?<br />
+                We've got answers.
+              </h2>
             </div>
-            <div className="font-semibold leading-[0] min-w-full not-italic relative shrink-0 text-[#09141f] text-[72px] tracking-[-3.6px]" data-node-id="65:1672" style={{ width: "min-content" }}>
-              <p className="leading-none">
-                Questions? <br />
-                We&apos;ve got answers.
-              </p>
-            </div>
+            
+            <p className="text-[#535960] text-[20px] md:text-[24px] leading-[28px] md:leading-[32px] max-w-[550px]">
+              Find quick answers to common questions about Elios. Still curious? We can help.
+            </p>
+            
+            <Link 
+              href="/connect" 
+              className="inline-flex items-center gap-2 text-[#09141f] text-[20px] font-semibold underline hover:text-[#fb5d0b] transition-colors"
+            >
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" className="flex-shrink-0">
+                <path 
+                  d="M2 8.5L17 8.5M17 8.5L10 1.5M17 8.5L10 15.5" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+              Connect With Us
+            </Link>
           </div>
-          <div className="font-normal leading-[0] not-italic relative shrink-0 text-[#535960] text-[24px] w-[550px]" data-node-id="65:1673">
-            <p className="leading-[32px]">Find quick answers to common questions about Elios. Still curious? We can help.</p>
-          </div>
-          <div className="box-border content-stretch flex gap-2.5 items-center justify-start overflow-clip px-0.5 py-[3px] relative shrink-0" data-name="Frame" data-node-id="65:1674">
-            <div className="h-[17px] relative shrink-0 w-[18.608px]" data-name="Vector" data-node-id="65:1675">
-              <div className="absolute inset-[-5.88%_-5.37%]">
-                <Image alt="" src={imgVector} width={19} height={17} className="block max-w-none size-full" />
-              </div>
-            </div>
-            <div className="font-semibold leading-[0] not-italic relative shrink-0 text-[#09141f] text-[20px] w-[550px]" data-node-id="65:1676">
-              <p className="[text-decoration-skip-ink:none] [text-underline-position:from-font] decoration-solid leading-[32px] underline">Connect With Us</p>
-            </div>
-          </div>
-        </div>
-        <div className="basis-0 content-stretch flex flex-col gap-3 grow items-start justify-start min-h-px min-w-px relative shrink-0" data-name="Accordion" data-node-id="65:1688">
-          <div className="bg-white box-border content-stretch flex flex-col gap-2.5 items-start justify-start overflow-clip px-[30px] py-11 relative rounded-[15px] shrink-0 w-full" data-name="Accordion Card" data-node-id="65:1689">
-            <div className="content-stretch flex flex-col gap-[11px] items-start justify-start relative shrink-0 w-full" data-name="Accordion Content" data-node-id="65:1690">
-              <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-name="Accordion Top" data-node-id="65:1691">
-                <div className="font-normal leading-[0] not-italic relative shrink-0 text-[#09141f] text-[24px] text-nowrap" data-node-id="65:1692">
-                  <p className="leading-[22px] whitespace-pre">What is Elios?</p>
-                </div>
-                <div className="overflow-clip relative shrink-0 size-4" data-name="Line Rounded/Plus" data-node-id="65:1693">
-                  <div className="absolute inset-[12.5%]" data-name="Plus" id="node-I65_1693-4940_34844">
-                    <div className="absolute inset-[-5.51%]">
-                      <Image alt="" src={img} width={16} height={16} className="block max-w-none size-full" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="bg-white relative rounded-[15px] shrink-0 w-full" data-name="Accordion Card" data-node-id="65:1695">
-            <div className="box-border content-stretch flex flex-col gap-2.5 items-start justify-start overflow-clip px-[30px] py-11 relative w-full">
-              <div className="content-stretch flex flex-col gap-[33px] items-start justify-start relative shrink-0 w-full" data-name="Accordion Content" data-node-id="65:1696">
-                <div className="box-border content-stretch flex items-center justify-between pb-[3px] pt-0 px-0 relative shrink-0 w-full" data-name="Accordion Top" data-node-id="65:1697">
-                  <div className="font-normal leading-[0] not-italic relative shrink-0 text-[#09141f] text-[24px] text-nowrap" data-node-id="65:1698">
-                    <p className="leading-[22px] whitespace-pre">How does Elios Insights work with our ATS and process?</p>
-                  </div>
-                  <div className="overflow-clip relative shrink-0 size-3.5" data-name="Line Rounded/Close" data-node-id="65:1699">
-                    <div className="absolute inset-[17.5%]" data-name="Close" id="node-I65_1699-4940_34863">
-                      <div className="absolute inset-[-7.14%]">
-                        <Image alt="" src={img1} width={14} height={14} className="block max-w-none size-full" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="font-normal leading-[0] not-italic relative shrink-0 text-[#535960] text-[20px] w-full" data-node-id="65:1700">
-                  <p className="leading-[26px]">Elios Insights layers on top of your ATS—you don&apos;t have to rip and replace. We translate each role into a structured brief, use job-relevant signals to rank candidates, and automate orchestration like scheduling and feedback capture. Recruiters review every recommendation and make the calls—human-in-the-loop by design. The platform writes back the right data so your ATS remains the source of record, while dashboards show funnel health, time-to-decision, and bottlenecks. Teams spend less time coordinating and more time with finalists. The result is faster cycles, stronger fits, and a process that improves with every search.</p>
-                </div>
-              </div>
-            </div>
-            <div aria-hidden="true" className="absolute border border-[#fa6a20] border-solid inset-0 pointer-events-none rounded-[15px] shadow-[0px_130px_36px_0px_rgba(254,164,62,0),0px_83px_33px_0px_rgba(254,164,62,0.02),0px_47px_28px_0px_rgba(254,164,62,0.06),0px_21px_21px_0px_rgba(254,164,62,0.1),0px_5px_11px_0px_rgba(254,164,62,0.12)]" />
-          </div>
-          <div className="bg-white box-border content-stretch flex flex-col gap-2.5 items-start justify-start overflow-clip px-[30px] py-11 relative rounded-[15px] shrink-0 w-full" data-name="Accordion Card" data-node-id="65:1701">
-            <div className="content-stretch flex flex-col gap-[11px] items-start justify-start relative shrink-0 w-full" data-name="Accordion Content" data-node-id="65:1702">
-              <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-name="Accordion Top" data-node-id="65:1703">
-                <div className="font-normal leading-[0] not-italic relative shrink-0 text-[#09141f] text-[24px] text-nowrap" data-node-id="65:1704">
-                  <p className="leading-[22px] whitespace-pre">What industries do you provide?</p>
-                </div>
-                <div className="overflow-clip relative shrink-0 size-4" data-name="Line Rounded/Plus" data-node-id="65:1705">
-                  <div className="absolute inset-[12.5%]" data-name="Plus" id="node-I65_1705-4940_34844">
-                    <div className="absolute inset-[-5.51%]">
-                      <Image alt="" src={img} width={16} height={16} className="block max-w-none size-full" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="bg-white box-border content-stretch flex flex-col gap-2.5 items-start justify-start overflow-clip px-[30px] py-11 relative rounded-[15px] shrink-0 w-full" data-name="Accordion Card" data-node-id="65:1707">
-            <div className="content-stretch flex flex-col gap-[11px] items-start justify-start relative shrink-0 w-full" data-name="Accordion Content" data-node-id="65:1708">
-              <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-name="Accordion Top" data-node-id="65:1709">
-                <div className="font-normal leading-[0] not-italic relative shrink-0 text-[#09141f] text-[24px] text-nowrap" data-node-id="65:1710">
-                  <p className="leading-[22px] whitespace-pre">What is your web design process?</p>
-                </div>
-                <div className="overflow-clip relative shrink-0 size-4" data-name="Line Rounded/Plus" data-node-id="65:1711">
-                  <div className="absolute inset-[12.5%]" data-name="Plus" id="node-I65_1711-4940_34844">
-                    <div className="absolute inset-[-5.51%]">
-                      <Image alt="" src={img} width={16} height={16} className="block max-w-none size-full" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="bg-white box-border content-stretch flex flex-col gap-2.5 items-start justify-start overflow-clip px-[30px] py-11 relative rounded-[15px] shrink-0 w-full" data-name="Accordion Card" data-node-id="65:1713">
-            <div className="content-stretch flex flex-col gap-[11px] items-start justify-start relative shrink-0 w-full" data-name="Accordion Content" data-node-id="65:1714">
-              <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-name="Accordion Top" data-node-id="65:1715">
-                <div className="font-normal leading-[0] not-italic relative shrink-0 text-[#09141f] text-[24px] text-nowrap" data-node-id="65:1716">
-                  <p className="leading-[22px] whitespace-pre">I&apos;m a candidate, looking for my next job, how can you help?</p>
-                </div>
-                <div className="overflow-clip relative shrink-0 size-4" data-name="Line Rounded/Plus" data-node-id="65:1717">
-                  <div className="absolute inset-[12.5%]" data-name="Plus" id="node-I65_1717-4940_34844">
-                    <div className="absolute inset-[-5.51%]">
-                      <Image alt="" src={img} width={16} height={16} className="block max-w-none size-full" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+          {/* Right Side - Accordion */}
+          <div className="flex-1 w-full">
+            <div className="flex flex-col gap-3">
+              {faqData.map((faq, index) => (
+                <Accordion
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpenByDefault={faq.isOpenByDefault || false}
+                />
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

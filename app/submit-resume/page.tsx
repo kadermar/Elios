@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 export default function SubmitResume() {
   const [formData, setFormData] = useState({
@@ -230,134 +231,7 @@ export default function SubmitResume() {
           </form>
         </div>
       </div>
-      <div className="bg-white box-border content-stretch flex flex-col gap-[72px] items-center justify-end overflow-clip px-[167px] py-[140px] relative shrink-0 w-full">
-        <div className="content-stretch flex flex-col gap-[72px] items-start justify-start relative shrink-0 w-[1638px]">
-          <div className="content-stretch flex gap-60 items-start justify-start relative shrink-0 w-full">
-            <div className="content-stretch flex flex-col gap-[30px] items-start justify-start relative shrink-0 w-[516px]">
-              <div className="h-[60px] relative shrink-0 w-[151.443px]">
-                <Image alt="Elios" src="/request-talent-footer-logo.svg" width={151} height={60} className="block max-w-none size-full" />
-              </div>
-              <div className="font-aptos font-normal leading-[0] min-w-full not-italic relative shrink-0 text-[#535960] text-[16px]" style={{ width: "min-content" }}>
-                <p className="leading-[1.4]">Elios is a technology-driven, human-centered recruiting firm committed to helping businesses scale with top talent. We connect leading companies with highly qualified professionals across key industries.</p>
-              </div>
-              <div className="content-stretch flex gap-4 items-start justify-start relative shrink-0">
-                <div className="relative shrink-0 size-[30px]">
-                  <div className="absolute bg-white inset-0 rounded-[4px]" />
-                  <div className="absolute bottom-1/4 left-[36.36%] right-[36.36%] top-1/4">
-                    <Image alt="Facebook" src="/request-talent-footer-facebook.svg" width={8} height={15} className="block max-w-none size-full" />
-                  </div>
-                </div>
-                <div className="relative shrink-0 size-[30px]">
-                  <div className="absolute bg-white inset-0 rounded-[4px]" />
-                  <div className="absolute bottom-[29.72%] left-1/4 right-1/4 top-[29.72%]">
-                    <Image alt="Twitter" src="/request-talent-footer-twitter.svg" width={15} height={12} className="block max-w-none size-full" />
-                  </div>
-                </div>
-                <div className="relative shrink-0 size-[30px]">
-                  <div className="absolute bg-white inset-0 rounded-[4px]" />
-                  <div className="absolute inset-1/4">
-                    <Image alt="Instagram" src="/book-demo-footer-instagram.svg" width={15} height={15} className="block max-w-none size-full" />
-                  </div>
-                </div>
-                <div className="relative shrink-0 size-[30px]">
-                  <Image alt="LinkedIn" src="/request-talent-footer-linkedin.svg" width={30} height={30} className="block max-w-none size-full" />
-                </div>
-              </div>
-            </div>
-            <div className="basis-0 box-border content-stretch flex grow items-start justify-between min-h-px min-w-px pb-0 pt-7 px-0 relative shrink-0">
-              <div className="content-stretch flex flex-col gap-8 items-start justify-start relative shrink-0">
-                <div className="content-stretch flex flex-col gap-6 items-start justify-start relative shrink-0">
-                  <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0">
-                    <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[16px] text-black text-center text-nowrap">
-                      <p className="leading-[14px] whitespace-pre">For Hiring Managers</p>
-                    </div>
-                  </div>
-                  <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0">
-                    <div className="font-aptos font-normal leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap">
-                      <p className="leading-[14px] whitespace-pre">Elios Talent</p>
-                    </div>
-                  </div>
-                  <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0">
-                    <div className="font-aptos font-normal leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap">
-                      <p className="leading-[14px] whitespace-pre">Elios Insights</p>
-                    </div>
-                  </div>
-                  <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0">
-                    <div className="font-aptos font-normal leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap">
-                      <p className="leading-[14px] whitespace-pre">Industries Served</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="content-stretch flex flex-col gap-6 items-start justify-start relative shrink-0">
-                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0 w-full">
-                  <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[16px] text-black text-center text-nowrap">
-                    <p className="leading-[14px] whitespace-pre">For Candidates</p>
-                  </div>
-                </div>
-                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0 w-full">
-                  <div className="font-aptos font-normal leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap">
-                    <p className="leading-[14px] whitespace-pre">Explore Jobs</p>
-                  </div>
-                </div>
-                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0">
-                  <div className="font-aptos font-normal leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap">
-                    <p className="leading-[14px] whitespace-pre">Upload Resume</p>
-                  </div>
-                </div>
-              </div>
-              <div className="content-stretch flex flex-col gap-6 items-start justify-start relative shrink-0">
-                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0">
-                  <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[16px] text-black text-center text-nowrap">
-                    <p className="leading-[14px] whitespace-pre">Company</p>
-                  </div>
-                </div>
-                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0">
-                  <div className="font-aptos font-normal leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap">
-                    <p className="leading-[14px] whitespace-pre">About Us</p>
-                  </div>
-                </div>
-                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0">
-                  <div className="font-aptos font-normal leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap">
-                    <p className="leading-[14px] whitespace-pre">Connect</p>
-                  </div>
-                </div>
-              </div>
-              <div className="content-stretch flex flex-col gap-6 items-start justify-start relative shrink-0">
-                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0">
-                  <div className="font-aptos font-semibold leading-[0] not-italic relative shrink-0 text-[16px] text-black text-center text-nowrap">
-                    <p className="leading-[14px] whitespace-pre">Resources</p>
-                  </div>
-                </div>
-                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0">
-                  <div className="font-aptos font-normal leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap">
-                    <p className="leading-[14px] whitespace-pre">Blog</p>
-                  </div>
-                </div>
-                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0">
-                  <div className="font-aptos font-normal leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap">
-                    <p className="leading-[14px] whitespace-pre">Case Studies</p>
-                  </div>
-                </div>
-                <div className="content-stretch flex gap-1.5 items-center justify-start relative shrink-0">
-                  <div className="font-aptos font-normal leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-center text-nowrap">
-                    <p className="leading-[14px] whitespace-pre">FAQ</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
-            <div className="flex flex-row items-center self-stretch">
-              <div className="content-stretch flex gap-6 h-full items-center justify-start relative shrink-0">
-                <div className="font-aptos font-normal leading-[0] not-italic relative shrink-0 text-[#535960] text-[16px] text-nowrap">
-                  <p className="leading-[22px] whitespace-pre">© 2025 Elios, Inc. All Rights Reserved.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }
